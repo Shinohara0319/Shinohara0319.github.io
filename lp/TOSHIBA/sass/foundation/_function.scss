@@ -1,0 +1,37 @@
+// line-heightを自動で計算
+@function lh($font-size, $line-height) {
+  @return $line-height / $font-size;
+}
+
+// line-heightを考慮した余白の計算（高さのあるテキストとline-height:1のアイテム）
+@function space($space, $font-size, $line-height) {
+  @return $space - ($font-size * ($line-height / $font-size) - $font-size) / 2+px;
+}
+
+@function spacevw($space, $font-size, $line-height) {
+  @return ($space - ($font-size * ($line-height / $font-size) - $font-size) / 2)/750 * 100+vw;
+}
+
+// line-heightを考慮した余白の計算（高さのあるテキスト同士）
+@function between($between, $font-size01, $line-height01, $font-size02, $line-height02) {
+  @return $between - ((($font-size01 * ($line-height01 / $font-size01) - $font-size01) / 2) + (($font-size02 * ($line-height02 / $font-size02) - $font-size02) / 2))+px;
+}
+
+@function betweenvw($between, $font-size01, $line-height01, $font-size02, $line-height02) {
+  @return ($between - ((($font-size01 * ($line-height01 / $font-size01) - $font-size01) / 2) + (($font-size02 * ($line-height02 / $font-size02) - $font-size02) / 2)))/750*100+vw;
+}
+
+// サイズをremに変換
+@function rem($size) {
+  @return ($size / 10)+rem;
+}
+
+// サイズをemに変換
+@function em($rem, $px) {
+  @return ($px / $rem)+em;
+}
+
+// サイズをvwに変換
+@function vw($size) {
+  @return ($size / 750 * 100)+vw;
+}

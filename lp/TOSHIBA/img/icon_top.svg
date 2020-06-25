@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="84" height="84" viewBox="0 0 84 84">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: none;
+      }
+
+      .cls-1 {
+        stroke: #000;
+      }
+
+      .cls-2 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="to_top" data-name="to top" transform="translate(-1691 -8323)">
+    <g id="楕円形_17" data-name="楕円形 17" class="cls-1" transform="translate(1691 8407) rotate(-90)">
+      <circle class="cls-2" cx="42" cy="42" r="42"/>
+      <circle class="cls-3" cx="42" cy="42" r="41.5"/>
+    </g>
+    <path id="多角形_3" data-name="多角形 3" d="M17,0,34,24H0Z" transform="translate(1716 8350)"/>
+  </g>
+</svg>

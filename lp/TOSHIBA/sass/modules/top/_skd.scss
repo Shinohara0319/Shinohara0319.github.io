@@ -1,0 +1,151 @@
+.skd {
+
+  &__container {
+    @include container;
+    padding-bottom: 200px;
+
+    @include m {
+      padding-bottom: vw(200);
+    }
+  }
+
+  &__title-en {
+    padding-top: 200px;
+    text-align: center;
+
+    @include m {
+      padding-top: vw(200);
+    }
+
+    img {
+      width: 251px;
+      height: 92px;
+
+      @include m {
+        width: vw(251);
+        height: vw(92);
+      }
+    }
+  }
+
+  &__title-jp {
+    @include title-jp;
+    color: $key;
+    margin-top: 11px;
+
+    @include m {
+      margin-top: vw(22);
+    }
+  }
+
+  &__contents {
+    margin-top: 200px;
+
+    @include m {
+      margin-top: vw(150);
+    }
+  }
+
+  &__contents-item {
+    display: flex;
+    margin-top: 100px;
+    position: relative;
+
+    @include m {
+      flex-direction: column;
+      margin-top: vw(160);
+    }
+
+    &--return {
+      flex-flow: row-reverse;
+    }
+  }
+
+  &__contents-item-time {
+    position: absolute;
+    z-index: 100;
+    top: -23px;
+    left: 30px;
+
+    @include m {
+      top: vw(-46);
+      left: vw(38);
+    }
+
+    &--return {
+      text-align: right;
+      left: auto;
+      right: 30px;
+
+      @include m {
+        left: vw(38);
+        right: auto;
+      }
+    }
+
+    img {
+      width: 144px;
+      height: 44px;
+
+      @include m {
+        width: vw(237);
+        height: vw(73);
+      }
+    }
+  }
+
+  &__contents-item-textarea {
+    width: 50%;
+    background: #eeebe7;
+    padding-top: 57px;
+
+    @include m {
+      width: 100%;
+      min-height: vw(450);
+      padding-top: vw(95);
+    }
+
+    &--non-sentence {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 0 !important;
+    }
+  }
+
+  &__contents-item-cc {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: $key;
+
+    @include m {
+      font-size: vw(30);
+    }
+  }
+
+  &__contents-item-text {
+    line-height: lh(16, 36);
+    letter-spacing: .1em;
+    margin-top: space(39, 16, 36);
+    padding: 0 50px;
+
+    @include m {
+      line-height: 2;
+      margin-top: spacevw(60, 16, 36);
+    }
+  }
+
+  &__contents-item-pic {
+    width: 50%;
+
+    @include m {
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+      vertical-align: bottom;
+    }
+  }
+}
