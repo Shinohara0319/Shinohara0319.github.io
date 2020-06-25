@@ -1,0 +1,112 @@
+.cta {
+  background: #f2ede2;
+
+  &__container {
+    @include container;
+    text-align: center;
+    padding-bottom: 100px;
+
+    @include m {
+      padding-bottom: vw(100);
+    }
+  }
+
+  &__title {
+    padding-top: 110px;
+
+    @include m {
+      padding-top: vw(100);
+    }
+
+    img {
+      width: 387px;
+      height: 94px;
+
+      @include m {
+        width: vw(387);
+        height: vw(94);
+      }
+    }
+  }
+
+  &__text {
+    margin-top: 35px;
+
+    @include m {
+      line-height: 2;
+      margin-top: spacevw(27, 24, 48);
+    }
+
+    span {
+      color: $key;
+    }
+  }
+
+  &__button-list {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+
+    @include m {
+      margin-top: spacevw(60, 24, 48);
+    }
+  }
+
+  &__button-tel {
+    margin-right: 28px;
+
+    @include m {
+      display: none;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 460px;
+      height: 98px;
+      background: #fff;
+      pointer-events: none;
+    }
+
+    img {
+      width: 337px;
+      height: 55px;
+    }
+  }
+
+  &__button-entry {
+
+    a {
+      @include cta_button;
+      width: 460px;
+      height: 98px;
+      background: $key;
+      color: #fff;
+
+      @include m {
+        max-width: auto;
+        width: vw(430);
+        height: vw(98);
+      }
+
+      &::before {
+        @include cta_button_cover;
+      }
+
+      &::after {
+        @include cta_button-arrow;
+        background-image: url('../img/icon_arrow_typeA_w.svg');
+        right: 45px;
+
+        @include m {
+          right: vw(30);
+        }
+      }
+
+      &:hover {
+        @include cta_button_hover;
+      }
+    }
+  }
+}

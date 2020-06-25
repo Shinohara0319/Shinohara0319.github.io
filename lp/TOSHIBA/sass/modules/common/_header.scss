@@ -1,0 +1,250 @@
+.header {
+  position: fixed;
+  z-index: 500;
+  top: 0;
+  right: 0;
+  width: 100%;
+
+  @include m {
+    background: #fff;
+  }
+
+  &__items {
+    height: vw(60);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: none;
+
+    @include m {
+      display: block;
+      width: vw(150);
+      padding-left: vw(30);
+    }
+  }
+
+  &__tel {
+    display: none;
+
+    @include m {
+      display: block;
+      font-size: vw(24);
+      letter-spacing: .3em;
+      color: #0071B6;
+      text-decoration: underline;
+      margin-right: vw(77);
+    }
+  }
+
+  &__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    img {
+      width: 60px;
+      height: 60px;
+
+      @include m {
+        width: vw(60);
+        height: vw(60);
+      }
+    }
+  }
+
+  &__contents {
+    display: none;
+    position: absolute;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+
+    >div {
+      display: flex;
+      height: 100%;
+    }
+  }
+
+  &__contents-bg {
+    background: url('../img/header_bg.jpg') no-repeat center /cover;
+    width: 43.4%;
+    height: 100%;
+
+    @include m {
+      display: none;
+    }
+  }
+
+  &__contents-text {
+    padding: 132px 0 140px 140px;
+
+    @include m {
+      width: 100%;
+      padding: vw(43) vw(25) vw(30);
+    }
+  }
+
+  &__contents-title {
+
+    img {
+      width: 97px;
+      height: 38px;
+
+      @include m {
+        width: vw(157);
+        height: vw(60);
+      }
+    }
+
+  }
+
+  &__contents-navi {
+    width: 566px;
+    display: flex;
+    justify-content: space-between;
+
+    @include m {
+      width: 100%;
+      display: block;
+      margin-top: vw(30);
+      position: relative;
+      overflow-y: hidden;
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        z-index: 300;
+        transform: translateY(-80%);
+        transition: all 1s;
+      }
+
+      &.is-shown {
+
+        &::before {
+          transform: translateY(100%);
+        }
+      }
+    }
+  }
+
+  &__contents-navi-list {
+    flex: 1;
+    margin-top: 70px;
+
+    @include m {
+      margin-top: 0;
+    }
+  }
+
+  &__contents-navi-item {
+    display: table;
+    margin-top: 39px;
+    position: relative;
+
+    @include m {
+      display: block;
+      margin-top: vw(20);
+    }
+
+    a {
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 3px;
+
+      @include m {
+        background: #F1EEEA;
+        letter-spacing: .1em;
+        width: 100%;
+        height: vw(100);
+        display: flex;
+        align-items: center;
+        padding-left: vw(32);
+      }
+
+      &::after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        left: -100%;
+        bottom: 0;
+        background: $key;
+        transition: all .8s;
+
+        @include m {
+          width: vw(10);
+          height: vw(20);
+          top: 50%;
+          transform: translateY(-50%);
+          right: vw(30);
+          left: auto;
+          background: url('../img/header_icon_arrow.svg') no-repeat center / contain;
+        }
+      }
+    }
+
+    &:hover {
+      color: $key;
+
+      a::after {
+        left: 100%;
+      }
+    }
+  }
+
+  &__contents-button {
+    margin-top: 45px;
+
+    @include m {
+      margin-top: vw(20);
+    }
+
+    a {
+      @include cta_button;
+      display: inline-block;
+      padding: 25px 70px;
+      color: #fff;
+      background: $key;
+
+      @include m {
+        width: 100%;
+        height: vw(100);
+        justify-content: flex-start;
+        padding: 0;
+        padding-left: vw(32);
+      }
+
+      &::before {
+        @include cta_button_cover;
+      }
+
+      &::after {
+        @include cta_button_arrow;
+        background-image: url('../img/icon_arrow_typeA_w.svg');
+        right: 22px;
+
+        @include m {
+          right: vw(30);
+        }
+      }
+
+      &:hover {
+        @include cta_button_hover;
+      }
+    }
+  }
+}

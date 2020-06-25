@@ -1,0 +1,18 @@
+.scroll {
+  text-align: center;
+  margin-top: 100px;
+
+  @include m {
+    margin-top: vw(200);
+  }
+
+  img {
+    width: 9px;
+    height: 120px;
+
+    @include m {
+      width: vw(19);
+      height: vw(200);
+    }
+  }
+}

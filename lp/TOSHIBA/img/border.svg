@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="76" height="1" viewBox="0 0 76 1">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #e61e1e;
+      }
+    </style>
+  </defs>
+  <line id="線_32" data-name="線 32" class="cls-1" x2="76" transform="translate(0 0.5)"/>
+</svg>
