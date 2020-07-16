@@ -101,6 +101,17 @@ $(function () {
     $(".slider_sp").slick("slickPlay");
   });
 
+  //GlobalMenu表示・非表示切り替え
+  $(function () {
+    const global = {
+      display: "block",
+    };
+    $(".header__items>.jump-menu").on("click", () => {
+      // $(".active>ul").hide();
+      $(".header__items>ul").toggle();
+    });
+  });
+
   //表示・非表示の切り替え
   $(function () {
     const tab01_active = {
