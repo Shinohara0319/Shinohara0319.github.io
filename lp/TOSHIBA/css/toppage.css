@@ -849,6 +849,84 @@ section > div > img {
   height: 60px;
 }
 
+.gfooter {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  line-height: 1.3;
+  border-top: 1px solid #999;
+}
+
+.gfooter__container {
+  padding: 0;
+  margin: 0 auto;
+}
+
+.gfooter__list-utilityF {
+  margin-top: 4px;
+  margin-bottom: 10px;
+  float: left;
+  font-size: 77%;
+  font-family: "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic",
+    "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", sans-serif;
+  text-align: left;
+  letter-spacing: 0;
+  line-height: 2.5em;
+}
+
+.gfooter__list-utilityF li:first-child {
+  margin-left: 0;
+}
+
+.gfooter__list-utilityF li {
+  display: inline;
+  margin-left: 10px;
+}
+
+.gfooter__list-utilityF li a {
+  color: #60c;
+  text-decoration: underline;
+}
+
+.gfooter__pc-hide {
+  display: none !important;
+}
+
+.gfooter__logo {
+  display: none;
+}
+
+.gfooter__logo a {
+  color: #60c;
+  text-decoration: underline;
+}
+
+.gfooter__logo a img {
+  max-width: 100%;
+  height: auto;
+}
+
+.gfooter__block-copyright {
+  width: auto;
+  margin-top: 8px;
+  float: right;
+  text-align: right;
+}
+
+.gfooter__copyright {
+  text-align: right;
+}
+
+.gfooter__copyright a {
+  color: #60c;
+  text-decoration: underline;
+}
+
+.gfooter__copyright a img {
+  max-width: 100%;
+  height: auto;
+}
+
 @media (max-width: 768px) {
   body {
     overflow-x: hidden;
@@ -1581,6 +1659,96 @@ section > div > img {
     bottom: 2vw;
     width: 3vw;
     height: 3vw;
+  }
+
+  .gfooter {
+    margin: 25px auto 0;
+    border-top: none;
+    padding-bottom: 45px;
+    background-color: #f5f5f5;
+  }
+
+  .gfooter__container {
+    padding: 0 15px;
+  }
+
+  .gfooter__list-utilityF {
+    margin: 30px 0;
+    float: left;
+    font-size: 77%;
+    font-family: "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic",
+      "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", sans-serif;
+    text-align: left;
+    letter-spacing: 0;
+    line-height: 1.3;
+    overflow: hidden;
+  }
+
+  .gfooter__list-utilityF li:first-child {
+    width: 100%;
+    margin-bottom: 15px;
+    margin-left: 0;
+  }
+
+  .gfooter__list-utilityF li:nth-child(2) {
+    width: 33%;
+  }
+
+  .gfooter__list-utilityF li:nth-child(3) {
+    width: 36%;
+  }
+
+  .gfooter__list-utilityF li:nth-child(4) {
+    width: 30%;
+    display: block !important;
+  }
+
+  .gfooter__list-utilityF li {
+    margin: 0;
+    padding: 0 5px;
+    float: left;
+    text-align: center;
+  }
+
+  .gfooter__pc-hide {
+    display: none !important;
+  }
+
+  .gfooter__logo {
+    margin: 30px 0;
+    display: block;
+    text-align: center;
+  }
+
+  .gfooter__block-copyright {
+    width: auto;
+    margin-top: 8px;
+    float: right;
+    text-align: right;
+  }
+
+  .gfooter__copyright {
+    text-align: right;
+  }
+
+  .gfooter__copyright a {
+    color: #60c;
+    text-decoration: underline;
+  }
+
+  .gfooter__block-copyright {
+    width: 100%;
+    float: none;
+    text-align: center;
+  }
+
+  .gfooter__copyright a img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .gfooter__copyright {
+    text-align: center;
   }
 }
 
