@@ -101,7 +101,15 @@ $(function () {
     $(".slider_sp").slick("slickPlay");
   });
 
-  //表示・非表示の切り替え
+  //GlobalMenu表示・非表示切り替え
+  $(function () {
+    $(".header__items>.jump-menu").on("click", () => {
+      // $(".active>ul").hide();
+      $(".header__items>ul").toggle();
+    });
+  });
+
+  //メニューの表示・非表示の切り替え
   $(function () {
     const tab01_active = {
       boxShadow: "-2px -2px 5px 0px rgba(0,0,0,0.4)",
