@@ -103,9 +103,15 @@ $(function () {
 
   //GlobalMenu表示・非表示切り替え
   $(function () {
-    $(".header__items>.jump-menu").on("click", () => {
-      // $(".active>ul").hide();
+    $(".header__items>.jump-menu").on("click", function () {
       $(".header__items>ul").toggle();
+    });
+  });
+
+  //closeボタン押した時にGlobalMenu非表示
+  $(function () {
+    $(".cls_btn").on("click", function () {
+      $(".header__items>ul").hide();
     });
   });
 
@@ -138,7 +144,7 @@ $(function () {
     $(".detail__list-box02").hide();
 
     //使った分だけお支払いプランのタブをクリックした時
-    $(".detail__list-tab01, .plan__link01").on("click", () => {
+    $(".detail__list-tab01, .plan__link01").on("click", function () {
       $(".detail__list-box02").hide();
       $(".detail__list-box01").css(listShadow).show();
 
@@ -147,7 +153,8 @@ $(function () {
     });
 
     //毎月お得な定額プランのタブをクリックした時
-    $(".detail__list-tab02, .plan__link02").on("click", () => {
+
+    $(".detail__list-tab02, .plan__link02").on("click", function () {
       $(".detail__list-box01").hide();
       $(".detail__list-box02").css(listShadow).show();
 
