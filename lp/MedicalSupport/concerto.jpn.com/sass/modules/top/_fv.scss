@@ -1,0 +1,153 @@
+.fv {
+  @include m {
+    padding-top: vw(60);
+  }
+
+  &__bg {
+    display: none;
+
+    @include m {
+      display: block;
+      opacity: 0;
+      animation: fadeIn .8s 2000ms forwards;
+    }
+  }
+
+  &__container {
+    background: url('../img/fv_bg@2x.jpg') no-repeat top center / cover;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 61px;
+    opacity: 0;
+    animation: fadeIn .8s 2000ms forwards;
+    position: relative;
+
+    @include l {
+      background-position: center;
+    }
+
+    @include m {
+      background: $key;
+      position: relative;
+      top: -3px;
+      padding-bottom: vw(100);
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    top: 14px;
+    left: 28px;
+
+    @include m {
+      display: none;
+    }
+  }
+
+  &__textarea {
+    opacity: 0;
+    animation: fadeIn .8s 2500ms forwards;
+  }
+
+  &__title-en {
+    padding-top: 70px;
+
+    @include m {
+      padding-top: vw(100);
+    }
+
+    img {
+      width: 137px;
+      height: 56px;
+
+      @include m {
+        width: vw(226);
+        height: vw(100);
+      }
+    }
+  }
+
+  &__title-jp {
+    font-size: 12px;
+    letter-spacing: .3em;
+    font-weight: bold;
+    margin-top: 18px;
+
+    @include m {
+      font-size: vw(24);
+      margin-top: vw(38);
+    }
+  }
+
+  &__cc-en {
+    font-size: 35px;
+    letter-spacing: .3em;
+    line-height: lh(35, 70);
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 67px;
+
+    @include m {
+      font-size: vw(50);
+      margin-top: vw(100);
+    }
+  }
+
+  &__cc-jp {
+    font-size: 25px;
+    letter-spacing: .2em;
+    margin-top: 70px;
+
+    @include m {
+      font-size: vw(30);
+      margin-top: spacevw(100, 50, 100);
+    }
+  }
+
+  &__button {
+    margin-top: 60px;
+
+    @include m {
+      margin-top: vw(100);
+    }
+
+    a {
+      @include cta_button;
+      width: 430px;
+      height: 98px;
+      color: $key;
+      background: #fff;
+      margin: auto;
+
+      @include m {
+        width: vw(430);
+        height: vw(98);
+      }
+
+      &::before {
+        @include cta_button_cover;
+        z-index: 100;
+      }
+
+      &::after {
+        @include cta_button_arrow;
+        width: 10px;
+        height: 20px;
+        background-image: url('../img/icon_arrow_typeA.svg');
+        right: 46px;
+
+        @include m {
+          width: vw(10);
+          height: vw(20);
+          right: vw(40);
+        }
+      }
+
+      &:hover {
+        @include cta_button_hover;
+      }
+    }
+  }
+}

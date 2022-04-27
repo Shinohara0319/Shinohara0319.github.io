@@ -1,0 +1,28 @@
+$xl: 1500px;
+$l: 1200px;
+$m: 768px;
+$s: 559px;
+
+@mixin xl {
+  @media (max-width: ($xl)) {
+    @content;
+  }
+}
+
+@mixin l {
+  @media (max-width: ($l)) {
+    @content;
+  }
+}
+
+@mixin m {
+  @media (max-width: ($m)) {
+    @content;
+  }
+}
+
+@mixin s {
+  @media (max-width: ($s)) {
+    @content;
+  }
+}

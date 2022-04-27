@@ -1,0 +1,95 @@
+.data {
+  background: $key;
+
+  &__container {
+    @include container;
+    padding-bottom: 200px;
+
+    @include m {
+      padding-bottom: vw(200);
+    }
+  }
+
+  &__title-en {
+    padding-top: 200px;
+    text-align: center;
+
+    @include m {
+      padding-top: vw(200);
+    }
+
+    img {
+      width: 168px;
+      height: 80px;
+
+      @include m {
+        width: vw(168);
+        height: vw(80);
+      }
+    }
+  }
+
+  &__title-jp {
+    @include title-jp;
+    color: #fff;
+    margin-top: 24px;
+
+    @include m {
+      margin-top: vw(37);
+    }
+  }
+
+  &__contents {
+    width: 100%;
+    margin-top: 100px;
+
+    @include m {
+      margin-top: vw(100);
+    }
+  }
+
+  &__pic {
+    text-align: center;
+    position: relative;
+    z-index: 100;
+
+    img {
+      vertical-align: bottom;
+    }
+  }
+
+  &__textarea {
+    background: #fff;
+    padding-top: space(450, 30, 60);
+    margin-top: -350px;
+
+    @include m {
+      padding-top: spacevw(100, 30, 60);
+      margin-top: 0;
+    }
+  }
+
+  &__cc {
+    font-size: 30px;
+    line-height: lh(30, 60);
+    font-weight: bold;
+    color: $key;
+    text-align: center;
+
+    @include m {
+      font-size: vw(40);
+    }
+  }
+
+  &__text {
+    line-height: lh(16, 32);
+    margin-top: between(60, 16, 32, 30, 60);
+    padding: 0 150px;
+
+    @include m {
+      margin-top: betweenvw(60, 16, 32, 30, 60);
+      padding: 0 vw(75);
+    }
+  }
+
+}
