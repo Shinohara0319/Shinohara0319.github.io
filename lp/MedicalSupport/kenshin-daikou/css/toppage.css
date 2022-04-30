@@ -9,18 +9,3 @@
 @import url("top/point.css");
 @import url("top/estimate.css");
 @import url("top/logo.css");
-
-@media (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-    font-size: 3.2vw;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic",
-      "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
-    line-height: 1;
-    letter-spacing: 0.2em;
-    color: #1a1a1a;
-    background: #fff;
-    min-width: 320px;
-    margin: auto;
-  }
-}

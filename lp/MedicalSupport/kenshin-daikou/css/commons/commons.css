@@ -113,7 +113,6 @@ body {
   letter-spacing: 1px;
   color: #000;
   background: #fff;
-  /* max-width: 1320px; */
   margin: 0 auto;
 }
 
@@ -143,4 +142,19 @@ section {
   position: relative;
   display: inline-block;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+    font-size: 3.2vw;
+    font-family: Noto Sans, Gotham, "游ゴシック体", YuGothic, "游ゴシック",
+      "Yu Gothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    line-height: 1;
+    letter-spacing: 0.2em;
+    color: #1a1a1a;
+    background: #fff;
+    min-width: 320px;
+    margin: auto;
+  }
 }
