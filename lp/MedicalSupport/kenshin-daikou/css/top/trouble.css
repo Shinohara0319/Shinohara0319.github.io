@@ -1,0 +1,99 @@
+
+#trouble {
+  padding: 100px 50px;
+  background-color: #f2fbfa;
+  font-family: Gotham;
+}
+.trouble__category {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Gotham;
+  letter-spacing: 1px;
+  color: #81c9c1;
+}
+#trouble > h2 {
+  text-align: center;
+  font-size: 30px;
+  margin: 50px 0;
+}
+#trouble > h2 > span {
+  color: #00b49f;
+}
+.trouble__content-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.trouble__content-box > div {
+  width: 100%;
+}
+.trouble__image {
+  text-align: center;
+}
+.trouble__question-box {
+  display: flex;
+  margin-top: 45px;
+  padding: 20px 0;
+}
+.trouble__question-box > .trouble__question {
+  display: flex;
+  align-items: center;
+}
+.trouble__question-box > .trouble__question:nth-child(1) {
+  width: 34%;
+}
+.trouble__question-box > .trouble__question:nth-child(3) {
+  width: 33%;
+}
+.trouble__question-box > .trouble__question:nth-child(5) {
+  width: 31%;
+}
+.trouble__question-box > .trouble__border {
+  content: "";
+  width: 1px;
+  height: 80px;
+  border-right: 1px solid #a7dec2;
+  margin: 0 1%;
+}
+.trouble__question-box .trouble__question-number {
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Helvetica;
+  color: #fff;
+  background-color: #00b49f;
+  border-radius: 50%;
+  padding: 7.5px 11.5px;
+  margin-right: 10px;
+}
+.trouble__question-box .trouble__question-text {
+  text-align: left;
+  font-size: 18px;
+  font-family: Noto Sans;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+.trouble__question-box .trouble__question-text .trouble__question-text-bold {
+  font-weight: bold;
+}
+.trouble__down-cursor {
+  max-width: 100px;
+  border-top: 50px solid #00b49f;
+  border-right: 50px solid transparent;
+  border-left: 50px solid transparent;
+  margin: 100px auto;
+}
+.trouble__text {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+#trouble .download__document {
+  display: table;
+  margin: 100px auto;
+}

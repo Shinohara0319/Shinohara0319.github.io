@@ -1,0 +1,9 @@
+#logo {
+  padding: 100px 50px;
+}
+#logo .logo__content-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}

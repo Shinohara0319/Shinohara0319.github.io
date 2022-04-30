@@ -2,12 +2,12 @@
 @import url("commons/header.css");
 @import url("commons/footer.css");
 
-#thanks {
-  padding: 200px 0 305px;
+#download {
+  padding: 100px 0 305px;
   background-color: #fff;
   font-family: Noto Sans;
 }
-.thanks__category {
+.download__category {
   text-align: center;
   font-size: 16px;
   font-weight: bold;
@@ -15,12 +15,29 @@
   letter-spacing: 1px;
   color: #81c9c1;
 }
-#thanks > h2 {
+#download > h2 {
   text-align: center;
   font-size: 25px;
   margin: 20px 0 100px;
 }
-#thanks .return-to-top {
+.download__content-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.download__message {
+  font-size: 16px;
+}
+.download__message p {
+  line-height: 2;
+}
+.download__staff {
+  margin: 30px 0 0;
+}
+#download .return-to-top {
   display: flex;
   align-items: center;
   justify-content: center;

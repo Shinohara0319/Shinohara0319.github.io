@@ -1,0 +1,89 @@
+#realizable {
+  padding: 100px 50px;
+  background-color: #fff;
+  font-family: Gotham;
+}
+.realizable__category {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Gotham;
+  letter-spacing: 1px;
+  color: #81c9c1;
+}
+#realizable > h2 {
+  text-align: center;
+  font-size: 30px;
+  margin: 50px 0 100px;
+}
+#realizable > h2 > span {
+  color: #00b49f;
+}
+.realizable__content-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.realizable__content {
+  display: flex;
+  margin: 100px 0;
+}
+.realizable__content > div {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+.realizable__content-text-box.first .realizable__content-icon {
+  position: relative;
+  right: 10px;
+  bottom: 30px;
+}
+.realizable__content-text-box.second .realizable__content-icon {
+  position: relative;
+  right: 10px;
+  bottom: 20px;
+}
+.realizable__content-text-box.third .realizable__content-icon {
+  position: relative;
+  right: 10px;
+  bottom: 18px;
+}
+.realizable__content-text-box span {
+  color: #00b49f;
+}
+.realizable__content-text-box .realizable__content-text-big {
+  font-size: 35px;
+}
+.realizable__content-text {
+  position: relative;
+}
+.realizable__content-text-box.first .realizable__content-text::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 170px;
+  height: 3px;
+  background-color: #00b49f;
+}
+.realizable__content-text-box.second .realizable__content-text::before {
+  content: "";
+  position: absolute;
+  bottom: 40px;
+  width: 100px;
+  height: 3px;
+  background-color: #00b49f;
+}
+.realizable__content-text-box.third .realizable__content-text::before {
+  content: "";
+  position: absolute;
+  bottom: 40px;
+  width: 195px;
+  height: 3px;
+  background-color: #00b49f;
+}

@@ -1,0 +1,52 @@
+#grid {
+  width: 100%;
+  height: 100px;
+  background-color: #00b49f;
+  font-weight: bold;
+  letter-spacing: 0;
+}
+.grid__label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1400px;
+  height: 100px;
+  padding: 0 50px;
+  margin: 0 auto;
+}
+.grid__monthly_limit {
+  border-radius: 30px;
+  background-color: #fff;
+  width: 200px;
+  height: 50px;
+  margin-right: 30px;
+}
+.grid__monthly_limit_text {
+  text-align: center;
+  font-size: 25px;
+  color: #00b49f;
+  max-height: 50px;
+  padding: 7.5px;
+}
+.grid__monthly_limit_text > span {
+  font-size: 35px;
+}
+.grid__text {
+  font-size: 25px;
+  color: #fff;
+}
+.grid__text > p > span {
+  font-size: 35px;
+}
+.grid__cursor {
+  position: absolute;
+  top: 43%;
+  right: 50px;
+  width: 16px;
+  height: 16px;
+  border-right: 3px solid #fff;
+  border-top: 3px solid #fff;
+  transform: rotate(45deg);
+  border-radius: 20%;
+}
