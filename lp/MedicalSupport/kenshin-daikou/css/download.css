@@ -1,0 +1,265 @@
+/* .js-fade-up,
+.js-fade-order li,
+.js-fade-order > div,
+.js-fade-order > p {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s;
+}
+
+.js-fade-up.is-shown,
+.js-fade-order li.is-shown,
+.js-fade-order > div.is-shown,
+.js-fade-order > p.is-shown {
+  opacity: 1;
+  transform: translate(0);
+}
+
+.js-slide-order li {
+  opacity: 0;
+  position: relative;
+  left: -50px;
+  transition: all 0.8s;
+}
+
+.js-slide-order li.is-shown {
+  opacity: 1;
+} */
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  overflow-x: hidden;
+  font-size: 16px;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic",
+    "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  line-height: 1;
+  letter-spacing: 0.2em;
+  color: #000;
+  background: #fff;
+  /* max-width: 1320px; */
+  margin: 0 auto;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+* {
+  box-sizing: border-box;
+}
+
+.header__items {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vw;
+  max-height: 100px;
+  font-family: Noto Sans;
+}
+.header__left {
+  display: flex;
+}
+.header__right {
+  display: flex;
+}
+.header__right .estimate__link {
+  width: 180px;
+  margin-right: 10px;
+}
+.header__right .download__document {
+  width: 180px;
+  margin-right: 10px;
+}
+.header__text {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0;
+  margin: auto;
+  color: #03a14f;
+}
+
+#download {
+  padding: 100px 0 305px;
+  background-color: #fff;
+  font-family: Noto Sans;
+}
+.download__category {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Gotham;
+  letter-spacing: 1px;
+  color: #81c9c1;
+}
+#download > h2 {
+  text-align: center;
+  font-size: 25px;
+  margin: 20px 0 100px;
+}
+.download__content-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.download__message {
+  font-size: 16px;
+}
+.download__message p {
+  line-height: 2;
+}
+.download__staff {
+  margin: 30px 0 0;
+}
+.download__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0;
+  max-width: 800px;
+  margin: 80px auto 0;
+}
+
+#footer {
+  color: #fff;
+  background-color: #00b49f;
+  font-family: Noto Sans;
+  letter-spacing: 0;
+}
+.footer__content-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  height: 57px;
+  margin: 0 auto;
+}
+#footer .privacy-policy {
+  font-size: 14px;
+  font-weight: normal;
+  text-decoration: none;
+  overflow: hidden;
+  color: #fff;
+  margin-right: 30px;
+}
+#footer .privacy-policy-treatment {
+  font-size: 14px;
+  font-weight: normal;
+  text-decoration: none;
+  overflow: hidden;
+  color: #fff;
+}
+#footer .footer__address {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+    font-size: 3.2vw;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic",
+      "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    line-height: 1;
+    letter-spacing: 0.2em;
+    color: #1a1a1a;
+    background: #fff;
+    min-width: 320px;
+    margin: auto;
+  }
+}
