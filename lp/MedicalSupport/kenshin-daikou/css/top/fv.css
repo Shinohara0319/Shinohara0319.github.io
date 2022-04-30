@@ -21,7 +21,7 @@
 .fv__text-box {
   position: relative;
   text-align: left;
-  font-weight: bold;
+  font-weight: 700;
 }
 .fv__text-box .fv__first-text {
   position: relative;
@@ -58,9 +58,16 @@
   margin: 26px 0 0 -10px;
 }
 #fv .download__document-pc {
-  display: block;
-  width: 330px;
+  display: table;
   margin: 60px 0 0 -15px;
+}
+#fv .download__document-pc::before {
+  content: "";
+  display: block;
+  background: url("../../img/section_fv/download_document.png") center no-repeat;
+  background-size: contain;
+  width: 330px;
+  height: 100px;
 }
 #fv .download__document-sp {
   display: none;
@@ -78,7 +85,7 @@
     width: 100%;
     font-family: Noto Sans;
     letter-spacing: 0;
-    padding: 4.2vw 5vw 170px;
+    padding: 2.2vw 5vw 170px;
   }
   .fv__content-box {
     display: block;
@@ -96,7 +103,7 @@
   .fv__text-box {
     position: relative;
     text-align: left;
-    font-weight: bold;
+    font-weight: 700;
   }
   .fv__text-box .fv__first-text {
     position: relative;
@@ -138,8 +145,17 @@
   }
   #fv .download__document-sp {
     display: block;
-    width: 330px;
+    text-align: center;
     margin: 10px auto 0;
+  }
+  #fv .download__document-sp::before {
+    content: "";
+    display: block;
+    background: url("../../img/section_fv/download_document.png") center
+      no-repeat;
+    background-size: contain;
+    width: 90vw;
+    height: 30vw;
   }
   .fv__research {
     position: absolute;

@@ -58,9 +58,9 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    height: 15.5vw;
+    height: 16vw;
     max-height: initial;
-    padding: 0 5vw;
+    padding: 2vw 5vw;
     font-family: Noto Sans;
   }
   .header__left {

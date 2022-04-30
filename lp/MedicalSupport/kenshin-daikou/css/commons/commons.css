@@ -144,6 +144,10 @@ section {
   width: 100%;
 }
 
+.sp-only {
+  display: none;
+}
+
 @media (max-width: 768px) {
   body {
     overflow-x: hidden;
@@ -156,5 +160,12 @@ section {
     background: #fff;
     min-width: 320px;
     margin: auto;
+  }
+
+  .pc-only {
+    display: none;
+  }
+  .sp-only {
+    display: initial;
   }
 }
