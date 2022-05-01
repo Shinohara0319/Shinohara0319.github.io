@@ -14,7 +14,7 @@
 #point > h2 {
   text-align: center;
   font-size: 30px;
-  margin: 50px 0 190px;
+  margin: 50px 0 100px;
 }
 #point > h2 > span {
   color: #00b49f;
@@ -53,7 +53,7 @@
     font-size: 3.48vw;
     font-weight: 700;
     font-family: Gotham;
-    letter-spacing: 1px;
+    letter-spacing: 0;
     color: #81c9c1;
   }
   #point > h2 {
