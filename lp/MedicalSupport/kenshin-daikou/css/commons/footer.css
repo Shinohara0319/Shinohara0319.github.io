@@ -1,3 +1,6 @@
+.footer {
+  background-color: #00b49f;
+}
 .footer__content-box {
   display: flex;
   align-items: center;
@@ -5,7 +8,6 @@
   max-width: 1200px;
   min-height: 57px;
   color: #fff;
-  background-color: #00b49f;
   font-family: Noto Sans;
   letter-spacing: 0;
   padding: 0 50px;
@@ -38,6 +40,9 @@
 }
 
 @media (max-width: 768px) {
+  .footer {
+    background-color: #00b49f;
+  }
   .footer__content-box {
     display: flex;
     flex-wrap: wrap;
@@ -46,7 +51,6 @@
     max-width: initial;
     min-height: 40px;
     color: #fff;
-    background-color: #00b49f;
     font-family: Noto Sans;
     letter-spacing: 0;
     padding: 7.692vw 12.82vw 3.077vw;
