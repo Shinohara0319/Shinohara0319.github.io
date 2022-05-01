@@ -1,7 +1,7 @@
 #grid {
   width: 100%;
   background-color: #00b49f;
-  font-weight: bold;
+  font-weight: 700;
   letter-spacing: 0;
 }
 .grid__label {
@@ -58,7 +58,7 @@
   #grid {
     width: 100%;
     background-color: #00b49f;
-    font-weight: bold;
+    font-weight: 700;
     letter-spacing: 0;
   }
   .grid__label {

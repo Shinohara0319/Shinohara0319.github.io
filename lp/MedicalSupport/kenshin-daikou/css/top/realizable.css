@@ -6,7 +6,7 @@
 .realizable__category {
   text-align: center;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 700;
   font-family: Gotham;
   letter-spacing: 1px;
   color: #81c9c1;
@@ -36,7 +36,7 @@
   align-items: center;
   justify-content: center;
   font-size: 25px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 1.5;
 }
 .realizable__content-text-box.sp-only {
@@ -95,13 +95,14 @@
   #realizable {
     padding: 50px 20px;
     background-color: #fff;
+    font-family: Noto Sans;
   }
   .realizable__category {
     text-align: center;
     font-size: 3.48vw;
-    font-weight: bold;
+    font-weight: 700;
     font-family: Gotham;
-    letter-spacing: 1px;
+    letter-spacing: 0;
     color: #81c9c1;
   }
   #realizable > h2 {
@@ -137,7 +138,7 @@
     align-items: center;
     justify-content: center;
     font-size: 5.1vw;
-    font-weight: bold;
+    font-weight: 700;
     line-height: 1.5;
   }
   .realizable__content-text-box.pc-only {

@@ -10,12 +10,12 @@
 .thanks__category {
   text-align: center;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 700;
   font-family: Gotham;
   letter-spacing: 1px;
   color: #81c9c1;
 }
-#thanks > h2 {
+#thanks h2 {
   text-align: center;
   font-size: 25px;
   margin: 20px 0 100px;
@@ -27,4 +27,34 @@
   letter-spacing: 0;
   max-width: 800px;
   margin: 80px auto 0;
+}
+
+@media (max-width: 768px) {
+  #thanks {
+    padding: 66.6vw 5.128vw 69.23vw;
+    background-color: #fff;
+    font-family: Noto Sans;
+  }
+  .thanks__category {
+    text-align: center;
+    font-size: 3.59vw;
+    font-weight: 700;
+    font-family: Gotham;
+    letter-spacing: 0;
+    color: #81c9c1;
+  }
+  #thanks h2 {
+    text-align: center;
+    font-size: 5.128vw;
+    letter-spacing: 0;
+    margin: 2.487vw -1.5vw 24.87vw;
+  }
+  #thanks .return-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0;
+    max-width: initial;
+    margin: 0;
+  }
 }

@@ -102,6 +102,7 @@
   #trouble {
     padding: 50px 25px;
     background-color: #f2fbfa;
+    font-family: Noto Sans;
   }
   .trouble__category {
     text-align: center;

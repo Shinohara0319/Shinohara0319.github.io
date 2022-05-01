@@ -86,13 +86,14 @@
   #service {
     padding: 50px 20px;
     background-color: #f5f5f5;
+    font-family: Noto Sans;
   }
   .service__category {
     text-align: center;
     font-size: 3.48vw;
     font-weight: 700;
     font-family: Gotham;
-    letter-spacing: 1px;
+    letter-spacing: 0;
     color: #81c9c1;
   }
   #service > h2 {
