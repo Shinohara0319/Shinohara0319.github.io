@@ -95,7 +95,6 @@
   #realizable {
     padding: 50px 20px;
     background-color: #fff;
-    font-family: Gotham;
   }
   .realizable__category {
     text-align: center;
@@ -109,7 +108,7 @@
     text-align: center;
     font-size: 4.97vw;
     letter-spacing: 0;
-    margin: 10px 0 54px;
+    margin: 2.56vw 0 14vw;
   }
   #realizable > h2 > span {
     color: #00b49f;
