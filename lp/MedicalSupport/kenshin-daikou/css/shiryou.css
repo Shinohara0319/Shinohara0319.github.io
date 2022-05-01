@@ -5,10 +5,6 @@ body {
   background-color: #f2fbfa;
 }
 
-.header__items {
-  justify-content: flex-start;
-}
-
 #shiryou {
   padding: 60px 0 116px;
   font-family: Noto Sans;
@@ -17,7 +13,7 @@ body {
 .shiryou__category {
   text-align: center;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 700;
   font-family: Gotham;
   letter-spacing: 1px;
   color: #81c9c1;
@@ -42,7 +38,7 @@ body {
   position: relative;
   text-align: center;
   max-width: 640px;
-  height: 760px;
+  min-height: 760px;
   border-radius: 30px;
   background-color: #fff;
   padding: 60px 50px 30px;
@@ -56,7 +52,7 @@ form {
 #shiryou .return-to-top {
   text-decoration: underline;
   font-size: 12px;
-  font-weight: normal;
+  font-weight: 400;
   font-family: Noto Sans;
   letter-spacing: 0;
   color: #000;
@@ -71,12 +67,92 @@ form {
   align-items: center;
   justify-content: center;
   max-width: 640px;
-  height: 57px;
+  min-height: 57px;
   margin: 0 auto;
 }
 
 #footer .footer__address {
   font-size: 12px;
-  font-weight: normal;
+  font-weight: 400;
   font-family: Noto Sans;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-color: #f2fbfa;
+  }
+
+  #shiryou {
+    padding: 8.2vw 3.846vw 5.128vw;
+    font-family: Noto Sans;
+    margin: 0 auto;
+  }
+  .shiryou__category {
+    text-align: center;
+    font-size: 3.59vw;
+    font-weight: 700;
+    font-family: Gotham;
+    letter-spacing: 0;
+    color: #81c9c1;
+  }
+  #shiryou h2 {
+    text-align: center;
+    font-size: 5.235vw;
+    margin: 10px 0;
+  }
+  #shiryou .required {
+    text-align: center;
+    font-size: 2.6vw;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0;
+  }
+  #shiryou .required::before {
+    content: "*";
+    color: #00b49f;
+  }
+
+  .form {
+    position: relative;
+    text-align: center;
+    max-width: initial;
+    min-height: initial;
+    border-radius: 30px;
+    background-color: #fff;
+    padding: 32px 15px 20px;
+    margin: 0 auto;
+    box-shadow: 0 0 4px 0 #d9e8e6;
+  }
+  form {
+    height: 500px;
+    /* 暫定的に。 */
+  }
+  #shiryou .return-to-top {
+    text-decoration: underline;
+    font-size: 2.6vw;
+    font-weight: 400;
+    font-family: Noto Sans;
+    letter-spacing: 0;
+    color: #000;
+  }
+
+  #footer {
+    color: #00b49f;
+    letter-spacing: 0;
+    padding: 0 0 2.618vw;
+  }
+  .footer__content-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: initial;
+    min-height: inherit;
+    margin: 0 auto;
+  }
+
+  #footer .footer__address {
+    font-size: 2.6vw;
+    font-weight: 400;
+    font-family: Noto Sans;
+  }
 }

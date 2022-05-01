@@ -26,6 +26,9 @@
 .header__right {
   display: flex;
 }
+.header__right.sp-only {
+  display: none;
+}
 .header__right .download__document {
   width: 180px;
   margin-right: 10px;
@@ -80,6 +83,9 @@
   .header__right {
     display: flex;
     align-items: center;
+  }
+  .header__right.sp-only {
+    display: inherit;
   }
   .header__right .download__document {
     position: relative;
