@@ -1,7 +1,7 @@
 #service {
   padding: 100px 50px;
   background-color: #f5f5f5;
-  font-family: Gotham;
+  font-family: Noto Sans;
 }
 .service__category {
   text-align: center;
@@ -165,7 +165,7 @@
   }
   #service > .download__document {
     display: table;
-    margin: 5px auto 10px;
+    margin: 5vw auto 0;
     text-align: center;
   }
 }
