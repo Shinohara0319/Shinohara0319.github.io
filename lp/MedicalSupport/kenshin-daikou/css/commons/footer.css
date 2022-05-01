@@ -1,16 +1,14 @@
-#footer {
-  color: #fff;
-  background-color: #00b49f;
-  font-family: Noto Sans;
-  letter-spacing: 0;
-  padding: 0 50px;
-}
 .footer__content-box {
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 1200px;
   min-height: 57px;
+  color: #fff;
+  background-color: #00b49f;
+  font-family: Noto Sans;
+  letter-spacing: 0;
+  padding: 0 50px;
   margin: 0 auto;
 }
 .footer__content-box > div {
@@ -40,20 +38,18 @@
 }
 
 @media (max-width: 768px) {
-  #footer {
-    color: #fff;
-    background-color: #00b49f;
-    font-family: Noto Sans;
-    letter-spacing: 0;
-    padding: 7.692vw 12.82vw 3.077vw;
-  }
   .footer__content-box {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     max-width: initial;
-    min-height: 57px;
+    min-height: 40px;
+    color: #fff;
+    background-color: #00b49f;
+    font-family: Noto Sans;
+    letter-spacing: 0;
+    padding: 7.692vw 12.82vw 3.077vw;
     margin: 0 auto;
   }
   .footer__content-box > div {
@@ -82,5 +78,19 @@
     font-size: 2.5vw;
     font-weight: 500;
     margin: 12.82vw 0 0;
+  }
+
+  /* TOP以外の画面 */
+  .footer__content-box.top-only {
+    justify-content: center;
+    padding: 0;
+  }
+  .footer__content-box.top-only .footer__privacy-policy-link-box {
+    display: none;
+  }
+  #footer > .top-only .footer__address {
+    font-size: 2.5vw;
+    font-weight: 500;
+    margin: 0;
   }
 }

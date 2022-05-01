@@ -1,5 +1,6 @@
 @import url("commons/commons.css");
 @import url("commons/header.css");
+@import url("commons/footer.css");
 
 body {
   background-color: #f2fbfa;
@@ -58,16 +59,16 @@ form {
   color: #000;
 }
 
-#footer {
-  color: #00b49f;
-  letter-spacing: 0;
-}
 .footer__content-box {
   display: flex;
   align-items: center;
   justify-content: center;
   max-width: 640px;
   min-height: 57px;
+  color: #00b49f;
+  background-color: #f2fbfa;
+  letter-spacing: 0;
+  padding: 0;
   margin: 0 auto;
 }
 
@@ -75,6 +76,7 @@ form {
   font-size: 12px;
   font-weight: 400;
   font-family: Noto Sans;
+  color: #00b49f;
 }
 
 @media (max-width: 768px) {
@@ -83,7 +85,7 @@ form {
   }
 
   #shiryou {
-    padding: 8.2vw 3.846vw 5.128vw;
+    padding: 8.2vw 3.846vw 0;
     font-family: Noto Sans;
     margin: 0 auto;
   }
@@ -136,23 +138,10 @@ form {
     color: #000;
   }
 
-  #footer {
-    color: #00b49f;
-    letter-spacing: 0;
-    padding: 0 0 2.618vw;
-  }
   .footer__content-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: initial;
-    min-height: inherit;
-    margin: 0 auto;
+    background-color: #f2fbfa;
   }
-
   #footer .footer__address {
-    font-size: 2.6vw;
-    font-weight: 400;
-    font-family: Noto Sans;
+    color: #00b49f;
   }
 }
