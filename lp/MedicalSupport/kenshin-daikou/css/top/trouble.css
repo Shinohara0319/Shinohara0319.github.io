@@ -139,6 +139,7 @@
     margin: 10vw -10px 0 0;
   }
   .trouble__question-box > .trouble__question {
+    position: relative;
     display: flex;
     align-items: center;
     width: 100%;
@@ -155,6 +156,14 @@
   }
   .trouble__question-box > .trouble__question:nth-child(5) {
     width: inherit;
+  }
+  .trouble__border.sp-only {
+    position: absolute;
+    left: -9px;
+    display: block;
+    width: 1px;
+    height: 15.38vw;
+    background-color: #a7dec2;
   }
   .trouble__question-box .trouble__question-number {
     width: 35px;

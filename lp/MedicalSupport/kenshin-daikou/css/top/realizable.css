@@ -39,6 +39,9 @@
   font-weight: bold;
   line-height: 1.5;
 }
+.realizable__content-text-box.sp-only {
+  display: none;
+}
 .realizable__content-text-box.first .realizable__content-icon {
   position: relative;
   right: 10px;
@@ -86,4 +89,124 @@
   width: 195px;
   height: 3px;
   background-color: #00b49f;
+}
+
+@media (max-width: 768px) {
+  #realizable {
+    padding: 50px 20px;
+    background-color: #fff;
+    font-family: Gotham;
+  }
+  .realizable__category {
+    text-align: center;
+    font-size: 3.48vw;
+    font-weight: bold;
+    font-family: Gotham;
+    letter-spacing: 1px;
+    color: #81c9c1;
+  }
+  #realizable > h2 {
+    text-align: center;
+    font-size: 4.97vw;
+    letter-spacing: 0;
+    margin: 10px 0 54px;
+  }
+  #realizable > h2 > span {
+    color: #00b49f;
+  }
+  .realizable__content-box {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    max-width: initial;
+    margin: 0 auto;
+  }
+  .realizable__content {
+    display: block;
+    margin: auto;
+  }
+  .realizable__border.sp-only {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #a7dec2;
+    margin: 40px 0;
+  }
+  .realizable__content > div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5.1vw;
+    font-weight: bold;
+    line-height: 1.5;
+  }
+  .realizable__content-text-box.pc-only {
+    display: none;
+  }
+  .realizable__content-text-box.sp-only {
+    display: flex;
+    margin: 0 0 30px;
+  }
+
+  .realizable__content-text-box.first .realizable__content-icon {
+    position: relative;
+    right: 1vw;
+    bottom: 5.8vw;
+    width: 6.26vw;
+  }
+  .realizable__content-text-box.second .realizable__content-icon {
+    position: relative;
+    right: 1vw;
+    bottom: 4.5vw;
+    width: 6.26vw;
+  }
+  .realizable__content-text-box.third .realizable__content-icon {
+    position: relative;
+    right: 1vw;
+    bottom: 4.4vw;
+    width: 6.26vw;
+  }
+  .realizable__content-text-box span {
+    color: #00b49f;
+  }
+  .realizable__content-text-box .realizable__content-text-big {
+    font-size: 6.4vw;
+  }
+  .realizable__content-text {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0;
+  }
+  .realizable__content-text-box.first .realizable__content-text::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30.7vw;
+    height: 3px;
+    background-color: #00b49f;
+  }
+  .realizable__content-text-box.second .realizable__content-text::before {
+    content: "";
+    position: absolute;
+    top: 9vw;
+    bottom: auto;
+    left: 0;
+    width: 18vw;
+    height: 3px;
+    background-color: #00b49f;
+  }
+  .realizable__content-text-box.third .realizable__content-text::before {
+    content: "";
+    position: absolute;
+    top: 9vw;
+    bottom: auto;
+    left: 0;
+    width: 35vw;
+    height: 3px;
+    background-color: #00b49f;
+  }
 }
