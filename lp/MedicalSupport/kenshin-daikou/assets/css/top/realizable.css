@@ -92,7 +92,7 @@
   }
   .realizable__category {
     text-align: center;
-    font-size: 3.48vw;
+    font-size: 14px;
     font-weight: 700;
     font-family: Gotham;
     letter-spacing: 0;
@@ -100,7 +100,7 @@
   }
   #realizable > h2 {
     text-align: center;
-    font-size: 4.97vw;
+    font-size: 20px;
     letter-spacing: 0;
     margin: 2.56vw 0 14vw;
   }
@@ -125,7 +125,7 @@
   }
   .realizable__content > div {
     width: 100%;
-    font-size: 5.1vw;
+    font-size: 20px;
     font-weight: 700;
     line-height: 1.5;
   }
@@ -161,7 +161,7 @@
     color: #00b49f;
   }
   .realizable__content-text-box .realizable__content-text-big {
-    font-size: 6.4vw;
+    font-size: 25px;
   }
   .realizable__content-text {
     position: relative;

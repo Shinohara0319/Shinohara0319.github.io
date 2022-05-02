@@ -185,7 +185,7 @@ section {
 @media (max-width: 768px) {
   body {
     overflow-x: hidden;
-    font-size: 3.2vw;
+    font-size: 14px;
     font-family: Noto Sans, Gotham, "游ゴシック体", YuGothic, "游ゴシック",
       "Yu Gothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
     line-height: 1;

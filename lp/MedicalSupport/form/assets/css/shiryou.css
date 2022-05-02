@@ -11,7 +11,7 @@ body {
   font-family: Noto Sans;
   margin: 0 auto;
 }
-.shiryou__category {
+#shiryou .shiryou__category {
   text-align: center;
   font-size: 16px;
   font-weight: 700;
@@ -27,10 +27,17 @@ body {
 #shiryou .required {
   text-align: center;
   font-size: 12px;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 1px;
 }
 #shiryou .required::before {
+  content: "*";
+  color: #00b49f;
+}
+.shiryou__form-box > p {
+  margin: 0 0 100px;
+}
+.shiryou__form-box > p::before {
   content: "*";
   color: #00b49f;
 }
@@ -46,14 +53,10 @@ body {
   margin: 0 auto;
   box-shadow: 0 0 4px 0 #d9e8e6;
 }
-form {
-  height: 500px;
-  /* 暫定的に。 */
-}
 #shiryou .return-to-top {
   text-decoration: underline;
   font-size: 12px;
-  font-weight: 400;
+  font-weight: 500;
   font-family: Noto Sans;
   letter-spacing: 0;
   color: #000;
@@ -73,7 +76,7 @@ form {
 
 #footer .footer__address {
   font-size: 12px;
-  font-weight: 400;
+  font-weight: 500;
   font-family: Noto Sans;
   color: #00b49f;
 }
@@ -88,9 +91,9 @@ form {
     font-family: Noto Sans;
     margin: 0 auto;
   }
-  .shiryou__category {
+  #shiryou .shiryou__category {
     text-align: center;
-    font-size: 3.59vw;
+    font-size: 14px;
     font-weight: 700;
     font-family: Gotham;
     letter-spacing: 0;
@@ -98,13 +101,13 @@ form {
   }
   #shiryou h2 {
     text-align: center;
-    font-size: 5.235vw;
+    font-size: 20px;
     margin: 10px 0;
   }
   #shiryou .required {
     text-align: center;
-    font-size: 2.6vw;
-    font-weight: 400;
+    font-size: 10px;
+    font-weight: 500;
     line-height: 1.4;
     letter-spacing: 0;
   }
@@ -124,14 +127,10 @@ form {
     margin: 0 auto;
     box-shadow: 0 0 4px 0 #d9e8e6;
   }
-  form {
-    height: 500px;
-    /* 暫定的に。 */
-  }
   #shiryou .return-to-top {
     text-decoration: underline;
-    font-size: 2.6vw;
-    font-weight: 400;
+    font-size: 10px;
+    font-weight: 500;
     font-family: Noto Sans;
     letter-spacing: 0;
     color: #000;

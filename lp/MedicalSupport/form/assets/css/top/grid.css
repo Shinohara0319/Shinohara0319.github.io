@@ -36,7 +36,7 @@
 .grid__text span {
   font-size: 35px;
 }
-.grid__text-big {
+.grid__text .big {
   font-weight: 900;
 }
 .grid__cursor {
@@ -74,25 +74,25 @@
   }
   .grid__monthly_limit_text {
     text-align: center;
-    font-size: 4.61vw;
+    font-size: 18px;
     color: #00b49f;
     max-height: initial;
     padding: 9px;
   }
   .grid__monthly_limit_text > span {
-    font-size: 6.4vw;
+    font-size: 25px;
   }
   .grid__text {
-    font-size: 4.3vw;
+    font-size: 18px;
     font-weight: 700;
     letter-spacing: -1px;
     color: #fff;
   }
-  .grid__text span {
-    font-size: 4.8vw;
+  .grid__text .big {
+    font-size: 20px;
   }
-  .grid__text-big {
-    font-weight: 900;
+  .grid__text span {
+    font-size: 18px;
   }
   .grid__cursor {
     position: absolute;

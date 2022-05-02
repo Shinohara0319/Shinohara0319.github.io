@@ -48,15 +48,15 @@
   }
   .download__category {
     text-align: center;
-    font-size: 3.59vw;
+    font-size: 14px;
     font-weight: 700;
     font-family: Gotham;
     letter-spacing: 0;
     color: #81c9c1;
   }
-  #download h2 {
+  #download > h2 {
     text-align: center;
-    font-size: 5.128vw;
+    font-size: 20px;
     letter-spacing: 0;
     margin: 10px 0 30px;
   }
@@ -66,7 +66,7 @@
     margin: 0 auto;
   }
   .download__message {
-    font-size: 3.59vw;
+    font-size: 14px;
   }
   .download__message p {
     line-height: 2;

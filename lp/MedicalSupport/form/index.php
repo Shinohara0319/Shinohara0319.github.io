@@ -106,7 +106,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
           </div>
           <div class="grid__text">
             <p>
-              今だけ！<span class="grid__text-big">初期費用半額</span><span>キャンペーン</span>
+              今だけ！<span class="big">初期費用半額</span><span>キャンペーン</span>
             </p>
           </div>
           <div class="grid__cursor"></div>
@@ -439,6 +439,8 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
                     </div>
                   </div>
 
+                  <div class="margin"></div>
+
                   <div id="privacy_check_box" class="privacy_check_box">
                     <p class="privacy_check_in">
                       <input type="checkbox" id="agree1" name="agree1" class="privacy_checkbox" <?php if ($agree1) {
@@ -464,7 +466,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
                 </div>
                 <div class="submit_box">
                   <div class="btn_in">
-                    <input id="confirm" name="confirm" class="submit_btn" type="submit" value="資料ダウンロードする">
+                    <input id="confirm" name="confirm" class="submit_btn" type="submit" value="送信する">
                   </div>
                 </div>
               </form>

@@ -1,21 +1,14 @@
 #form {
   text-align: initial;
 }
-.estimate__form-box .contact_box {
-  margin-bottom: 90px;
-}
-.estimate__form-box .contact_box .margin {
-  width: 100%;
-  height: 50px;
-}
-.estimate__form-box .contact_box .list {
+.shiryou__form-box .contact_box .list {
   margin-bottom: 20px;
   align-items: flex-start;
 }
 .is_between {
   justify-content: space-between;
 }
-.estimate__form-box .contact_box .list label {
+.shiryou__form-box .contact_box .list label {
   font-weight: 600;
   font-size: 18px;
   line-height: 1.5;
@@ -26,53 +19,50 @@
   height: 40px;
   margin-bottom: 10px;
 }
-.estimate__form-box .contact_box .list label .mand {
-  color: #00b49f;
+.shiryou__form-box .contact_box .list label .mand {
+  color: #319edc;
   text-align: center;
   font-size: 16px;
   line-height: 1.5;
   font-weight: bold;
 }
-.estimate__form-box .contact_box .list .input_list {
+.shiryou__form-box .contact_box .list .input_list {
   width: 64%;
   align-items: center;
 }
-.estimate__form-box .contact_box .list .input_list .form_input_yoursei {
+.shiryou__form-box .contact_box .list .input_list .form_input_yoursei {
   width: calc(50% - 10px);
 }
-.estimate__form-box .contact_box .list .input_list .form_input_yourmei {
+.shiryou__form-box .contact_box .list .input_list .form_input_yourmei {
   width: calc(50% - 10px);
 }
-.estimate__form-box .contact_box .list .input_list input {
+.shiryou__form-box .contact_box .list .input_list input {
   width: 100%;
-  font-size: 16px;
+  font-size: 18px;
   border-radius: 5px;
-  border: 1px solid #f0f0f0;
-  background-color: #fff;
-  padding: 13px 20px;
-  height: 50px;
+  border: 1px solid #bfbfbf;
+  background-color: #fafafa;
+  padding: 11.5px;
+  height: 40px;
 }
-.estimate__form-box .contact_box .list .input_list input::placeholder {
-  color: #c8c8c8;
-}
-.estimate__form-box .validation_space {
+.shiryou__form-box .validation_space {
   padding-top: 5px;
   font-size: 14px;
   color: #dc3232;
   line-height: 1.7;
   height: 25px;
 }
-.estimate__form-box .privacy_check_box {
+.shiryou__form-box .privacy_check_box {
   width: 100%;
 }
-.estimate__form-box .privacy_check_box .privacy_check_in {
+.shiryou__form-box .privacy_check_box .privacy_check_in {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 }
-.estimate__form-box .privacy_check_box .privacy_check_in .privacy_checkbox {
+.shiryou__form-box .privacy_check_box .privacy_check_in .privacy_checkbox {
   display: none;
 }
-.estimate__form-box
+.shiryou__form-box
   .privacy_check_box
   .privacy_check_in
   .privacy_checkbox
@@ -82,15 +72,15 @@
   margin-bottom: 0;
   height: 30px;
 }
-.estimate__form-box .privacy_check_box .privacy_check_in label {
+.shiryou__form-box .privacy_check_box .privacy_check_in label {
   width: inherit;
   font-weight: 500;
 }
-.estimate__form-box .privacy_check_box .privacy_txt {
+.shiryou__form-box .privacy_check_box .privacy_txt {
   font-size: 16px;
   line-height: 1.9;
 }
-.estimate__form-box
+.shiryou__form-box
   .privacy_check_box
   .privacy_check_in
   .privacy_checkbox
@@ -106,7 +96,7 @@
   border-radius: 5px;
   background: #fff;
 }
-.estimate__form-box
+.shiryou__form-box
   .privacy_check_box
   .privacy_check_in
   .privacy_checkbox:checked
@@ -122,7 +112,7 @@
   border-bottom: 3px solid #333;
   transform: rotate(-45deg) translate(-50%, -50%);
 }
-.estimate__form-box .privacy_check_box .privacy_txt .txt_link {
+.shiryou__form-box .privacy_check_box .privacy_txt .txt_link {
   text-decoration: none;
   display: inline;
   color: #00b49f;
@@ -130,16 +120,16 @@
   font-weight: 700;
   line-height: 1.9;
 }
-.estimate__form-box .submit_box {
+.shiryou__form-box .submit_box {
   text-align: center;
 }
-.estimate__form-box .submit_box .btn_in {
-  width: 300px;
+.shiryou__form-box .submit_box .btn_in {
+  width: 350px;
   margin: auto;
   position: relative;
   cursor: pointer;
 }
-.estimate__form-box .submit_box .btn_in .submit_btn {
+.shiryou__form-box .submit_box .btn_in .submit_btn {
   width: 100%;
   text-align: center;
   cursor: pointer;
@@ -147,15 +137,14 @@
   border: none;
   color: #fff;
 }
-.estimate__form-box .submit_box .btn_in input {
+.shiryou__form-box .submit_box .btn_in input {
   font-family: serif;
-  width: 300px;
+  width: 350px;
   text-align: center;
-  background-color: #00b49f;
+  background-color: #ffa700;
   line-height: 1.5;
   padding: 23.5px;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 16px;
   font-family: "Noto Sans", sans-serif;
 }
 
@@ -165,40 +154,38 @@
     width: 90%;
     margin: auto;
   }
-  .estimate__form-box .contact_box {
+  .shiryou__form-box .contact_box {
     margin-bottom: 40px;
+    padding: 30px 15px;
   }
-  .estimate__form-box .contact_box .margin {
-    height: 35px;
+  .shiryou__form-box .contact_box .list {
+    margin-bottom: 20px;
   }
-  .estimate__form-box .contact_box .list {
-    margin-bottom: 10px;
-  }
-  .estimate__form-box .contact_box .list label {
+  .shiryou__form-box .contact_box .list label {
     width: 100%;
     font-size: 16px;
-    margin-bottom: 0;
+    margin-bottom: 15px;
   }
-  .estimate__form-box .contact_box .list .input_list {
+  .shiryou__form-box .contact_box .list .input_list {
     width: 100%;
     font-size: 16px;
   }
-  .estimate__form-box .contact_box .list .input_list input {
+  .shiryou__form-box .contact_box .list .input_list input {
     width: 100%;
     height: inherit;
   }
-  .estimate__form-box .validation_space {
+  .shiryou__form-box .validation_space {
     margin-bottom: 10px;
     padding-top: 5px;
   }
-  .estimate__form-box .privacy_check_box .privacy_txt .txt_link {
-    font-size: 14px;
+  .shiryou__form-box .privacy_check_box .privacy_txt .txt_link {
+    font-size: 16px;
     line-height: 1.9;
   }
-  .estimate__form-box .submit_box .btn_in {
+  .shiryou__form-box .submit_box .btn_in {
     width: 80%;
   }
-  .estimate__form-box .submit_box .btn_in input {
+  .shiryou__form-box .submit_box .btn_in input {
     width: 100%;
     max-width: 100%;
     padding: 15px;

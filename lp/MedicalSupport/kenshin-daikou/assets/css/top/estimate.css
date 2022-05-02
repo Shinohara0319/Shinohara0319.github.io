@@ -49,7 +49,7 @@
   }
   .estimate__category {
     text-align: center;
-    font-size: 3.48vw;
+    font-size: 14px;
     font-weight: 700;
     font-family: Gotham;
     letter-spacing: 0;
@@ -57,7 +57,7 @@
   }
   #estimate > h2 {
     text-align: center;
-    font-size: 4.97vw;
+    font-size: 20px;
     letter-spacing: 0;
     margin: 2.56vw 0 12.8vw;
   }
@@ -68,7 +68,7 @@
   }
   .estimate__description {
     text-align: center;
-    font-size: 3.59vw;
+    font-size: 14px;
     line-height: 1.57;
   }
   .estimate__description a {

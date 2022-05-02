@@ -44,7 +44,7 @@
     margin: 0 auto;
   }
   .footer__privacy-policy-link-box {
-    font-size: 3.59vw;
+    font-size: 14px;
     font-weight: 500;
     line-height: 2;
   }
@@ -60,7 +60,7 @@
     color: #fff;
   }
   #footer .footer__address {
-    font-size: 2.5vw;
+    font-size: 10px;
     font-weight: 500;
     margin: 12.82vw 0 0;
   }
@@ -74,7 +74,7 @@
     display: none;
   }
   #footer > .top-only .footer__address {
-    font-size: 2.5vw;
+    font-size: 10px;
     font-weight: 500;
     margin: 0;
   }

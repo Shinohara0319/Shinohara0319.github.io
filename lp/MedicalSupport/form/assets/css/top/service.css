@@ -33,6 +33,7 @@
   color: #00b49f;
   letter-spacing: 0;
   text-align: center;
+  font-family: Gotham;
 }
 .service__number-text {
   font-size: 16px;
@@ -83,7 +84,7 @@
   }
   .service__category {
     text-align: center;
-    font-size: 3.48vw;
+    font-size: 14px;
     font-weight: 700;
     font-family: Gotham;
     letter-spacing: 0;
@@ -91,7 +92,7 @@
   }
   #service > h2 {
     text-align: center;
-    font-size: 4.97vw;
+    font-size: 20px;
     letter-spacing: 0;
     margin: 2.56vw 0 14vw;
   }
@@ -109,15 +110,12 @@
   }
   .service__number-box {
     width: 100%;
-    color: #00b49f;
-    letter-spacing: 0;
-    text-align: center;
   }
   .service__number-text {
-    font-size: 3.59vw;
+    font-size: 14px;
   }
   .service__number {
-    font-size: 12.82vw;
+    font-size: 50px;
   }
   .service__image {
     width: 100%;
@@ -129,7 +127,7 @@
     font-family: Noto Sans;
   }
   .service__text-box h3 {
-    font-size: 4.102vw;
+    font-size: 16px;
     font-weight: 700;
     color: #00b49f;
     letter-spacing: 0;
@@ -139,7 +137,7 @@
     line-height: 1.5;
   }
   .service__text-box p {
-    font-size: 3.57vw;
+    font-size: 14px;
     font-weight: 500;
     letter-spacing: 0;
     line-height: 1.6;

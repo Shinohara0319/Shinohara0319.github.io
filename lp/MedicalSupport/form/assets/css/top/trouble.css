@@ -92,13 +92,13 @@
 
 @media (max-width: 768px) {
   #trouble {
-    padding: 50px 25px;
+    padding: 50px 20px;
     background-color: #f2fbfa;
     font-family: Noto Sans;
   }
   .trouble__category {
     text-align: center;
-    font-size: 3.48vw;
+    font-size: 14px;
     font-weight: 700;
     font-family: Gotham;
     letter-spacing: 0;
@@ -106,7 +106,7 @@
   }
   #trouble > h2 {
     text-align: center;
-    font-size: 4.97vw;
+    font-size: 20px;
     letter-spacing: 0;
     margin: 10px 0 24px;
   }
@@ -169,7 +169,7 @@
   }
   .trouble__question-box .trouble__question-text {
     text-align: left;
-    font-size: 4.1vw;
+    font-size: 16px;
     font-family: Noto Sans;
     line-height: 1.4;
   }
@@ -187,8 +187,9 @@
   }
   .trouble__text {
     text-align: center;
-    font-size: 4.62vw;
+    font-size: 18px;
     font-weight: 700;
+    line-height: 1.5;
   }
   #trouble .download__document {
     display: table;

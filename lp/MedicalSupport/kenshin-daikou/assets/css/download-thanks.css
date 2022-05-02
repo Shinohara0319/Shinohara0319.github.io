@@ -34,7 +34,7 @@
   }
   .thanks__category {
     text-align: center;
-    font-size: 3.59vw;
+    font-size: 14px;
     font-weight: 700;
     font-family: Gotham;
     letter-spacing: 0;
@@ -42,7 +42,7 @@
   }
   #thanks h2 {
     text-align: center;
-    font-size: 5.128vw;
+    font-size: 14px;
     letter-spacing: 0;
     margin: 2.487vw -1.5vw 24.87vw;
   }
