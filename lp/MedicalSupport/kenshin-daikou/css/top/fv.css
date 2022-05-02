@@ -6,9 +6,6 @@
   padding: 100px 50px 170px;
 }
 .fv__content-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -89,8 +86,6 @@
   }
   .fv__content-box {
     display: block;
-    align-items: center;
-    justify-content: center;
     max-width: initial;
     margin: 0 auto;
   }

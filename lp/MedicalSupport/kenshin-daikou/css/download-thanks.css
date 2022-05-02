@@ -21,9 +21,6 @@
   margin: 20px 0 100px;
 }
 #thanks .return-to-top {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   letter-spacing: 0;
   max-width: 800px;
   margin: 80px auto 0;
@@ -50,9 +47,6 @@
     margin: 2.487vw -1.5vw 24.87vw;
   }
   #thanks .return-to-top {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     letter-spacing: 0;
     max-width: initial;
     margin: 0;

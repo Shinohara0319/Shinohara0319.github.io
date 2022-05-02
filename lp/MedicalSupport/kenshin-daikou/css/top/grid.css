@@ -6,9 +6,6 @@
 }
 .grid__label {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   max-width: 1400px;
   height: 100px;
   padding: 0 50px;
@@ -63,10 +60,6 @@
   }
   .grid__label {
     position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
     max-width: initial;
     height: 41.4vw;
     padding: 6.6vw 10.6vw;

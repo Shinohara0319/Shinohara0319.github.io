@@ -17,9 +17,6 @@
   margin: 50px 0 70px;
 }
 .service__content-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   max-width: 1200px;
   min-height: 250px;
   background-color: #fff;
@@ -27,8 +24,6 @@
   border-radius: 20px;
 }
 .service__content {
-  display: flex;
-  align-items: center;
   width: 100%;
   height: 100%;
   padding: 0 40px;
@@ -61,8 +56,6 @@
   margin: 0 0 30px;
 }
 .service__text-box h3 > span {
-  display: flex;
-  flex-wrap: wrap;
   line-height: 1.5;
 }
 .service__text-box p {
@@ -103,9 +96,6 @@
     margin: 2.56vw 0 14vw;
   }
   .service__content-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     max-width: initial;
     min-height: auto;
     background-color: #fff;
@@ -113,9 +103,6 @@
     border-radius: 20px;
   }
   .service__content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
     width: 100%;
     height: 100%;
     padding: 5.641vw 3.846vw 8.2vw;
@@ -149,8 +136,6 @@
     margin: 0 0 5.1vw;
   }
   .service__text-box h3 > span {
-    display: flex;
-    flex-wrap: wrap;
     line-height: 1.5;
   }
   .service__text-box p {

@@ -18,9 +18,6 @@
   margin: 50px 0 70px;
 }
 .estimate__content-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   max-width: 920px;
   margin: 0 auto;
 }
@@ -65,9 +62,6 @@
     margin: 2.56vw 0 12.8vw;
   }
   .estimate__content-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     max-width: initial;
     padding: 0 15px;
     margin: 0 auto;

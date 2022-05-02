@@ -148,6 +148,35 @@ section {
   display: none;
 }
 
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.block {
+  display: block;
+}
+
+.is-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.is-between {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sp-is-start {
+  justify-content: flex-start;
+  align-items: center;
+}
+
 @media (max-width: 768px) {
   body {
     overflow-x: hidden;
