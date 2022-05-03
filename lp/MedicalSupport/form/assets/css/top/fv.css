@@ -1,7 +1,7 @@
 #fv {
   display: inline-block;
   width: 100%;
-  font-family: Noto Sans;
+  font-family: "Noto Sans";
   letter-spacing: 0;
   padding: 100px 50px 170px;
 }
@@ -80,7 +80,7 @@
   #fv {
     display: inline-block;
     width: 100%;
-    font-family: Noto Sans;
+    font-family: "Noto Sans";
     letter-spacing: 0;
     padding: 2.2vw 5vw 170px;
   }

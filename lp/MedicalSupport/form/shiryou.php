@@ -27,7 +27,6 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
     <link rel="stylesheet" href="./assets/css/shiryou.css" />
     <link rel="stylesheet" href="./assets/css/shiryou-form.css" />
-    <link rel="stylesheet" href="./assets/css/estimate-form.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script type="text/javascript" src="./assets/js/validation.js"></script>
 </head>
@@ -51,11 +50,11 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
             <section id="shiryou">
                 <div class="form">
                     <div class="form__header">
-                        <p class="shiryou__category">DOWNLOAD</p>
+                        <p class="category">DOWNLOAD</p>
                         <h2>資料ダウンロードはこちらから</h2>
                     </div>
                     <div class="shiryou__form-box">
-                        <p class="required">入力必須事項</p>
+                        <p>入力必須事項</p>
                         <form method="post" name="form" id="form" action="confirm.php">
                             <div class="contact_box">
 
@@ -118,11 +117,13 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
                                     </div>
                                 </div>
 
+                                <div class="margin"></div>
+
                                 <div id="privacy_check_box" class="privacy_check_box">
                                     <p class="privacy_check_in">
-                                        <input type="checkbox" id="agree1" name="agree1" class="privacy_checkbox" <?php if ($agree1) {
-                                                                                                                        echo "checked";
-                                                                                                                    } ?>>
+                                        <input type="checkbox" id="agree1" name="agree1" class="privacy_checkbox required" <?php if ($agree1) {
+                                                                                                                                echo "checked";
+                                                                                                                            } ?>>
                                         <label for="agree1" class="privacy_txt">
                                             <a class="txt_link" href="https://www.meiservice.com/privacy-policy/">個人情報保護方針</a>に同意する
                                         </label>
@@ -131,9 +132,9 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
                                 </div>
                                 <div id="privacy_check_box" class="privacy_check_box">
                                     <p class="privacy_check_in">
-                                        <input type="checkbox" id="agree2" name="agree2" class="privacy_checkbox" <?php if ($agree2) {
-                                                                                                                        echo "checked";
-                                                                                                                    } ?>>
+                                        <input type="checkbox" id="agree2" name="agree2" class="privacy_checkbox required" <?php if ($agree2) {
+                                                                                                                                echo "checked";
+                                                                                                                            } ?>>
                                         <label for="agree2" class="privacy_txt">
                                             <a class="txt_link" href="https://www.meiservice.com/privacy-policy/treatment/">個人情報の保護に関する弊社の取り扱い</a>に同意する
                                         </label>
@@ -148,7 +149,8 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
                             </div>
                         </form>
                     </div>
-                    <a href="./index.php" target="_top" class="return-to-top">トップに戻る</a>
+                    <br class="pc-only" />
+                    <a href="./index.php" target="_top" class="return-to-top pc-only">トップに戻る</a>
                 </div>
             </section>
         </main>

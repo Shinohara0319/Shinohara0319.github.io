@@ -114,7 +114,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
       </section>
 
       <section id="trouble">
-        <p class="trouble__category">TROUBLE</p>
+        <p class="category">TROUBLE</p>
         <h2>こんな<span>お悩み</span>や<span>課題</span>はありませんか？</h2>
         <div class="trouble__content-box flex is-center">
           <div>
@@ -187,7 +187,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
       </section>
 
       <section id="realizable">
-        <p class="realizable__category">REALIZABLE</p>
+        <p class="category">REALIZABLE</p>
         <h2>メディカルサポートで<span>実現できること</span></h2>
         <div class="realizable__content-box flex is-center">
           <div>
@@ -263,7 +263,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
       </section>
 
       <section id="service">
-        <p class="service__category">SERVICE</p>
+        <p class="category">SERVICE</p>
         <h2>サービス紹介</h2>
         <div class="service__content-box flex is-center">
           <div class="service__content flex is-center">
@@ -334,7 +334,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
       </section>
 
       <section id="point">
-        <p class="point__category">POINT</p>
+        <p class="category">POINT</p>
         <h2>メディカルサポートの<span>ここがすごい！</span></h2>
         <div class="point__content-box flex is-center">
           <div>
@@ -362,7 +362,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
       </section>
 
       <section id="estimate">
-        <p class="estimate__category">ESTIMATE</p>
+        <p class="category">ESTIMATE</p>
         <h2>お見積もりはこちら</h2>
         <div class="estimate__content-box flex is-center">
           <div>
@@ -443,9 +443,9 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
 
                   <div id="privacy_check_box" class="privacy_check_box">
                     <p class="privacy_check_in">
-                      <input type="checkbox" id="agree1" name="agree1" class="privacy_checkbox" <?php if ($agree1) {
-                                                                                                  echo "checked";
-                                                                                                } ?>>
+                      <input type="checkbox" id="agree1" name="agree1" class="privacy_checkbox required" <?php if ($agree1) {
+                                                                                                            echo "checked";
+                                                                                                          } ?>>
                       <label for="agree1" class="privacy_txt">
                         <a class="txt_link" href="https://www.meiservice.com/privacy-policy/">個人情報保護方針</a>に同意する
                       </label>
@@ -454,9 +454,9 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
                   </div>
                   <div id="privacy_check_box" class="privacy_check_box">
                     <p class="privacy_check_in">
-                      <input type="checkbox" id="agree2" name="agree2" class="privacy_checkbox" <?php if ($agree2) {
-                                                                                                  echo "checked";
-                                                                                                } ?>>
+                      <input type="checkbox" id="agree2" name="agree2" class="privacy_checkbox required" <?php if ($agree2) {
+                                                                                                            echo "checked";
+                                                                                                          } ?>>
                       <label for="agree2" class="privacy_txt">
                         <a class="txt_link" href="https://www.meiservice.com/privacy-policy/treatment/">個人情報の保護に関する弊社の取り扱い</a>に同意する
                       </label>

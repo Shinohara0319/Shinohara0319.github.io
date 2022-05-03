@@ -6,7 +6,7 @@
 }
 .estimate__form-box .contact_box .margin {
   width: 100%;
-  height: 50px;
+  height: 30px;
 }
 .estimate__form-box .contact_box .list {
   margin-bottom: 20px;
@@ -114,8 +114,8 @@
   content: "";
   display: block;
   position: absolute;
-  top: calc(50% - 4px);
-  left: 5%;
+  top: calc(50% - 8px);
+  left: 14px;
   width: 11px;
   height: 7px;
   border-left: 3px solid #333;
@@ -169,7 +169,7 @@
     margin-bottom: 40px;
   }
   .estimate__form-box .contact_box .margin {
-    height: 35px;
+    height: 25px;
   }
   .estimate__form-box .contact_box .list {
     margin-bottom: 10px;
@@ -190,6 +190,42 @@
   .estimate__form-box .validation_space {
     margin-bottom: 10px;
     padding-top: 5px;
+  }
+  .estimate__form-box .privacy_check_box .privacy_txt {
+    font-size: 14px;
+    line-height: 1.9;
+  }
+  .estimate__form-box
+    .privacy_check_box
+    .privacy_check_in
+    .privacy_checkbox
+    + .privacy_txt::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 6px;
+    left: 10px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #c8c8c8;
+    border-radius: 5px;
+    background: #fff;
+  }
+  .estimate__form-box
+    .privacy_check_box
+    .privacy_check_in
+    .privacy_checkbox:checked
+    + .privacy_txt::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: calc(50% - 8px);
+    left: 14px;
+    width: 11px;
+    height: 7px;
+    border-left: 3px solid #333;
+    border-bottom: 3px solid #333;
+    transform: rotate(-45deg) translate(-50%, -50%);
   }
   .estimate__form-box .privacy_check_box .privacy_txt .txt_link {
     font-size: 14px;

@@ -5,19 +5,12 @@
 #thanks {
   padding: 200px 0 305px;
   background-color: #fff;
-  font-family: Noto Sans;
-}
-.thanks__category {
-  text-align: center;
-  font-size: 16px;
-  font-weight: 700;
-  font-family: Gotham;
-  letter-spacing: 1px;
-  color: #81c9c1;
+  font-family: "Noto Sans";
 }
 #thanks h2 {
   text-align: center;
   font-size: 25px;
+  letter-spacing: 0;
   margin: 20px 0 100px;
 }
 #thanks .return-to-top {
@@ -30,20 +23,10 @@
   #thanks {
     padding: 66.6vw 5.128vw 69.23vw;
     background-color: #fff;
-    font-family: Noto Sans;
-  }
-  .thanks__category {
-    text-align: center;
-    font-size: 14px;
-    font-weight: 700;
-    font-family: Gotham;
-    letter-spacing: 0;
-    color: #81c9c1;
+    font-family: "Noto Sans";
   }
   #thanks h2 {
-    text-align: center;
     font-size: 14px;
-    letter-spacing: 0;
     margin: 2.487vw -1.5vw 24.87vw;
   }
   #thanks .return-to-top {

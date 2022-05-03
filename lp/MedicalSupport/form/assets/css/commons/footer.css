@@ -5,7 +5,7 @@
   max-width: 1200px;
   min-height: 57px;
   color: #fff;
-  font-family: Noto Sans;
+  font-family: "Noto Sans";
   letter-spacing: 0;
   padding: 0 50px;
   margin: 0 auto;
@@ -38,7 +38,7 @@
     max-width: initial;
     min-height: 40px;
     color: #fff;
-    font-family: Noto Sans;
+    font-family: "Noto Sans";
     letter-spacing: 0;
     padding: 7.692vw 12.82vw 3.077vw;
     margin: 0 auto;
