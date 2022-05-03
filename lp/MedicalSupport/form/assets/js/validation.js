@@ -2,8 +2,8 @@ $(function () {
   $(window).on("load", function () {
     //エラー表示エリアを非表示にする
     $(".is-valid-company").css("display", "none");
+    $(".is-valid-staffNumber").css("display", "none");
     $(".is-valid-busyo").css("display", "none");
-    $(".is-valid-name").css("display", "none");
     $(".is-valid-name").css("display", "none");
     $(".is-valid-email").css("display", "none");
     $(".is-valid-tel").css("display", "none");
@@ -15,10 +15,14 @@ $(function () {
   $("#your-company").blur(function () {
     checkCompany();
   });
-  //部署入力チェック
+  //部署入力チェック;
   // $("#your-busyo").blur(function () {
-  // 	checkBusyo();
+  //   checkBusyo();
   // });
+  //従業員数入力チェック
+  $("#your-staffNumber").blur(function () {
+    checkStaffNumber();
+  });
   //名前チェック
   $("#your-sei").blur(function () {
     checkSei();
@@ -98,10 +102,14 @@ $(function () {
       err_cnt += 1;
       err_point = "your-mei";
     }
-    // if(checBusyo()){
-    // 	err_cnt += 1;
-    // 	err_point = "your-busyo";
+    // if (checkBusyo()) {
+    //   err_cnt += 1;
+    //   err_point = "your-busyo";
     // }
+    if (checkStaffNumber()) {
+      err_cnt += 1;
+      err_point = "your-staffNumber";
+    }
     if (checkCompany()) {
       err_cnt += 1;
       err_point = "your-company";
@@ -118,7 +126,7 @@ $(function () {
     } else {
       //XSS対策
       $("#your-company").val(escapeHTML($("#your-company").val()));
-      // $('#your-busyo').val(escapeHTML($('#your-busyo').val()));
+      // $("#your-busyo").val(escapeHTML($("#your-busyo").val()));
       return true;
     }
     return false;
@@ -136,16 +144,27 @@ $(function () {
     }
   }
   // function checkBusyo() {
-  // 	if ($('#your-busyo').val() == "") {
-  // 		$('.is-valid-busyo').text("部署名が入力されていません。");
-  // 		$('.is-valid-busyo').css('display', 'block');
-  // 		return 1;
-  // 	} else {
-  // 		$('.is-valid-busyo').text("");
-  // 		$('.is-valid-busyo').css('display', 'none');
-  // 		return 0;
-  // 	}
+  //   if ($('#your-busyo').val() == "") {
+  //           $('.is-valid-busyo').text("部署名が入力されていません。");
+  //           $('.is-valid-busyo').css('display', 'block');
+  //           return 1;
+  //   } else {
+  //           $('.is-valid-busyo').text("");
+  //           $('.is-valid-busyo').css('display', 'none');
+  //           return 0;
+  //   }
   // }
+  function checkStaffNumber() {
+    if ($("#your-staffNumber").val() == "") {
+      $(".is-valid-staffNumber").text("従業員数が入力されていません。");
+      $(".is-valid-staffNumber").css("display", "block");
+      return 1;
+    } else {
+      $(".is-valid-staffNumber").text("");
+      $(".is-valid-staffNumber").css("display", "none");
+      return 0;
+    }
+  }
   function checkSei() {
     if ($("#your-sei").val() == "") {
       $(".is-valid-name").text("姓が入力されていません。");

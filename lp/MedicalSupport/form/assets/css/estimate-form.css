@@ -9,6 +9,7 @@
   height: 30px;
 }
 .estimate__form-box .contact_box .list {
+  position: relative;
   margin-bottom: 20px;
   align-items: flex-start;
 }
@@ -19,7 +20,7 @@
   font-weight: 600;
   font-size: 18px;
   line-height: 1.5;
-  width: 33%;
+  width: 20%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -34,8 +35,29 @@
   font-weight: bold;
 }
 .estimate__form-box .contact_box .list .input_list {
-  width: 64%;
+  width: 79%;
   align-items: center;
+}
+.estimate__form-box .contact_box .list .input_list .form_input_yourstaffNumber {
+  width: calc(50% - 10px);
+}
+.estimate__form-box .contact_box .list .input_list .select-box-cursor {
+  position: absolute;
+  top: 38%;
+  left: 56%;
+  width: 12px;
+  height: 12px;
+  border-top: 3px solid #00b49f;
+  border-right: 3px solid #00b49f;
+  border-radius: 3px;
+  transform: rotate(135deg);
+}
+.estimate__form-box .contact_box .list .input_list select {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.estimate__form-box .contact_box .list .input_list select::-ms-expand {
+  display: none;
 }
 .estimate__form-box .contact_box .list .input_list .form_input_yoursei {
   width: calc(50% - 10px);
@@ -43,7 +65,14 @@
 .estimate__form-box .contact_box .list .input_list .form_input_yourmei {
   width: calc(50% - 10px);
 }
-.estimate__form-box .contact_box .list .input_list input {
+.estimate__form-box .contact_box .list .input_list .form_input_tel {
+  width: calc(50% - 10px);
+}
+.estimate__form-box .contact_box .list .input_list .form_input_email {
+  width: calc(50% - 10px);
+}
+.estimate__form-box .contact_box .list .input_list input,
+select {
   width: 100%;
   font-size: 16px;
   border-radius: 5px;
@@ -186,6 +215,24 @@
   .estimate__form-box .contact_box .list .input_list input {
     width: 100%;
     height: inherit;
+  }
+  .estimate__form-box
+    .contact_box
+    .list
+    .input_list
+    .form_input_yourstaffNumber {
+    width: 100%;
+  }
+  .estimate__form-box .contact_box .list .input_list .select-box-cursor {
+    position: absolute;
+    top: 65%;
+    left: 93%;
+  }
+  .estimate__form-box .contact_box .list .input_list .form_input_tel {
+    width: 100%;
+  }
+  .estimate__form-box .contact_box .list .input_list .form_input_email {
+    width: 100%;
   }
   .estimate__form-box .validation_space {
     margin-bottom: 10px;

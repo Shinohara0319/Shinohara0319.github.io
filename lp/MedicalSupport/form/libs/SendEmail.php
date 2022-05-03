@@ -6,15 +6,16 @@ class SendEmail
 	{
 	}
 
-	public function sendContactToAdmin($data) {
+	public function sendContactToAdmin($data)
+	{
 		try {
-			$from = 'yoshinori.shinohara@cirqua.co.jp';
+			$from = 'kudrya.key@gmail.com';
 
 			mb_language("JA");
 			mb_internal_encoding("UTF-8");
 
 			$header  = 'From:' . mb_encode_mimeheader("フォーム送信テスト") . '<' . $from . '>' . "\n";
-			$subject = 'お問い合わせがありました ' ;
+			$subject = 'お問い合わせがありました ';
 			$body = $this->buildBodyContact('admin', $data);
 
 			mb_send_mail($data['your-email'], $subject, $body, $header);
@@ -27,9 +28,10 @@ class SendEmail
 		return false;
 	}
 
-	public function sendContactToUser($data) {
+	public function sendContactToUser($data)
+	{
 		try {
-			$from = 'yoshinori.shinohara@cirqua.co.jp';
+			$from = 'kudrya.key@gmail.com';
 
 			mb_language("JA");
 			mb_internal_encoding("UTF-8");
@@ -48,7 +50,8 @@ class SendEmail
 		return false;
 	}
 
-	private function buildBodyContact($type, $data) {
+	private function buildBodyContact($type, $data)
+	{
 		if ($type == 'admin') {
 			$body = $this->load_body_contact_admin();
 		} else {
@@ -56,6 +59,7 @@ class SendEmail
 		}
 
 		$body = str_replace('%busyo%', $data['your-busyo'], $body);
+		$body = str_replace('%staffNumber%', $data['your-staffNumber'], $body);
 		$body = str_replace('%sei%', $data['your-sei'], $body);
 		$body = str_replace('%mei%', $data['your-mei'], $body);
 		$body = str_replace('%email%', $data['your-email'], $body);
@@ -66,12 +70,13 @@ class SendEmail
 	}
 
 	/**
-	*
-	* @return string
-	*/
-	private function load_body_contact_admin() {
+	 *
+	 * @return string
+	 */
+	private function load_body_contact_admin()
+	{
 		return
-<<< EOM
+			<<< EOM
 
 
 お客様からお問い合わせがありました。
@@ -82,6 +87,7 @@ class SendEmail
 
 【会社名】		%company%
 【部署名】		%busyo%
+【従業員数】		%staffNumber%
 【担当名】		%sei% %mei%
 【メールアドレス】	%email%
 【電話番号】		%tel%
@@ -92,9 +98,10 @@ class SendEmail
 EOM;
 	}
 
-	private function load_body_contact_user() {
+	private function load_body_contact_user()
+	{
 		return
-<<< EOM
+			<<< EOM
 
 %sei%　%mei%様
 
@@ -109,6 +116,7 @@ EOM;
 
 【会社名】		%company%
 【部署名】		%busyo%
+【従業員数】		%staffNumber%
 【担当名】		%sei% %mei%
 【メールアドレス】	%email%
 【電話番号】		%kana%

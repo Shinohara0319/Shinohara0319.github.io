@@ -4,6 +4,7 @@ $_SESSION['contact_flg'] = 1;
 
 //確認から戻っていたら変数にSessionから値を代入
 $company       = isset($_SESSION['your-company']) ? $_SESSION['your-company'] : NULL;
+$staffNumber       = isset($_SESSION['your-staffNumber']) ? $_SESSION['your-staffNumber'] : NULL;
 $busyo       = isset($_SESSION['your-busyo']) ? $_SESSION['your-busyo'] : NULL;
 $sei       = isset($_SESSION['your-sei']) ? $_SESSION['your-sei'] : NULL;
 $mei       = isset($_SESSION['your-mei']) ? $_SESSION['your-mei'] : NULL;
@@ -49,6 +50,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
   <link rel="stylesheet" href="./assets/css/estimate-form.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script type="text/javascript" src="./assets/js/validation.js"></script>
+  <script type="text/javascript" src="./assets/js/onchange.js"></script>
 </head>
 
 <body id="body">
@@ -393,12 +395,26 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
                   </div>
 
                   <div class="list flex is_between">
-                    <label for="your-busyo">部署名</label>
+                    <label for="your-staffNumber">従業員数
+                      <p class="mand"><span>*</span></p>
+                    </label>
                     <div class="input_list">
                       <div class="flex is_between">
-                        <input type="text" id="your-busyo" name="your-busyo" placeholder="人事部　部長" class="form_input_yourbusyo input-your_busyo required" value="<?php echo $busyo; ?>">
+                        <div class="select-box-cursor"></div>
+                        <select onchange="changeItem(this)" style="color: #c8c8c8;" name="your-staffNumber" id="your-staffNumber" class="form_input_yourstaffNumber input-your_staffNumber required" autocapitalize="street-staffNumber required" placeholder="" value="<?php echo $staffNumber; ?>" required>
+                          <option value="" hidden>---</option>
+                          <option value="1" <?php if ($staffNumber === "10人以内") {
+                                              echo "selected";
+                                            } ?>>10人以内</option>
+                          <option value="2" <?php if ($staffNumber === "10人以上50人以下") {
+                                              echo "selected";
+                                            } ?>>10人以上50人以下</option>
+                          <option value="3" <?php if ($staffNumber === "50人以上") {
+                                              echo "selected";
+                                            } ?>>50人以上</option>
+                        </select>
                       </div>
-                      <div class="validation_space is-valid-busyo"></div>
+                      <div class="validation_space is-valid-staffNumber"></div>
                     </div>
                   </div>
 
