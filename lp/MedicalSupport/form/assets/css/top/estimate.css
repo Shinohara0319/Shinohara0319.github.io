@@ -41,8 +41,6 @@
 @media (max-width: 768px) {
   #estimate {
     padding: 50px 20px;
-    background-color: #f2fbfa;
-    font-family: "Noto Sans";
   }
   #estimate > h2 {
     font-size: 20px;
@@ -51,25 +49,13 @@
   .estimate__content-box {
     max-width: initial;
     padding: 0;
-    margin: 0 auto;
   }
   .estimate__description {
-    text-align: center;
     font-size: 14px;
     padding: 0 15px;
     line-height: 1.57;
   }
-  .estimate__description a {
-    text-decoration: none;
-    font-weight: 700;
-    color: #00b49f;
-  }
-  .estimate__form-box {
-    text-align: center;
-    font-size: 12px;
-    margin: 30px auto;
-  }
   .estimate__form-box > p {
-    margin-bottom: 50px;
+    margin: 0 0 50px;
   }
 }

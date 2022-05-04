@@ -80,20 +80,14 @@
 @media (max-width: 768px) {
   #realizable {
     padding: 50px 20px;
-    background-color: #fff;
-    font-family: "Noto Sans";
   }
   #realizable > h2 {
     font-size: 20px;
     margin: 2.56vw 0 14vw;
   }
-  #realizable > h2 > span {
-    color: #00b49f;
-  }
   .realizable__content-box {
     display: block;
     max-width: initial;
-    margin: 0 auto;
   }
   .realizable__content {
     display: block;
@@ -109,8 +103,6 @@
   .realizable__content > div {
     width: 100%;
     font-size: 20px;
-    font-weight: 700;
-    line-height: 1.5;
   }
   .realizable__content-text-box.pc-only {
     display: none;
@@ -140,14 +132,10 @@
     bottom: 4.4vw;
     width: 6.26vw;
   }
-  .realizable__content-text-box span {
-    color: #00b49f;
-  }
   .realizable__content-text-box .realizable__content-text-big {
     font-size: 25px;
   }
   .realizable__content-text {
-    position: relative;
     letter-spacing: 0;
   }
   .realizable__content-text-box.first .realizable__content-text::before {
@@ -156,8 +144,6 @@
     bottom: 0;
     left: 0;
     width: 30.7vw;
-    height: 3px;
-    background-color: #00b49f;
   }
   .realizable__content-text-box.second .realizable__content-text::before {
     content: "";
@@ -167,7 +153,6 @@
     left: 0;
     width: 18vw;
     height: 3px;
-    background-color: #00b49f;
   }
   .realizable__content-text-box.third .realizable__content-text::before {
     content: "";
@@ -177,6 +162,5 @@
     left: 0;
     width: 35vw;
     height: 3px;
-    background-color: #00b49f;
   }
 }

@@ -160,11 +160,4 @@ body {
     font-weight: 700;
     /* color: #00b49f; */
   }
-
-  .footer {
-    background-color: #f2fbfa;
-  }
-  #footer .footer__address {
-    color: #00b49f;
-  }
 }

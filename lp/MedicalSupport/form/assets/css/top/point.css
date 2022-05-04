@@ -30,22 +30,10 @@
 @media (max-width: 768px) {
   #point {
     padding: 50px 20px;
-    background-color: #fff;
-    font-family: "Noto Sans";
   }
   #point > h2 {
     font-size: 20px;
     margin: 2.56vw 0 12.8vw;
-  }
-  #point > h2 > span {
-    color: #00b49f;
-  }
-  .point__content-box {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  .point__content-box > div {
-    width: 100%;
   }
   .point__content {
     display: block;
@@ -55,7 +43,6 @@
   }
   .point__image {
     width: 100%;
-    text-align: center;
     margin: 0 0 50px;
   }
 }

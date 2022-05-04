@@ -31,37 +31,18 @@
 }
 
 @media (max-width: 768px) {
-  .footer {
-    background-color: #00b49f;
-  }
   .footer__content-box {
     max-width: initial;
     min-height: 40px;
-    color: #fff;
-    font-family: "Noto Sans";
-    letter-spacing: 0;
     padding: 7.692vw 12.82vw 3.077vw;
-    margin: 0 auto;
   }
   .footer__privacy-policy-link-box {
-    font-size: 14px;
-    font-weight: 500;
     line-height: 2;
   }
   #footer .privacy-policy {
-    text-decoration: none;
-    overflow: hidden;
-    color: #fff;
     margin: 0;
   }
-  #footer .privacy-policy-treatment {
-    text-decoration: none;
-    overflow: hidden;
-    color: #fff;
-  }
   #footer .footer__address {
-    font-size: 10px;
-    font-weight: 500;
     margin: 12.82vw 0 0;
   }
 

@@ -3,12 +3,12 @@
   background-color: #00b49f;
   font-weight: 700;
   letter-spacing: 0;
+  padding: 0 50px;
 }
 .grid__label {
   position: relative;
   max-width: 1400px;
   height: 100px;
-  padding: 0 50px;
   margin: 0 auto;
 }
 .grid__monthly_limit {
@@ -56,40 +56,29 @@
 
 @media (max-width: 768px) {
   #grid {
-    width: 100%;
-    background-color: #00b49f;
-    font-weight: 700;
-    letter-spacing: 0;
+    padding: 22px 35px;
   }
   .grid__label {
-    position: relative;
     max-width: initial;
-    height: 41.4vw;
-    padding: 6.6vw 10.6vw;
-    margin: 0 auto;
+    height: auto;
   }
   .grid__monthly_limit {
-    border-radius: 30px;
-    background-color: #fff;
     width: 55vw;
     height: auto;
     margin-right: 0;
   }
   .grid__monthly_limit_text {
-    text-align: center;
     font-size: 18px;
-    color: #00b49f;
     max-height: initial;
-    padding: 9px;
+    padding: 7px 9px;
   }
   .grid__monthly_limit_text > span {
     font-size: 25px;
   }
   .grid__text {
     font-size: 18px;
-    font-weight: 700;
     letter-spacing: -1px;
-    color: #fff;
+    margin-top: 20px;
   }
   .grid__text .big {
     font-size: 20px;
@@ -99,13 +88,9 @@
   }
   .grid__cursor {
     position: absolute;
-    top: 67%;
-    right: 9%;
+    top: 64px;
+    right: 0;
     width: 11px;
     height: 11px;
-    border-right: 3px solid #fff;
-    border-top: 3px solid #fff;
-    transform: rotate(45deg);
-    border-radius: 20%;
   }
 }

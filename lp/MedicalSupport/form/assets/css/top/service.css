@@ -72,8 +72,6 @@
 @media (max-width: 768px) {
   #service {
     padding: 50px 20px;
-    background-color: #f5f5f5;
-    font-family: "Noto Sans";
   }
   #service > h2 {
     font-size: 20px;
@@ -82,13 +80,9 @@
   .service__content-box {
     max-width: initial;
     min-height: auto;
-    background-color: #fff;
     margin: 0 auto 7.692vw;
-    border-radius: 20px;
   }
   .service__content {
-    width: 100%;
-    height: 100%;
     padding: 5.641vw 3.846vw 8.2vw;
   }
   .service__number-box {
@@ -102,22 +96,15 @@
   }
   .service__image {
     width: 100%;
-    text-align: center;
     margin-bottom: 7.6vw;
   }
   .service__text-box {
     width: 100%;
-    font-family: "Noto Sans";
   }
   .service__text-box h3 {
     font-size: 16px;
-    font-weight: 700;
-    color: #00b49f;
     letter-spacing: 0;
     margin: 0 0 5.1vw;
-  }
-  .service__text-box h3 > span {
-    line-height: 1.5;
   }
   .service__text-box p {
     font-size: 14px;
@@ -125,14 +112,7 @@
     letter-spacing: 0;
     line-height: 1.6;
   }
-  .service__text-box p::before {
-    content: "● ";
-    font-size: 10px;
-    color: #00b49f;
-  }
   #service > .download__document {
-    display: table;
     margin: 5vw auto 0;
-    text-align: center;
   }
 }
