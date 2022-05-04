@@ -15,7 +15,7 @@ $(function () {
   $("#your-company").blur(function () {
     checkCompany();
   });
-  //部署入力チェック;
+  //部署入力チェック
   // $("#your-busyo").blur(function () {
   //   checkBusyo();
   // });
@@ -71,6 +71,7 @@ $(function () {
     if ($("#agree1").prop("checked")) {
       $(".is-valid-agree1").text("");
     } else {
+      $(".is-valid-agree1").css("display", "block");
       $(".is-valid-agree1").text(
         "「個人情報保護方針に同意する」にチェックしてください。"
       );
@@ -80,6 +81,7 @@ $(function () {
     if ($("#agree2").prop("checked")) {
       $(".is-valid-agree2").text("");
     } else {
+      $(".is-valid-agree2").css("display", "block");
       $(".is-valid-agree2").text(
         "「個人情報の保護に関する弊社の取り扱いに同意する」にチェックしてください。"
       );

@@ -76,7 +76,9 @@ body {
   font-family: "Noto Sans";
   letter-spacing: 0;
   color: #000;
-  margin-bottom: 10px;
+  background-color: unset;
+  border: none;
+  margin-top: 24px;
 }
 .confirm__form-box .submit_box .btn_in .submit_btn {
   font-family: serif;

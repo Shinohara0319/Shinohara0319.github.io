@@ -25,10 +25,10 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:700&display=swap&subset=japanese" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
-    <link rel="stylesheet" href="./assets/css/shiryou.css" />
-    <link rel="stylesheet" href="./assets/css/shiryou-form.css" />
+    <link rel="stylesheet" href="../../assets/css/shiryou.css" />
+    <link rel="stylesheet" href="../../assets/css/shiryou-form.css" />
+    <script type="text/javascript" src="../../assets/js/validation.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script type="text/javascript" src="./assets/js/validation.js"></script>
 </head>
 
 <body id="body">
@@ -39,9 +39,9 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
                     <div class="header__logo"></div>
                 </div>
                 <div class="header__right flex sp-only">
-                    <a href="https://google.com" target="_blank" class="download__document">
+                    <a href="../shiryou/shiryou.php#shiryou" target="_blank" class="download__document">
                     </a>
-                    <a href="https://google.com" target="_blank" class="estimate__link"></a>
+                    <a href="../../index.php#estimate" target="_blank" class="estimate__link"></a>
                 </div>
             </div>
         </header>
@@ -55,7 +55,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
                     </div>
                     <div class="shiryou__form-box">
                         <p>入力必須事項</p>
-                        <form method="post" name="form" id="form" action="confirm.php">
+                        <form method="post" name="form" id="form" action="../confirm/shiryou-confirm.php">
                             <div class="contact_box">
 
                                 <div class="list flex is_between">
@@ -136,7 +136,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
                                                                                                                                 echo "checked";
                                                                                                                             } ?>>
                                         <label for="agree2" class="privacy_txt">
-                                            <a class="txt_link" href="https://www.meiservice.com/privacy-policy/treatment/">個人情報の保護に関する弊社の取り扱い</a>に同意する
+                                            <a class="txt_link" href="https://www.meiservice.com/privacy-policy/treatment">個人情報の保護に関する弊社の取り扱い</a>に同意する
                                         </label>
                                     </p>
                                     <div class="validation_space is-valid-agree2"></div>
@@ -150,7 +150,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
                         </form>
                     </div>
                     <br class="pc-only" />
-                    <a href="./index.php" target="_top" class="return-to-top pc-only">トップに戻る</a>
+                    <a href="../../index.php" target="_top" class="return-to-top pc-only">トップに戻る</a>
                 </div>
             </section>
         </main>
