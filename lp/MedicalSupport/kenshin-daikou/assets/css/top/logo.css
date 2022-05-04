@@ -1,0 +1,12 @@
+#logo {
+  padding: 100px 50px;
+}
+#logo .logo__content-box {
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  #logo {
+    padding: 13vw 19vw;
+  }
+}

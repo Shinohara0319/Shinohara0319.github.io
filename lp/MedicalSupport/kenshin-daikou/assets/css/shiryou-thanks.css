@@ -1,0 +1,37 @@
+@import url("commons/commons.css");
+@import url("commons/header.css");
+@import url("commons/footer.css");
+
+#thanks {
+  padding: 200px 0 305px;
+  background-color: #fff;
+  font-family: "Noto Sans";
+}
+#thanks h2 {
+  text-align: center;
+  font-size: 25px;
+  letter-spacing: 0;
+  margin: 20px 0 100px;
+}
+#thanks .return-to-top {
+  letter-spacing: 0;
+  max-width: 800px;
+  margin: 80px auto 0;
+}
+
+@media (max-width: 768px) {
+  #thanks {
+    padding: 66.6vw 5.128vw 69.23vw;
+    background-color: #fff;
+    font-family: "Noto Sans";
+  }
+  #thanks h2 {
+    font-size: 14px;
+    margin: 2.487vw -1.5vw 24.87vw;
+  }
+  #thanks .return-to-top {
+    letter-spacing: 0;
+    max-width: initial;
+    margin: 0;
+  }
+}

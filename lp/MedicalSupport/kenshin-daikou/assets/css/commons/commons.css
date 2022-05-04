@@ -1,0 +1,189 @@
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  overflow-x: hidden;
+  font-size: 16px;
+  font-family: "Noto Sans", "Gotham", "游ゴシック体", YuGothic, "游ゴシック",
+    "Yu Gothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  line-height: 1;
+  letter-spacing: 1px;
+  color: #000;
+  background: #fff;
+  margin: 0 auto;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+* {
+  box-sizing: border-box;
+}
+
+section {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.sp-only {
+  display: none;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.block {
+  display: block;
+}
+
+.is-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.is-between {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.is-start {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.category {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Gotham";
+  letter-spacing: 0;
+  color: #81c9c1;
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+    font-size: 14px;
+    font-family: "Noto Sans", "Gotham", "游ゴシック体", YuGothic, "游ゴシック",
+      "Yu Gothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    line-height: 1;
+    letter-spacing: 1px;
+    color: #1a1a1a;
+    background: #fff;
+    min-width: 320px;
+    margin: auto;
+  }
+
+  .pc-only {
+    display: none;
+  }
+  .sp-only {
+    display: initial;
+  }
+  .category {
+    font-size: 14px;
+  }
+}
