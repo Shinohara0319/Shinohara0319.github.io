@@ -89,7 +89,6 @@ select {
   font-size: 14px;
   color: #dc3232;
   line-height: 1.7;
-  height: 25px;
 }
 .estimate__form-box .privacy_check_box {
   width: 100%;
@@ -106,7 +105,7 @@ select {
   .privacy_check_in
   .privacy_checkbox
   + .privacy_txt {
-  padding-left: 35px;
+  padding-left: 25px;
   position: relative;
   margin-bottom: 0;
   height: 30px;
@@ -185,7 +184,7 @@ select {
   padding: 23.5px;
   font-size: 18px;
   font-weight: 700;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 @media screen and (max-width: 768px) {
@@ -225,7 +224,7 @@ select {
   }
   .estimate__form-box .contact_box .list .input_list .select-box-cursor {
     position: absolute;
-    top: 65%;
+    top: 59px;
     left: 93%;
   }
   .estimate__form-box .contact_box .list .input_list .form_input_tel {
@@ -250,8 +249,8 @@ select {
     content: "";
     display: block;
     position: absolute;
-    top: 6px;
-    left: 10px;
+    top: 3px;
+    left: 0;
     width: 18px;
     height: 18px;
     border: 1px solid #c8c8c8;
@@ -266,8 +265,8 @@ select {
     content: "";
     display: block;
     position: absolute;
-    top: calc(50% - 8px);
-    left: 21px;
+    top: calc(50% - 10px);
+    left: 12px;
     width: 11px;
     height: 7px;
     border-left: 3px solid #333;

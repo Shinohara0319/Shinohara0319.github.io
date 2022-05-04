@@ -1,7 +1,7 @@
 #point {
   padding: 100px 20px;
   background-color: #fff;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans JP", sans-serif;
 }
 #point > h2 {
   text-align: center;
@@ -33,7 +33,7 @@
   }
   #point > h2 {
     font-size: 20px;
-    margin: 2.56vw 0 12.8vw;
+    margin: 10px 0 50px;
   }
   .point__content {
     display: block;

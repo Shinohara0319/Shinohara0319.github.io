@@ -56,14 +56,14 @@
 
 @media (max-width: 768px) {
   #grid {
-    padding: 22px 35px;
+    padding: 28.5px 35px;
   }
   .grid__label {
     max-width: initial;
     height: auto;
   }
   .grid__monthly_limit {
-    width: 55vw;
+    width: 46.2vw;
     height: auto;
     margin-right: 0;
   }

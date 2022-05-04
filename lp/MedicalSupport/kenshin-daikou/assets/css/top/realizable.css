@@ -1,7 +1,7 @@
 #realizable {
   padding: 100px 50px;
   background-color: #fff;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans JP", sans-serif;
 }
 #realizable > h2 {
   text-align: center;
@@ -83,7 +83,7 @@
   }
   #realizable > h2 {
     font-size: 20px;
-    margin: 2.56vw 0 14vw;
+    margin: 10px 0 50px;
   }
   .realizable__content-box {
     display: block;
@@ -103,6 +103,7 @@
   .realizable__content > div {
     width: 100%;
     font-size: 20px;
+    padding: 0 20px;
   }
   .realizable__content-text-box.pc-only {
     display: none;

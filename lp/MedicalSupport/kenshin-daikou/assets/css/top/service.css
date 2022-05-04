@@ -1,7 +1,7 @@
 #service {
   padding: 100px 50px;
   background-color: #f5f5f5;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans JP", sans-serif;
 }
 #service > h2 {
   text-align: center;
@@ -26,7 +26,7 @@
   color: #00b49f;
   letter-spacing: 0;
   text-align: center;
-  font-family: "Gotham";
+  font-family: "Gotham", sans-serif;
 }
 .service__number-text {
   font-size: 16px;
@@ -40,7 +40,7 @@
 }
 .service__text-box {
   width: 50%;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans JP", sans-serif;
 }
 .service__text-box h3 {
   font-size: 20px;
@@ -75,7 +75,7 @@
   }
   #service > h2 {
     font-size: 20px;
-    margin: 2.56vw 0 14vw;
+    margin: 10px 0 30px;
   }
   .service__content-box {
     max-width: initial;

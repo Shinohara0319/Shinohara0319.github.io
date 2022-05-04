@@ -79,7 +79,7 @@ video {
 body {
   overflow-x: hidden;
   font-size: 16px;
-  font-family: "Noto Sans", "Gotham", "游ゴシック体", YuGothic, "游ゴシック",
+  font-family: "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック",
     "Yu Gothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
   line-height: 1;
   letter-spacing: 1px;
@@ -158,7 +158,7 @@ section {
   text-align: center;
   font-size: 16px;
   font-weight: 700;
-  font-family: "Gotham";
+  font-family: "Gotham", sans-serif;
   letter-spacing: 0;
   color: #81c9c1;
 }
@@ -167,7 +167,7 @@ section {
   body {
     overflow-x: hidden;
     font-size: 14px;
-    font-family: "Noto Sans", "Gotham", "游ゴシック体", YuGothic, "游ゴシック",
+    font-family: "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック",
       "Yu Gothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
     line-height: 1;
     letter-spacing: 1px;

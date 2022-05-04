@@ -5,7 +5,7 @@
 #download {
   padding: 100px 0 305px;
   background-color: #fff;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans JP", sans-serif;
 }
 #download > h2 {
   text-align: center;
@@ -37,7 +37,7 @@
   #download {
     padding: 30vw 8.97vw 35vw;
     background-color: #fff;
-    font-family: "Noto Sans";
+    font-family: "Noto Sans JP", sans-serif;
   }
   #download > h2 {
     font-size: 20px;

@@ -1,7 +1,7 @@
 #estimate {
   padding: 100px 50px;
   background-color: #f2fbfa;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans JP", sans-serif;
   letter-spacing: 0;
 }
 #estimate > h2 {
@@ -44,7 +44,7 @@
   }
   #estimate > h2 {
     font-size: 20px;
-    margin: 2.56vw 0 12.8vw;
+    margin: 10px 0 30px;
   }
   .estimate__content-box {
     max-width: initial;

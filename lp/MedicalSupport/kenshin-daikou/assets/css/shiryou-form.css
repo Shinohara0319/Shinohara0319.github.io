@@ -60,7 +60,6 @@
   font-size: 14px;
   color: #dc3232;
   line-height: 1.7;
-  height: 25px;
 }
 .shiryou__form-box .privacy_check_box {
   width: 100%;
@@ -157,7 +156,7 @@
   padding: 23.5px;
   font-size: 16px;
   font-weight: 700;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 @media screen and (max-width: 768px) {
@@ -225,8 +224,8 @@
     content: "";
     display: block;
     position: absolute;
-    top: calc(50% - 8px);
-    left: 21px;
+    top: calc(50% - 12px);
+    left: 12px;
     width: 11px;
     height: 7px;
     border-left: 3px solid #333;

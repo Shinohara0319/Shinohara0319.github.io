@@ -1,7 +1,7 @@
 #trouble {
   padding: 100px 50px;
   background-color: #f2fbfa;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans JP", sans-serif;
 }
 #trouble > h2 {
   text-align: center;
@@ -57,7 +57,7 @@
 .trouble__question-box .trouble__question-text {
   text-align: left;
   font-size: 18px;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans JP", sans-serif;
   line-height: 1.4;
   letter-spacing: 0;
 }

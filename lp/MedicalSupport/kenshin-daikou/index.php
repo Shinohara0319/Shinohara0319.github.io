@@ -5,7 +5,6 @@ $_SESSION['contact_flg'] = 1;
 //確認から戻っていたら変数にSessionから値を代入
 $company       = isset($_SESSION['your-company']) ? $_SESSION['your-company'] : NULL;
 $staffNumber       = isset($_SESSION['your-staffNumber']) ? $_SESSION['your-staffNumber'] : NULL;
-$busyo       = isset($_SESSION['your-busyo']) ? $_SESSION['your-busyo'] : NULL;
 $sei       = isset($_SESSION['your-sei']) ? $_SESSION['your-sei'] : NULL;
 $mei       = isset($_SESSION['your-mei']) ? $_SESSION['your-mei'] : NULL;
 $email      = isset($_SESSION['your-email']) ? $_SESSION['your-email'] : NULL;
@@ -26,6 +25,10 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:700&display=swap&subset=japanese" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+  <link rel="stylesheet" href="http://fonts.cdnfonts.com/css/gotham" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" />
   <link rel="stylesheet" href="./assets/css/toppage.css" />
   <link rel="stylesheet" href="./assets/css/estimate-form.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -345,7 +348,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
 
       <section id="estimate">
         <p class="category">ESTIMATE</p>
-        <h2>お見積もりはこちら</h2>
+        <h2>お見積はこちら</h2>
         <div class="estimate__content-box flex is-center">
           <div>
             <div class="estimate__description">
@@ -382,7 +385,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
                       <div class="flex is_between">
                         <div class="select-box-cursor"></div>
                         <select onchange="changeItem(this)" style="color: #c8c8c8;" name="your-staffNumber" id="your-staffNumber" class="form_input_yourstaffNumber input-your_staffNumber required" autocapitalize="street-staffNumber required" placeholder="" value="<?php echo $staffNumber; ?>" required>
-                          <option value="" hidden>---</option>
+                          <option value="">---</option>
                           <option value="1" <?php if ($staffNumber === "10人以内") {
                                               echo "selected";
                                             } ?>>10人以内</option>

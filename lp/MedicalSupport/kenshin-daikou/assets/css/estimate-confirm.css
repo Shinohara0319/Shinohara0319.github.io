@@ -8,7 +8,7 @@ body {
 
 #confirm {
   padding: 60px 0 116px;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans JP", sans-serif;
   margin: 0 auto;
 }
 #confirm h2 {
@@ -32,7 +32,7 @@ body {
   text-decoration: underline;
   font-size: 12px;
   font-weight: 500;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans JP", sans-serif;
   letter-spacing: 0;
   color: #000;
 }
@@ -73,7 +73,7 @@ body {
   text-decoration: underline;
   font-size: 12px;
   font-weight: 500;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans JP", sans-serif;
   letter-spacing: 0;
   color: #000;
   background-color: unset;
@@ -93,7 +93,7 @@ body {
   padding: 23.5px;
   font-size: 18px;
   font-weight: 700;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 .footer {
@@ -111,7 +111,7 @@ body {
 #footer .footer__address {
   font-size: 12px;
   font-weight: 500;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans JP", sans-serif;
   color: #00b49f;
 }
 
@@ -122,7 +122,7 @@ body {
 
   #confirm {
     padding: 8.2vw 3.846vw 0;
-    font-family: "Noto Sans";
+    font-family: "Noto Sans JP", sans-serif;
     margin: 0 auto;
   }
   #confirm h2 {
@@ -161,5 +161,9 @@ body {
   .confirm__form-box .privacy_check_box .privacy_check_in span {
     font-weight: 700;
     /* color: #00b49f; */
+  }
+
+  #footer .footer__address {
+    font-size: 10px;
   }
 }
