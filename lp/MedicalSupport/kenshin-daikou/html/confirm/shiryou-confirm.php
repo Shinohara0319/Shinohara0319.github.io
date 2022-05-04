@@ -30,7 +30,7 @@ if (isset($_POST) && count($_POST) > 0) {
         // 送信ボタンが押されたら
         if (isset($_POST["submit"])) {
             //メール送信処理
-            require_once './form/libs/SendEmail.php';
+            require_once './kenshin-daikou/libs/SendEmail.php';
             //メール送信処理
             $mail = new SendEmail;
             $sendAdmin = $mail->sendContactToAdmin($_POST);
