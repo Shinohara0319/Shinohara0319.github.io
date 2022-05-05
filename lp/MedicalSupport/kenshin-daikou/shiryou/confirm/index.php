@@ -40,7 +40,7 @@ if (isset($_POST) && count($_POST) > 0) {
                 unset($_POST);
                 $_SESSION['contact_flg'] = 2;
                 // サンクスページに画面遷移させる
-                header("Location: http://" . $_SERVER["HTTP_HOST"] . "/html/shiryou/thanks/thanks.php");
+                header("Location: http://" . $_SERVER["HTTP_HOST"] . "/shiryou/thanks/index.php");
                 exit;
             } else {
                 $_SESSION['contact'] = $_POST;
@@ -74,7 +74,7 @@ if (isset($_POST) && count($_POST) > 0) {
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:700&display=swap&subset=japanese" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
-    <link rel="stylesheet" href="http://fonts.cdnfonts.com/css/gotham" />
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/gotham" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" />
@@ -91,7 +91,7 @@ if (isset($_POST) && count($_POST) > 0) {
                     <div class="header__logo"></div>
                 </div>
                 <div class="header__right flex sp-only">
-                    <a href="../shiryou/shiryou.php#shiryou" target="_top" class="download__document">
+                    <a href="../../shiryou/index.php#shiryou" target="_top" class="download__document">
                     </a>
                     <a href="../../index.php#estimate" target="_top" class="estimate__link"></a>
                 </div>
@@ -165,7 +165,7 @@ if (isset($_POST) && count($_POST) > 0) {
                                         <p class="privacy_check_in"><span>個人情報の保護に関する弊社の取り扱い</span>に同意する。</p>
                                     </div>
                                     <div class="submit_box">
-                                        <form method="post" action="shiryou-confirm.php">
+                                        <form method="post" action="index.php">
                                             <input type="hidden" name="your-company" value="<?php echo $company; ?>">
                                             <input type="hidden" name="your-busyo" value="<?php echo $busyo; ?>">
                                             <input type="hidden" name="your-sei" value="<?php echo $sei; ?>">
@@ -176,7 +176,7 @@ if (isset($_POST) && count($_POST) > 0) {
                                                 <input name="submit" class="submit_btn" type="submit" value="入力内容を送信">
                                             </div>
                                         </form>
-                                        <form method="post" action="../shiryou/shiryou.php">
+                                        <form method="post" action="../index.php#shiryou">
                                             <div class="btn_in">
                                                 <input name="back" class="back_btn" type="submit" value="戻る">
                                             </div>
