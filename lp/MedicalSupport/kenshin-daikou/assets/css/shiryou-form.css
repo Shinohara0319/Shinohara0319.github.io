@@ -19,7 +19,8 @@
   font-weight: 600;
   font-size: 18px;
   line-height: 1.5;
-  width: 33%;
+  letter-spacing: 0;
+  width: 26%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -34,7 +35,7 @@
   font-weight: bold;
 }
 .shiryou__form-box .contact_box .list .input_list {
-  width: 64%;
+  width: 74%;
   align-items: center;
 }
 .shiryou__form-box .contact_box .list .input_list .form_input_yoursei {
@@ -63,7 +64,7 @@
 }
 .shiryou__form-box .privacy_check_box {
   width: 100%;
-  margin-left: 68px;
+  padding: 0 0 0 68px;
 }
 .shiryou__form-box .privacy_check_box .privacy_check_in {
   display: flex;
@@ -89,6 +90,7 @@
 .shiryou__form-box .privacy_check_box .privacy_txt {
   font-size: 16px;
   line-height: 1.9;
+  letter-spacing: 0;
 }
 .shiryou__form-box
   .privacy_check_box
@@ -185,20 +187,27 @@
   }
   .shiryou__form-box .contact_box .list .input_list input {
     width: 100%;
-    font-size: 14px;
     height: inherit;
+    font-size: 14px;
   }
   .shiryou__form-box .validation_space {
     margin-bottom: 10px;
     padding-top: 5px;
   }
   .shiryou__form-box .privacy_check_box {
-    margin-left: 0;
+    width: 100%;
+    padding: 0;
   }
   .shiryou__form-box .privacy_check_box .privacy_txt {
     font-size: 12px;
     line-height: 1.9;
-    letter-spacing: 0;
+  }
+  .shiryou__form-box
+    .privacy_check_box
+    .privacy_check_in
+    .privacy_checkbox
+    + .privacy_txt {
+    padding-left: 25px;
   }
   .shiryou__form-box
     .privacy_check_box

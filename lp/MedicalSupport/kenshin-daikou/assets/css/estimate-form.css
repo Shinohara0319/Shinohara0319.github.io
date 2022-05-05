@@ -105,7 +105,7 @@ select {
   .privacy_check_in
   .privacy_checkbox
   + .privacy_txt {
-  padding-left: 25px;
+  padding-left: 30px;
   position: relative;
   margin-bottom: 0;
   height: 30px;
@@ -117,6 +117,7 @@ select {
 .estimate__form-box .privacy_check_box .privacy_txt {
   font-size: 16px;
   line-height: 1.9;
+  letter-spacing: 0;
 }
 .estimate__form-box
   .privacy_check_box
@@ -204,16 +205,18 @@ select {
   }
   .estimate__form-box .contact_box .list label {
     width: 100%;
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 0;
   }
   .estimate__form-box .contact_box .list .input_list {
     width: 100%;
     font-size: 16px;
   }
-  .estimate__form-box .contact_box .list .input_list input {
+  .estimate__form-box .contact_box .list .input_list input,
+  select {
     width: 100%;
     height: inherit;
+    font-size: 14px;
   }
   .estimate__form-box
     .contact_box
@@ -224,7 +227,7 @@ select {
   }
   .estimate__form-box .contact_box .list .input_list .select-box-cursor {
     position: absolute;
-    top: 59px;
+    top: 54px;
     left: 93%;
   }
   .estimate__form-box .contact_box .list .input_list .form_input_tel {
@@ -240,6 +243,13 @@ select {
   .estimate__form-box .privacy_check_box .privacy_txt {
     font-size: 14px;
     line-height: 1.9;
+  }
+  .estimate__form-box
+    .privacy_check_box
+    .privacy_check_in
+    .privacy_checkbox
+    + .privacy_txt {
+    padding-left: 25px;
   }
   .estimate__form-box
     .privacy_check_box

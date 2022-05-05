@@ -56,7 +56,7 @@ body {
   width: 100%;
   height: 30px;
   text-align: left;
-  margin-left: 68px;
+  padding: 0 0 0 68px;
 }
 .confirm__form-box .privacy_check_box .privacy_check_in {
   font-size: 16px;
@@ -153,7 +153,7 @@ body {
     height: 20px;
   }
   .confirm__form-box .privacy_check_box {
-    margin-left: 0;
+    padding: 0;
   }
   .confirm__form-box .privacy_check_box .privacy_check_in {
     font-size: 12px;
