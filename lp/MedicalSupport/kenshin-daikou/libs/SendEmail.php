@@ -9,7 +9,7 @@ class SendEmail
 	public function sendContactToAdmin($data)
 	{
 		try {
-			$from = 'kudrya.key@gmail.com';
+			$from = $data['your-email'];
 
 			mb_language("JA");
 			mb_internal_encoding("UTF-8");
@@ -18,7 +18,7 @@ class SendEmail
 			$subject = 'お問い合わせがありました ';
 			$body = $this->buildBodyContact('admin', $data);
 
-			mb_send_mail($data['your-email'], $subject, $body, $header);
+			mb_send_mail('kudrya.key@gmail.com', $subject, $body, $header);
 
 			return true;
 		} catch (Exception $e) {

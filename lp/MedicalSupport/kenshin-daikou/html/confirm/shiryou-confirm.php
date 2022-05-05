@@ -30,7 +30,7 @@ if (isset($_POST) && count($_POST) > 0) {
         // 送信ボタンが押されたら
         if (isset($_POST["submit"])) {
             //メール送信処理
-            require_once './kenshin-daikou/libs/SendEmail.php';
+            require_once '../../libs/SendEmail.php';
             //メール送信処理
             $mail = new SendEmail;
             $sendAdmin = $mail->sendContactToAdmin($_POST);
@@ -40,7 +40,7 @@ if (isset($_POST) && count($_POST) > 0) {
                 unset($_POST);
                 $_SESSION['contact_flg'] = 2;
                 // サンクスページに画面遷移させる
-                header("Location: http://" . $_SERVER["HTTP_HOST"] . "../shiryou/thanks/thanks.php");
+                header("Location: http://" . $_SERVER["HTTP_HOST"] . "/html/shiryou/thanks/thanks.php");
                 exit;
             } else {
                 $_SESSION['contact'] = $_POST;
@@ -165,7 +165,7 @@ if (isset($_POST) && count($_POST) > 0) {
                                         <p class="privacy_check_in"><span>個人情報の保護に関する弊社の取り扱い</span>に同意する。</p>
                                     </div>
                                     <div class="submit_box">
-                                        <form method="post" action="../shiryou/thanks/thanks.php">
+                                        <form method="post" action="shiryou-confirm.php">
                                             <input type="hidden" name="your-company" value="<?php echo $company; ?>">
                                             <input type="hidden" name="your-busyo" value="<?php echo $busyo; ?>">
                                             <input type="hidden" name="your-sei" value="<?php echo $sei; ?>">
