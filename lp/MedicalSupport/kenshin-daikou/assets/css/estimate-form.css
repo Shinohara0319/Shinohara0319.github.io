@@ -185,7 +185,7 @@ select {
   padding: 23.5px;
   font-size: 18px;
   font-weight: 700;
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Noto Sans", sans-serif;
 }
 
 @media screen and (max-width: 768px) {

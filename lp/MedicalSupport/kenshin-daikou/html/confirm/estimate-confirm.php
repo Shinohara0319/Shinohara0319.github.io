@@ -107,9 +107,9 @@ if (isset($_POST) && count($_POST) > 0) {
                     <div class="header__logo"></div>
                 </div>
                 <div class="header__right flex sp-only">
-                    <a href="../shiryou/shiryou.php#shiryou" target="_blank" class="download__document">
+                    <a href="../shiryou/shiryou.php#shiryou" target="_top" class="download__document">
                     </a>
-                    <a href="../../index.php#estimate" target="_blank" class="estimate__link"></a>
+                    <a href="../../index.php#estimate" target="_top" class="estimate__link"></a>
                 </div>
             </div>
         </header>

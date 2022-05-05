@@ -44,7 +44,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
           <div class="header__logo"></div>
         </div>
         <div class="header__right flex">
-          <a href="./html/shiryou/shiryou.php#shiryou" target="_blank" class="download__document"></a>
+          <a href="./html/shiryou/shiryou.php#shiryou" target="_top" class="download__document"></a>
           <a href="#estimate" target="_top" class="estimate__link"></a>
         </div>
       </div>
@@ -74,12 +74,12 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
             <div class="fv__research">
               <p>※自社調べ</p>
             </div>
-            <a href="./html/shiryou/shiryou.php#shiryou" target="_blank" class="download__document-pc"></a>
+            <a href="./html/shiryou/shiryou.php#shiryou" target="_top" class="download__document-pc"></a>
           </div>
           <div class="fv__right">
             <img src="assets/img/section_fv/image1.png" alt="fv__image" />
           </div>
-          <a href="./html/shiryou/shiryou.php#shiryou" target="_blank" class="download__document-sp">
+          <a href="./html/shiryou/shiryou.php#shiryou" target="_top" class="download__document-sp">
           </a>
         </div>
       </section>
@@ -164,7 +164,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
             <p class="trouble__text">
               健康診断業務は<br class="sp-only" />メディカルサポートにお任せください
             </p>
-            <a href="./html/shiryou/shiryou.php#shiryou" target="_blank" class="download__document">
+            <a href="./html/shiryou/shiryou.php#shiryou" target="_top" class="download__document">
               <img src="assets/img/section_trouble/document__download.png" alt="download__document" />
             </a>
           </div>
@@ -201,7 +201,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
                 </div>
               </div>
             </div>
-            <div class="realizable__border sp-only"></div>
+            <div class="realizable__border"></div>
             <div class="realizable__content flex">
               <div class="realizable__content-text-box second flex is-center">
                 <div class="realizable__content-icon">
@@ -217,7 +217,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
                 <img src="./assets/img/section_realizable/image2.png" alt="section_realizable/image2.png" />
               </div>
             </div>
-            <div class="realizable__border sp-only"></div>
+            <div class="realizable__border"></div>
             <div class="realizable__content flex">
               <div class="realizable__content-text-box third flex is-center sp-only">
                 <div class="realizable__content-icon">
@@ -313,7 +313,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
             </div>
           </div>
         </div>
-        <a href="./html/shiryou/shiryou.php#shiryou" target="_blank" class="download__document">
+        <a href="./html/shiryou/shiryou.php#shiryou" target="_top" class="download__document">
           <img src="assets/img/section_service/document_download.png" alt="download__document" />
         </a>
       </section>
@@ -357,7 +357,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
               </p>
               <p>
                 ご入力いただいた個人情報は、
-                <a href="https://www.meiservice.com/privacy-policy/" target="_blank" class="privacy-policy">個人情報保護方針</a>及び<a href="https://www.meiservice.com/privacy-policy/treatment" target="_blank" class="privacy-policy-treatment">個人情報保護に関する弊社の取り扱い</a>基づき、適切な取扱いを行います。
+                <a href="https://www.meiservice.com/privacy-policy" target="_blank" class="privacy-policy">個人情報保護方針</a>及び<a href="https://www.meiservice.com/privacy-policytreatment" target="_blank" class="privacy-policy-treatment">個人情報保護に関する弊社の取り扱い</a>基づき、適切な取扱いを行います。
               </p>
             </div>
             <div class="estimate__form-box">
@@ -446,7 +446,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
                                                                                                             echo "checked";
                                                                                                           } ?>>
                       <label for="agree1" class="privacy_txt">
-                        <a class="txt_link" href="https://www.meiservice.com/privacy-policy/">個人情報保護方針</a>に同意する
+                        <a class="txt_link" target="_blank" href="https://www.meiservice.com/privacy-policy">個人情報保護方針</a>に同意する
                       </label>
                     </p>
                     <div class="validation_space is-valid-agree1"></div>
@@ -457,7 +457,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
                                                                                                             echo "checked";
                                                                                                           } ?>>
                       <label for="agree2" class="privacy_txt">
-                        <a class="txt_link" href="https://www.meiservice.com/privacy-policy/treatment">個人情報の保護に関する弊社の取り扱い</a>に同意する
+                        <a class="txt_link" target="_blank" href="https://www.meiservice.com/privacy-policytreatment">個人情報の保護に関する弊社の取り扱い</a>に同意する
                       </label>
                     </p>
                     <div class="validation_space is-valid-agree2"></div>
@@ -484,8 +484,8 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
       <div id="footer" class="footer">
         <div class="footer__content-box flex is-between">
           <div class="footer__privacy-policy-link-box flex is-center">
-            <a href="https://www.meiservice.com/privacy-policy/" target="_blank" class="privacy-policy">個人情報保護方針</a>
-            <a href="https://www.meiservice.com/privacy-policy/treatment" target="_blank" class="privacy-policy-treatment">個人情報保護に関する弊社の取り扱い</a>
+            <a href="https://www.meiservice.com/privacy-policy" target="_blank" class="privacy-policy">個人情報保護方針</a>
+            <a href="https://www.meiservice.com/privacy-policytreatment" target="_blank" class="privacy-policy-treatment">個人情報保護に関する弊社の取り扱い</a>
           </div>
           <div class="footer__address flex is-center">
             COPYRIGHT(C) MEISERVICE co.,ltd ALL RIGHTS RESERVED.

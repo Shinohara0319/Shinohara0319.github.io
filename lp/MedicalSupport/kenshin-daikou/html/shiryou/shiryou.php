@@ -43,9 +43,9 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
                     <div class="header__logo"></div>
                 </div>
                 <div class="header__right flex sp-only">
-                    <a href="../shiryou/shiryou.php#shiryou" target="_blank" class="download__document">
+                    <a href="../shiryou/shiryou.php#shiryou" target="_top" class="download__document">
                     </a>
-                    <a href="../../index.php#estimate" target="_blank" class="estimate__link"></a>
+                    <a href="../../index.php#estimate" target="_top" class="estimate__link"></a>
                 </div>
             </div>
         </header>
@@ -129,7 +129,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
                                                                                                                                 echo "checked";
                                                                                                                             } ?>>
                                         <label for="agree1" class="privacy_txt">
-                                            <a class="txt_link" href="https://www.meiservice.com/privacy-policy/">個人情報保護方針</a>に同意する
+                                            <a class="txt_link" target="_blank" href="https://www.meiservice.com/privacy-policy">個人情報保護方針</a>に同意する
                                         </label>
                                     </p>
                                     <div class="validation_space is-valid-agree1"></div>
@@ -140,7 +140,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
                                                                                                                                 echo "checked";
                                                                                                                             } ?>>
                                         <label for="agree2" class="privacy_txt">
-                                            <a class="txt_link" href="https://www.meiservice.com/privacy-policy/treatment">個人情報の保護に関する弊社の取り扱い</a>に同意する
+                                            <a class="txt_link" target="_blank" href="https://www.meiservice.com/privacy-policytreatment">個人情報の保護に関する弊社の取り扱い</a>に同意する
                                         </label>
                                     </p>
                                     <div class="validation_space is-valid-agree2"></div>

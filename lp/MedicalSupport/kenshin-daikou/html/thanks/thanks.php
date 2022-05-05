@@ -46,8 +46,8 @@ if (
           <div class="header__logo"></div>
         </div>
         <div class="header__right flex">
-          <a href="../shiryou/shiryou.php" target="_blank" class="download__document"></a>
-          <a href="../../index.php#estimate" target="_blank" class="estimate__link"></a>
+          <a href="../shiryou/shiryou.php" target="_top" class="download__document"></a>
+          <a href="../../index.php#estimate" target="_top" class="estimate__link"></a>
         </div>
       </div>
     </header>
@@ -78,8 +78,8 @@ if (
       <div id="footer" class="footer">
         <div class="footer__content-box flex is-between top-only">
           <div class="footer__privacy-policy-link-box">
-            <a href="https://www.meiservice.com/privacy-policy/" target="_blank" class="privacy-policy">個人情報保護方針</a>
-            <a href="https://www.meiservice.com/privacy-policy/treatment" target="_blank" class="privacy-policy-treatment">個人情報保護に関する弊社の取り扱い</a>
+            <a href="https://www.meiservice.com/privacy-policy" target="_blank" class="privacy-policy">個人情報保護方針</a>
+            <a href="https://www.meiservice.com/privacy-policytreatment" target="_blank" class="privacy-policy-treatment">個人情報保護に関する弊社の取り扱い</a>
           </div>
           <div class="footer__address">
             COPYRIGHT(C) MEISERVICE co.,ltd ALL RIGHTS RESERVED.
