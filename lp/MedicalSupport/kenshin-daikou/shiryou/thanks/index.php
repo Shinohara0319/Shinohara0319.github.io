@@ -24,7 +24,6 @@ if (
   <meta charset="UTF-8" />
   <meta name="viewport" content="width-device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta http-equiv="Refresh" content="1;URL=../../download-document/健康診断業務サポート_資料簡易版.pdf.zip">
   <title>ダウンロードありがとうございました。 Medical Support</title>
   <meta name="description" content="ダウンロードありがとうございました。 Medical Support" />
   <meta name="keywords" content="健診代行ならメイサービス Medical Support" />
@@ -37,6 +36,7 @@ if (
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" />
   <link rel="stylesheet" href="/kenshin-daikou/assets/css/shiryou-thanks.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="/kenshin-daikou/assets/js/auto-download.js"></script>
 </head>
 
 <body id="body">
@@ -75,6 +75,14 @@ if (
           </div>
         </div>
       </div>
+
+      <script type="text/javascript">
+        // URLから自動ダウンロードさせる
+        downloadFromUrlAutomatically(
+          "../../download-document/健康診断業務サポート_資料簡易版.pdf",
+          "健康診断業務サポート_資料簡易版.pdf"
+        );
+      </script>
     </footer>
   </div>
 </body>
