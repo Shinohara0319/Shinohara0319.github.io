@@ -237,7 +237,6 @@ select {
     width: 100%;
   }
   .estimate__form-box .validation_space {
-    margin-bottom: 10px;
     padding-top: 5px;
   }
   .estimate__form-box .privacy_check_box .privacy_txt {

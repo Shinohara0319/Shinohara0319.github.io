@@ -2,15 +2,76 @@
 session_start();
 $_SESSION['contact_flg'] = 1;
 
-//確認から戻っていたら変数にSessionから値を代入
-$company       = isset($_SESSION['your-company']) ? $_SESSION['your-company'] : NULL;
-$busyo       = isset($_SESSION['your-busyo']) ? $_SESSION['your-busyo'] : NULL;
-$sei       = isset($_SESSION['your-sei']) ? $_SESSION['your-sei'] : NULL;
-$mei       = isset($_SESSION['your-mei']) ? $_SESSION['your-mei'] : NULL;
-$email      = isset($_SESSION['your-email']) ? $_SESSION['your-email'] : NULL;
-$tel       = isset($_SESSION['your-tel']) ? $_SESSION['your-tel'] : NULL;
-$agree1      = isset($_SESSION['agree1']) ? $_SESSION['agree1'] : NULL;
-$agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
+// //確認から戻っていたら変数にSessionから値を代入
+// $company       = isset($_POST['your-company']) ? $_POST['your-company'] : NULL;
+// $busyo       = isset($_POST['your-busyo']) ? $_POST['your-busyo'] : NULL;
+// $sei       = isset($_POST['your-sei']) ? $_POST['your-sei'] : NULL;
+// $mei       = isset($_POST['your-mei']) ? $_POST['your-mei'] : NULL;
+// $email      = isset($_POST['your-email']) ? $_POST['your-email'] : NULL;
+// $tel       = isset($_POST['your-tel']) ? $_POST['your-tel'] : NULL;
+// $agree1      = isset($_SESSION['agree1']) ? $_SESSION['agree1'] : NULL;
+// $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
+
+if (
+    !isset($_SESSION['contact_flg']) ||
+    (isset($_SESSION['contact_flg']) && $_SESSION['contact_flg'] !== 1)
+) {
+    // 正規の遷移でない場合コンタクト画面に強制移動
+    header("Location: http://" . $_SERVER["HTTP_HOST"] . "/kenshin-daikou/index.php");
+    exit;
+}
+if (isset($_POST) && count($_POST) > 0) {
+    // フォームのボタンが押されたら
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        // フォームから送信されたデータを各変数に格納
+        $company       = isset($_POST['your-company']) ? $_POST['your-company'] : NULL;
+        $busyo       = isset($_POST['your-busyo']) ? $_POST['your-busyo'] : NULL;
+        $sei       = isset($_POST['your-sei']) ? $_POST['your-sei'] : NULL;
+        $mei       = isset($_POST['your-mei']) ? $_POST['your-mei'] : NULL;
+        $email      = isset($_POST['your-email']) ? $_POST['your-email'] : NULL;
+        $tel       = isset($_POST['your-tel']) ? $_POST['your-tel'] : NULL;
+        $agree1      = isset($_SESSION['agree1']) ? $_SESSION['agree1'] : NULL;
+        $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
+
+        //POSTされたデータをセッション変数に保存
+        $_SESSION['your-company']       = $company;
+        $_SESSION['your-busyo']       = $busyo;
+        $_SESSION['your-sei']       = $sei;
+        $_SESSION['your-mei']       = $mei;
+        $_SESSION['your-email']      = $email;
+        $_SESSION['your-tel']      = $tel;
+        $_SESSION['agree1']      = $agree1;
+        $_SESSION['agree2']      = $agree2;
+
+
+        // 送信ボタンが押されたら
+        if (isset($_POST["submit"])) {
+            //メール送信処理
+            require_once '../libs/SendEmail.php';
+            //メール送信処理
+            $mail = new SendEmail;
+            $sendAdmin = $mail->sendContactToAdmin($_POST);
+            $sendUser  = $mail->sendContactToUser($_POST);
+            if ($sendAdmin && $sendUser) {
+                //終了処理
+                unset($_POST);
+                $_SESSION['contact_flg'] = 2;
+                // サンクスページに画面遷移させる
+                header("Location: http://" . $_SERVER["HTTP_HOST"] . "/kenshin-daikou/shiryou/thanks/index.php");
+                exit;
+            }
+        }
+    } else {
+        // POST遷移でない場合Sessionとクッキーを破棄してコンタクト画面に強制移動
+        $_SESSION = array();
+        if (isset($_COOKIE[session_name()])) {
+            setcookie(session_name(), '', time() - 42000, '/');
+        }
+        session_destroy();
+        header("Location: http://" . $_SERVER["HTTP_HOST"] . "/index.php");
+        exit;
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -32,7 +93,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
     <link rel="stylesheet" href="../assets/css/shiryou.css" />
     <link rel="stylesheet" href="../assets/css/shiryou-form.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script type="text/javascript" src="../assets/js/validation.js"></script>
+    <script type="text/javascript" src="/kenshin-daikou/assets/js/validation.js"></script>
 </head>
 
 <body id="body">
@@ -43,9 +104,9 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
                     <div class="header__logo"></div>
                 </div>
                 <div class="header__right flex sp-only">
-                    <a href="../shiryou/index.php#shiryou" target="_top" class="download__document">
+                    <a href="/kenshin-daikou/shiryou/index.php#shiryou" target="_top" class="download__document">
                     </a>
-                    <a href="../index.php#estimate" target="_top" class="estimate__link"></a>
+                    <a href="/kenshin-daikou/index.php#estimate" target="_top" class="estimate__link"></a>
                 </div>
             </div>
         </header>
@@ -59,7 +120,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
                     </div>
                     <div class="shiryou__form-box">
                         <p>入力必須事項</p>
-                        <form method="post" name="form" id="form" action="confirm/index.php">
+                        <form method="post" name="form" id="form" action="index.php">
                             <div class="contact_box">
 
                                 <div class="list flex is_between">
@@ -147,14 +208,22 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
                                 </div>
                             </div>
                             <div class="submit_box">
-                                <div class="btn_in">
-                                    <input id="confirm" name="confirm" class="submit_btn" type="submit" value="資料ダウンロードする">
-                                </div>
+                                <form method="post" action="/kenshin-daikou/shiryou/thanks/index.php">
+                                    <input type="hidden" name="your-company" value="<?php echo $company; ?>">
+                                    <input type="hidden" name="your-busyo" value="<?php echo $busyo; ?>">
+                                    <input type="hidden" name="your-sei" value="<?php echo $sei; ?>">
+                                    <input type="hidden" name="your-mei" value="<?php echo $mei; ?>">
+                                    <input type="hidden" name="your-email" value="<?php echo $email; ?>">
+                                    <input type="hidden" name="your-tel" value="<?php echo $tel; ?>">
+                                    <div class="btn_in">
+                                        <input id="submit" name="submit" class="submit_btn" type="submit" value="資料ダウンロードする">
+                                    </div>
+                                </form>
                             </div>
                         </form>
                     </div>
                     <br class="pc-only" />
-                    <a href="../index.php" target="_top" class="return-to-top pc-only">トップに戻る</a>
+                    <a href="/kenshin-daikou/index.php" target="_top" class="return-to-top pc-only">トップに戻る</a>
                 </div>
             </section>
         </main>

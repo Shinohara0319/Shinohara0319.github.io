@@ -64,7 +64,7 @@ $(function () {
   });
 
   //送信時の必須項目入力チェック
-  $("#confirm").on("click", function () {
+  $("#submit").on("click", function () {
     var err_cnt = 0,
       err_point = "";
 

@@ -11,6 +11,79 @@ $email      = isset($_SESSION['your-email']) ? $_SESSION['your-email'] : NULL;
 $tel       = isset($_SESSION['your-tel']) ? $_SESSION['your-tel'] : NULL;
 $agree1      = isset($_SESSION['agree1']) ? $_SESSION['agree1'] : NULL;
 $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
+
+if (
+  !isset($_SESSION['contact_flg']) ||
+  (isset($_SESSION['contact_flg']) && $_SESSION['contact_flg'] !== 1)
+) {
+  // 正規の遷移でない場合コンタクト画面に強制移動
+  header("Location: http://" . $_SERVER["HTTP_HOST"] . "/kenshin-daikou/index.php");
+  exit;
+}
+if (isset($_POST) && count($_POST) > 0) {
+  // フォームのボタンが押されたら
+  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // フォームから送信されたデータを各変数に格納
+    $company       = isset($_POST['your-company']) ? $_POST['your-company'] : NULL;
+    $staffNumber       = isset($_POST['your-staffNumber']) ? $_POST['your-staffNumber'] : NULL;
+    $sei       = isset($_POST['your-sei']) ? $_POST['your-sei'] : NULL;
+    $mei       = isset($_POST['your-mei']) ? $_POST['your-mei'] : NULL;
+    $email      = isset($_POST['your-email']) ? $_POST['your-email'] : NULL;
+    $tel       = isset($_POST['your-tel']) ? $_POST['your-tel'] : NULL;
+
+    switch ($staffNumber) {
+      case '1':
+        $staffNumber = "50人未満";
+        break;
+      case '2':
+        $staffNumber = "50人以上〜100人未満";
+        break;
+      case '3':
+        $staffNumber = "100人以上〜300人未満";
+        break;
+      case '4':
+        $staffNumber = "300人以上";
+        break;
+      default:
+        $staffNumber = "---";
+    }
+
+    //POSTされたデータをセッション変数に保存
+    $_SESSION['your-company']       = $company;
+    $_SESSION['your-staffNumber']       = $staffNumber;
+    $_SESSION['your-sei']       = $sei;
+    $_SESSION['your-mei']       = $mei;
+    $_SESSION['your-email']      = $email;
+    $_SESSION['your-tel']      = $tel;
+
+    // 送信ボタンが押されたら
+    if (isset($_POST["submit"])) {
+      //メール送信処理
+      require_once './libs/SendEmail.php';
+      //メール送信処理
+      $mail = new SendEmail;
+      $sendAdmin = $mail->sendContactToAdmin($_POST);
+      $sendUser  = $mail->sendContactToUser($_POST);
+      if ($sendAdmin && $sendUser) {
+        //終了処理
+        unset($_POST);
+        $_SESSION['contact_flg'] = 2;
+        // サンクスページに画面遷移させる
+        header("Location: http://" . $_SERVER["HTTP_HOST"] . "/kenshin-daikou/thanks/index.php");
+        exit;
+      }
+    }
+  } else {
+    // POST遷移でない場合Sessionとクッキーを破棄してコンタクト画面に強制移動
+    $_SESSION = array();
+    if (isset($_COOKIE[session_name()])) {
+      setcookie(session_name(), '', time() - 42000, '/');
+    }
+    session_destroy();
+    header("Location: http://" . $_SERVER["HTTP_HOST"] . "/index.php");
+    exit;
+  }
+}
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -362,7 +435,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
             </div>
             <div class="estimate__form-box">
               <p>入力必須事項</p>
-              <form method="post" name="form" id="form" action="confirm/index.php">
+              <form method="post" name="form" id="form" action="index.php">
                 <div class="contact_box">
 
                   <div class="list flex is_between">
@@ -467,9 +540,17 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
                   </div>
                 </div>
                 <div class="submit_box">
-                  <div class="btn_in">
-                    <input id="confirm" name="confirm" class="submit_btn" type="submit" value="送信する">
-                  </div>
+                  <form method="post" action="/kenshin-daikou/thanks/index.php">
+                    <input type="hidden" name="your-company" value="<?php echo $company; ?>">
+                    <input type="hidden" name="your-staffNumber" value="<?php echo $staffNumber; ?>">
+                    <input type="hidden" name="your-sei" value="<?php echo $sei; ?>">
+                    <input type="hidden" name="your-mei" value="<?php echo $mei; ?>">
+                    <input type="hidden" name="your-email" value="<?php echo $email; ?>">
+                    <input type="hidden" name="your-tel" value="<?php echo $tel; ?>">
+                    <div class="btn_in">
+                      <input id="submit" name="submit" class="submit_btn" type="submit" value="送信する">
+                    </div>
+                  </form>
                 </div>
               </form>
             </div>
