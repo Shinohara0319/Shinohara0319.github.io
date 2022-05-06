@@ -5,7 +5,7 @@ if (
   (isset($_SESSION['contact_flg']) && $_SESSION['contact_flg'] !== 2)
 ) {
   // 正規の遷移でない場合コンタクト画面に強制移動
-  header("Location: http://" . $_SERVER["HTTP_HOST"] . "/index.php");
+  header("Location: http://" . $_SERVER["HTTP_HOST"] . "/kenshin-daikou/index.php");
   exit;
 } else {
   $_SESSION = array(); // セッション変数解除

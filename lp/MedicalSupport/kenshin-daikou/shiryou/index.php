@@ -1,16 +1,15 @@
 <?php
 session_start();
 $_SESSION['contact_flg'] = 1;
-
-// //確認から戻っていたら変数にSessionから値を代入
-// $company       = isset($_POST['your-company']) ? $_POST['your-company'] : NULL;
-// $busyo       = isset($_POST['your-busyo']) ? $_POST['your-busyo'] : NULL;
-// $sei       = isset($_POST['your-sei']) ? $_POST['your-sei'] : NULL;
-// $mei       = isset($_POST['your-mei']) ? $_POST['your-mei'] : NULL;
-// $email      = isset($_POST['your-email']) ? $_POST['your-email'] : NULL;
-// $tel       = isset($_POST['your-tel']) ? $_POST['your-tel'] : NULL;
-// $agree1      = isset($_SESSION['agree1']) ? $_SESSION['agree1'] : NULL;
-// $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
+// フォームから送信されたデータを各変数に格納
+$company       = isset($_POST['your-company']) ? $_POST['your-company'] : NULL;
+$busyo       = isset($_POST['your-busyo']) ? $_POST['your-busyo'] : NULL;
+$sei       = isset($_POST['your-sei']) ? $_POST['your-sei'] : NULL;
+$mei       = isset($_POST['your-mei']) ? $_POST['your-mei'] : NULL;
+$email      = isset($_POST['your-email']) ? $_POST['your-email'] : NULL;
+$tel       = isset($_POST['your-tel']) ? $_POST['your-tel'] : NULL;
+$agree1      = isset($_POST['agree1']) ? $_POST['agree1'] : NULL;
+$agree2      = isset($_POST['agree2']) ? $_POST['agree2'] : NULL;
 
 if (
     !isset($_SESSION['contact_flg']) ||
@@ -23,26 +22,6 @@ if (
 if (isset($_POST) && count($_POST) > 0) {
     // フォームのボタンが押されたら
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        // フォームから送信されたデータを各変数に格納
-        $company       = isset($_POST['your-company']) ? $_POST['your-company'] : NULL;
-        $busyo       = isset($_POST['your-busyo']) ? $_POST['your-busyo'] : NULL;
-        $sei       = isset($_POST['your-sei']) ? $_POST['your-sei'] : NULL;
-        $mei       = isset($_POST['your-mei']) ? $_POST['your-mei'] : NULL;
-        $email      = isset($_POST['your-email']) ? $_POST['your-email'] : NULL;
-        $tel       = isset($_POST['your-tel']) ? $_POST['your-tel'] : NULL;
-        $agree1      = isset($_SESSION['agree1']) ? $_SESSION['agree1'] : NULL;
-        $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
-
-        //POSTされたデータをセッション変数に保存
-        $_SESSION['your-company']       = $company;
-        $_SESSION['your-busyo']       = $busyo;
-        $_SESSION['your-sei']       = $sei;
-        $_SESSION['your-mei']       = $mei;
-        $_SESSION['your-email']      = $email;
-        $_SESSION['your-tel']      = $tel;
-        $_SESSION['agree1']      = $agree1;
-        $_SESSION['agree2']      = $agree2;
-
 
         // 送信ボタンが押されたら
         if (isset($_POST["submit"])) {
@@ -207,14 +186,9 @@ if (isset($_POST) && count($_POST) > 0) {
                                     <div class="validation_space is-valid-agree2"></div>
                                 </div>
                             </div>
+
                             <div class="submit_box">
-                                <form method="post" action="/kenshin-daikou/shiryou/thanks/index.php">
-                                    <input type="hidden" name="your-company" value="<?php echo $company; ?>">
-                                    <input type="hidden" name="your-busyo" value="<?php echo $busyo; ?>">
-                                    <input type="hidden" name="your-sei" value="<?php echo $sei; ?>">
-                                    <input type="hidden" name="your-mei" value="<?php echo $mei; ?>">
-                                    <input type="hidden" name="your-email" value="<?php echo $email; ?>">
-                                    <input type="hidden" name="your-tel" value="<?php echo $tel; ?>">
+                                <form method="post" action="index.php">
                                     <div class="btn_in">
                                         <input id="submit" name="submit" class="submit_btn" type="submit" value="資料ダウンロードする">
                                     </div>

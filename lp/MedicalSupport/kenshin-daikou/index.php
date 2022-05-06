@@ -1,16 +1,15 @@
 <?php
 session_start();
 $_SESSION['contact_flg'] = 1;
-
-//確認から戻っていたら変数にSessionから値を代入
-$company       = isset($_SESSION['your-company']) ? $_SESSION['your-company'] : NULL;
-$staffNumber       = isset($_SESSION['your-staffNumber']) ? $_SESSION['your-staffNumber'] : NULL;
-$sei       = isset($_SESSION['your-sei']) ? $_SESSION['your-sei'] : NULL;
-$mei       = isset($_SESSION['your-mei']) ? $_SESSION['your-mei'] : NULL;
-$email      = isset($_SESSION['your-email']) ? $_SESSION['your-email'] : NULL;
-$tel       = isset($_SESSION['your-tel']) ? $_SESSION['your-tel'] : NULL;
-$agree1      = isset($_SESSION['agree1']) ? $_SESSION['agree1'] : NULL;
-$agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
+// フォームから送信されたデータを各変数に格納
+$company       = isset($_POST['your-company']) ? $_POST['your-company'] : NULL;
+$staffNumber       = isset($_POST['your-staffNumber']) ? $_POST['your-staffNumber'] : NULL;
+$sei       = isset($_POST['your-sei']) ? $_POST['your-sei'] : NULL;
+$mei       = isset($_POST['your-mei']) ? $_POST['your-mei'] : NULL;
+$email      = isset($_POST['your-email']) ? $_POST['your-email'] : NULL;
+$tel       = isset($_POST['your-tel']) ? $_POST['your-tel'] : NULL;
+$agree1      = isset($_POST['agree1']) ? $_POST['agree1'] : NULL;
+$agree2      = isset($_POST['agree2']) ? $_POST['agree2'] : NULL;
 
 if (
   !isset($_SESSION['contact_flg']) ||
@@ -23,14 +22,6 @@ if (
 if (isset($_POST) && count($_POST) > 0) {
   // フォームのボタンが押されたら
   if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // フォームから送信されたデータを各変数に格納
-    $company       = isset($_POST['your-company']) ? $_POST['your-company'] : NULL;
-    $staffNumber       = isset($_POST['your-staffNumber']) ? $_POST['your-staffNumber'] : NULL;
-    $sei       = isset($_POST['your-sei']) ? $_POST['your-sei'] : NULL;
-    $mei       = isset($_POST['your-mei']) ? $_POST['your-mei'] : NULL;
-    $email      = isset($_POST['your-email']) ? $_POST['your-email'] : NULL;
-    $tel       = isset($_POST['your-tel']) ? $_POST['your-tel'] : NULL;
-
     switch ($staffNumber) {
       case '1':
         $staffNumber = "50人未満";
@@ -47,14 +38,8 @@ if (isset($_POST) && count($_POST) > 0) {
       default:
         $staffNumber = "---";
     }
-
-    //POSTされたデータをセッション変数に保存
-    $_SESSION['your-company']       = $company;
-    $_SESSION['your-staffNumber']       = $staffNumber;
-    $_SESSION['your-sei']       = $sei;
-    $_SESSION['your-mei']       = $mei;
-    $_SESSION['your-email']      = $email;
-    $_SESSION['your-tel']      = $tel;
+    // valueの値を文字に書き換えて$_POSTに格納
+    $_POST['your-staffNumber'] = $staffNumber;
 
     // 送信ボタンが押されたら
     if (isset($_POST["submit"])) {
@@ -458,7 +443,7 @@ if (isset($_POST) && count($_POST) > 0) {
                       <div class="flex is_between">
                         <div class="select-box-cursor"></div>
                         <select onchange="changeItem(this)" style="color: #c8c8c8;" name="your-staffNumber" id="your-staffNumber" class="form_input_yourstaffNumber input-your_staffNumber required" autocapitalize="street-staffNumber required" placeholder="" value="<?php echo $staffNumber; ?>" required>
-                          <option value="">---</option>
+                          <option value="" hidden>---</option>
                           <option value="1" <?php if ($staffNumber === "50人未満") {
                                               echo "selected";
                                             } ?>>50人未満</option>
@@ -539,14 +524,9 @@ if (isset($_POST) && count($_POST) > 0) {
                     <div class="validation_space is-valid-agree2"></div>
                   </div>
                 </div>
+
                 <div class="submit_box">
-                  <form method="post" action="/kenshin-daikou/thanks/index.php">
-                    <input type="hidden" name="your-company" value="<?php echo $company; ?>">
-                    <input type="hidden" name="your-staffNumber" value="<?php echo $staffNumber; ?>">
-                    <input type="hidden" name="your-sei" value="<?php echo $sei; ?>">
-                    <input type="hidden" name="your-mei" value="<?php echo $mei; ?>">
-                    <input type="hidden" name="your-email" value="<?php echo $email; ?>">
-                    <input type="hidden" name="your-tel" value="<?php echo $tel; ?>">
+                  <form method="post" action="index.php">
                     <div class="btn_in">
                       <input id="submit" name="submit" class="submit_btn" type="submit" value="送信する">
                     </div>
