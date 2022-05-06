@@ -42,11 +42,6 @@ if (isset($_POST) && count($_POST) > 0) {
                 // サンクスページに画面遷移させる
                 header("Location: http://" . $_SERVER["HTTP_HOST"] . "/kenshin-daikou/shiryou/thanks/index.php");
                 exit;
-            } else {
-                $_SESSION['contact'] = $_POST;
-                unset($_POST);
-                header("Location: http://" . $_SERVER["HTTP_HOST"] . "/error.html");
-                exit();
             }
         }
     } else {
