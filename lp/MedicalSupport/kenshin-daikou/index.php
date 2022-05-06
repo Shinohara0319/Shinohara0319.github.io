@@ -386,15 +386,18 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
                         <div class="select-box-cursor"></div>
                         <select onchange="changeItem(this)" style="color: #c8c8c8;" name="your-staffNumber" id="your-staffNumber" class="form_input_yourstaffNumber input-your_staffNumber required" autocapitalize="street-staffNumber required" placeholder="" value="<?php echo $staffNumber; ?>" required>
                           <option value="">---</option>
-                          <option value="1" <?php if ($staffNumber === "10人以内") {
+                          <option value="1" <?php if ($staffNumber === "50人未満") {
                                               echo "selected";
-                                            } ?>>10人以内</option>
-                          <option value="2" <?php if ($staffNumber === "10人以上50人以下") {
+                                            } ?>>50人未満</option>
+                          <option value="2" <?php if ($staffNumber === "50人以上〜100人未満") {
                                               echo "selected";
-                                            } ?>>10人以上50人以下</option>
-                          <option value="3" <?php if ($staffNumber === "50人以上") {
+                                            } ?>>50人以上〜100人未満</option>
+                          <option value="3" <?php if ($staffNumber === "100人以上〜300人未満") {
                                               echo "selected";
-                                            } ?>>50人以上</option>
+                                            } ?>>100人以上〜300人未満</option>
+                          <option value="4" <?php if ($staffNumber === "300人以上") {
+                                              echo "selected";
+                                            } ?>>300人以上</option>
                         </select>
                       </div>
                       <div class="validation_space is-valid-staffNumber"></div>

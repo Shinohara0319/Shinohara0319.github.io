@@ -22,13 +22,16 @@ if (isset($_POST) && count($_POST) > 0) {
 
         switch ($staffNumber) {
             case '1':
-                $staffNumber = "10人以内";
+                $staffNumber = "50人未満";
                 break;
             case '2':
-                $staffNumber = "10人以上50人以内";
+                $staffNumber = "50人以上〜100人未満";
                 break;
             case '3':
-                $staffNumber = "50人以上";
+                $staffNumber = "100人以上〜300人未満";
+                break;
+            case '4':
+                $staffNumber = "300人以上";
                 break;
             default:
                 $staffNumber = "---";
