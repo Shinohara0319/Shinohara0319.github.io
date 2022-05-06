@@ -61,7 +61,8 @@
 #fv .download__document-pc::before {
   content: "";
   display: block;
-  background: url("../../img/section_fv/download_document.png") center no-repeat;
+  background: url("/kenshin-daikou/assets/img/section_fv/download_document.png")
+    center no-repeat;
   background-size: contain;
   width: 330px;
   height: 100px;
@@ -127,8 +128,8 @@
   #fv .download__document-sp::before {
     content: "";
     display: block;
-    background: url("../../img/section_fv/download_document.png") center
-      no-repeat;
+    background: url("/kenshin-daikou/assets/img/section_fv/download_document.png")
+      center no-repeat;
     background-size: contain;
     width: 90vw;
     height: 30vw;

@@ -35,7 +35,7 @@ if (
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" />
-  <link rel="stylesheet" href="../../assets/css/shiryou-thanks.css" />
+  <link rel="stylesheet" href="/kenshin-daikou/assets/css/shiryou-thanks.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 
@@ -47,8 +47,8 @@ if (
           <div class="header__logo"></div>
         </div>
         <div class="header__right flex">
-          <a href="../../shiryou/index.php#shiryou" target="_top" class="download__document"></a>
-          <a href="../../index.php#estimate" target="_top" class="estimate__link"></a>
+          <a href="/kenshin-daikou/shiryou/index.php#shiryou" target="_top" class="download__document"></a>
+          <a href="/kenshin-daikou/index.php#estimate" target="_top" class="estimate__link"></a>
         </div>
       </div>
     </header>
@@ -57,8 +57,8 @@ if (
       <section id="thanks">
         <p class="category">THANK YOU</p>
         <h2>ダウンロードありがとうございました。</h2>
-        <a href="../../index.php" target="_top" class="return-to-top flex is-center">
-          <img src="../../assets/img/common/top.png" alt="top" />
+        <a href="/kenshin-daikou/index.php" target="_top" class="return-to-top flex is-center">
+          <img src="/kenshin-daikou/assets/img/common/top.png" alt="top" />
         </a>
       </section>
     </main>

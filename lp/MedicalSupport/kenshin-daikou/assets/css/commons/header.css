@@ -11,7 +11,8 @@
 .header__logo::before {
   content: "";
   display: block;
-  background: url("../../img/common/header-logo-pc.png") center no-repeat;
+  background: url("/kenshin-daikou/assets/img/common/header-logo-pc.png") center
+    no-repeat;
   background-size: contain;
   width: 100%;
   height: 41px;
@@ -32,7 +33,8 @@
 .header__right .download__document::before {
   content: "";
   display: block;
-  background: url("../../img/common/download_document.png") center no-repeat;
+  background: url("/kenshin-daikou/assets/img/common/download_document.png")
+    center no-repeat;
   background-size: contain;
   width: 100%;
   height: 50.4px;
@@ -44,7 +46,8 @@
 .header__right .estimate__link::before {
   content: "";
   display: block;
-  background: url("../../img/common/estimate_link.png") center no-repeat;
+  background: url("/kenshin-daikou/assets/img/common/estimate_link.png") center
+    no-repeat;
   background-size: contain;
   width: 100%;
   height: 50.4px;
@@ -62,7 +65,8 @@
   .header__logo::before {
     content: "";
     display: block;
-    background: url("../../img/common/header-logo-sp.png") center no-repeat;
+    background: url("/kenshin-daikou/assets/img/common/header-logo-sp.png")
+      center no-repeat;
     background-size: contain;
     width: 100%;
     height: 12vw;
@@ -84,8 +88,8 @@
     top: 3.1vw;
     left: 3.3vw;
     display: block;
-    background: url("../../img/common/download_document-icon.svg") center
-      no-repeat;
+    background: url("/kenshin-daikou/assets/img/common/download_document-icon.svg")
+      center no-repeat;
     background-size: contain;
     text-align: center;
     width: 3.9vw;
@@ -105,7 +109,8 @@
     top: 2.6vw;
     left: 3.3vw;
     display: block;
-    background: url("../../img/common/estimate_link-icon.svg") center no-repeat;
+    background: url("/kenshin-daikou/assets/img/common/estimate_link-icon.svg")
+      center no-repeat;
     background-size: contain;
     width: 3.9vw;
     height: 5.2vw;

@@ -29,11 +29,11 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" />
-  <link rel="stylesheet" href="./assets/css/toppage.css" />
-  <link rel="stylesheet" href="./assets/css/estimate-form.css" />
+  <link rel="stylesheet" href="/kenshin-daikou/assets/css/toppage.css" />
+  <link rel="stylesheet" href="/kenshin-daikou/assets/css/estimate-form.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script type="text/javascript" src="./assets/js/validation.js"></script>
-  <script type="text/javascript" src="./assets/js/onchange.js"></script>
+  <script type="text/javascript" src="/kenshin-daikou/assets/js/validation.js"></script>
+  <script type="text/javascript" src="/kenshin-daikou/assets/js/onchange.js"></script>
 </head>
 
 <body id="body">
@@ -44,7 +44,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
           <div class="header__logo"></div>
         </div>
         <div class="header__right flex">
-          <a href="./shiryou/index.php#shiryou" target="_top" class="download__document"></a>
+          <a href="/kenshin-daikou/shiryou/index.php#shiryou" target="_top" class="download__document"></a>
           <a href="#estimate" target="_top" class="estimate__link"></a>
         </div>
       </div>
@@ -68,18 +68,18 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
                 <p>業務改善の健診代行なら</p>
               </div>
               <div class="logo">
-                <img src="assets/img/section_fv/Medicalsupport-logo大.png" alt="Medicalsupport-logo" />
+                <img src="/kenshin-daikou/assets/img/section_fv/Medicalsupport-logo大.png" alt="Medicalsupport-logo" />
               </div>
             </div>
             <div class="fv__research">
               <p>※自社調べ</p>
             </div>
-            <a href="./shiryou/index.php#shiryou" target="_top" class="download__document-pc"></a>
+            <a href="/kenshin-daikou/shiryou/index.php#shiryou" target="_top" class="download__document-pc"></a>
           </div>
           <div class="fv__right">
-            <img src="assets/img/section_fv/image1.png" alt="fv__image" />
+            <img src="/kenshin-daikou/assets/img/section_fv/image1.png" alt="fv__image" />
           </div>
-          <a href="./shiryou/index.php#shiryou" target="_top" class="download__document-sp">
+          <a href="/kenshin-daikou/shiryou/index.php#shiryou" target="_top" class="download__document-sp">
           </a>
         </div>
       </section>
@@ -104,7 +104,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
         <div class="trouble__content-box flex is-center">
           <div>
             <div class="trouble__image">
-              <img src="assets/img/section_trouble/image1.png" alt="trouble__image" />
+              <img src="/kenshin-daikou/assets/img/section_trouble/image1.png" alt="trouble__image" />
             </div>
             <div class="trouble__question-box flex-nowrap">
               <div class="trouble__question flex-nowrap is-center is-start">
@@ -164,8 +164,8 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
             <p class="trouble__text">
               健康診断業務は<br class="sp-only" />メディカルサポートにお任せください
             </p>
-            <a href="./shiryou/index.php#shiryou" target="_top" class="download__document">
-              <img src="assets/img/section_trouble/document__download.png" alt="download__document" />
+            <a href="/kenshin-daikou/shiryou/index.php#shiryou" target="_top" class="download__document">
+              <img src="/kenshin-daikou/assets/img/section_trouble/document__download.png" alt="download__document" />
             </a>
           </div>
         </div>
@@ -179,7 +179,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
             <div class="realizable__content flex">
               <div class="realizable__content-text-box first flex is-center sp-only">
                 <div class="realizable__content-icon">
-                  <img src="./assets/img/section_realizable/checking_icon.svg" alt="realizable__checking_icon" />
+                  <img src="/kenshin-daikou/assets/img/section_realizable/checking_icon.svg" alt="realizable__checking_icon" />
                 </div>
                 <div class="realizable__content-text flex is-center">
                   <p>
@@ -188,11 +188,11 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
                 </div>
               </div>
               <div class="realizable__content-image flex is-center">
-                <img src="./assets/img/section_realizable/image1.png" alt="section_realizable/image1.png" />
+                <img src="/kenshin-daikou/assets/img/section_realizable/image1.png" alt="section_realizable/image1.png" />
               </div>
               <div class="realizable__content-text-box first flex is-center pc-only">
                 <div class="realizable__content-icon">
-                  <img src="./assets/img/section_realizable/checking_icon.svg" alt="realizable__checking_icon" />
+                  <img src="/kenshin-daikou/assets/img/section_realizable/checking_icon.svg" alt="realizable__checking_icon" />
                 </div>
                 <div class="realizable__content-text flex is-center">
                   <p>
@@ -205,7 +205,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
             <div class="realizable__content flex">
               <div class="realizable__content-text-box second flex is-center">
                 <div class="realizable__content-icon">
-                  <img src="./assets/img/section_realizable/checking_icon.svg" alt="realizable__checking_icon" />
+                  <img src="/kenshin-daikou/assets/img/section_realizable/checking_icon.svg" alt="realizable__checking_icon" />
                 </div>
                 <div class="realizable__content-text flex is-center">
                   <p>
@@ -214,14 +214,14 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
                 </div>
               </div>
               <div class="realizable__content-image flex is-center">
-                <img src="./assets/img/section_realizable/image2.png" alt="section_realizable/image2.png" />
+                <img src="/kenshin-daikou/assets/img/section_realizable/image2.png" alt="section_realizable/image2.png" />
               </div>
             </div>
             <div class="realizable__border"></div>
             <div class="realizable__content flex">
               <div class="realizable__content-text-box third flex is-center sp-only">
                 <div class="realizable__content-icon">
-                  <img src="./assets/img/section_realizable/checking_icon.svg" alt="realizable__checking_icon" />
+                  <img src="/kenshin-daikou/assets/img/section_realizable/checking_icon.svg" alt="realizable__checking_icon" />
                 </div>
                 <div class="realizable__content-text flex is-center">
                   <p>
@@ -230,11 +230,11 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
                 </div>
               </div>
               <div class="realizable__content-image flex is-center">
-                <img src="./assets/img/section_realizable/image3.png" alt="section_realizable/image3.png" />
+                <img src="/kenshin-daikou/assets/img/section_realizable/image3.png" alt="section_realizable/image3.png" />
               </div>
               <div class="realizable__content-text-box third flex is-center pc-only">
                 <div class="realizable__content-icon">
-                  <img src="./assets/img/section_realizable/checking_icon.svg" alt="realizable__checking_icon" />
+                  <img src="/kenshin-daikou/assets/img/section_realizable/checking_icon.svg" alt="realizable__checking_icon" />
                 </div>
                 <div class="realizable__content-text flex is-center">
                   <p>
@@ -257,7 +257,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
               <p class="service__number">01</p>
             </div>
             <div class="service__image">
-              <img src="./assets/img/section_service/image1.png" alt="service__image1" />
+              <img src="/kenshin-daikou/assets/img/section_service/image1.png" alt="service__image1" />
             </div>
             <div class="service__text-box">
               <h3>健診に関わる業務をお引き受けします</h3>
@@ -277,7 +277,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
               <p class="service__number">02</p>
             </div>
             <div class="service__image">
-              <img src="./assets/img/section_service/image2.png" alt="service__image2" />
+              <img src="/kenshin-daikou/assets/img/section_service/image2.png" alt="service__image2" />
             </div>
             <div class="service__text-box">
               <h3>
@@ -301,7 +301,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
               <p class="service__number">03</p>
             </div>
             <div class="service__image">
-              <img src="./assets/img/section_service/image3.png" alt="service__image3" />
+              <img src="/kenshin-daikou/assets/img/section_service/image3.png" alt="service__image3" />
             </div>
             <div class="service__text-box">
               <h3>
@@ -313,8 +313,8 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
             </div>
           </div>
         </div>
-        <a href="./shiryou/index.php#shiryou" target="_top" class="download__document">
-          <img src="assets/img/section_service/document_download.png" alt="download__document" />
+        <a href="/kenshin-daikou/shiryou/index.php#shiryou" target="_top" class="download__document">
+          <img src="/kenshin-daikou/assets/img/section_service/document_download.png" alt="download__document" />
         </a>
       </section>
 
@@ -325,21 +325,21 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
           <div>
             <div class="point__content first flex is-center">
               <div class="point__image">
-                <img src="./assets/img/section_point/image1.png" alt="point__image1" />
+                <img src="/kenshin-daikou/assets/img/section_point/image1.png" alt="point__image1" />
               </div>
               <div class="point__image">
-                <img src="./assets/img/section_point/image2.png" alt="point__image2" />
+                <img src="/kenshin-daikou/assets/img/section_point/image2.png" alt="point__image2" />
               </div>
               <div class="point__image">
-                <img src="./assets/img/section_point/image3.png" alt="point__image3" />
+                <img src="/kenshin-daikou/assets/img/section_point/image3.png" alt="point__image3" />
               </div>
             </div>
             <div class="point__content second flex is-center">
               <div class="point__image">
-                <img src="./assets/img/section_point/image4.png" alt="point__image4" />
+                <img src="/kenshin-daikou/assets/img/section_point/image4.png" alt="point__image4" />
               </div>
               <div class="point__image">
-                <img src="./assets/img/section_point/image5.png" alt="point__image5" />
+                <img src="/kenshin-daikou/assets/img/section_point/image5.png" alt="point__image5" />
               </div>
             </div>
           </div>
@@ -479,7 +479,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
 
       <section id="logo">
         <div class="logo__content-box flex is-center">
-          <img src="./assets/img/common/logo.png" alt="MedicalSupport logo" />
+          <img src="/kenshin-daikou/assets/img/common/logo.png" alt="MedicalSupport logo" />
         </div>
       </section>
     </main>
