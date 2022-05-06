@@ -37,6 +37,7 @@
 .shiryou__form-box .contact_box .list .input_list {
   width: 74%;
   align-items: center;
+  justify-content: flex-end;
 }
 .shiryou__form-box .contact_box .list .input_list .form_input_yoursei {
   width: calc(50% - 10px);
