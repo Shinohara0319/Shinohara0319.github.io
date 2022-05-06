@@ -56,7 +56,7 @@ if (isset($_POST) && count($_POST) > 0) {
                 unset($_POST);
                 $_SESSION['contact_flg'] = 2;
                 // サンクスページに画面遷移させる
-                header("Location: http://" . $_SERVER["HTTP_HOST"] . "/thanks/index.php");
+                header("Location: http://" . $_SERVER["HTTP_HOST"] . "/kenshin-daikou/thanks/index.php");
                 exit;
             } else {
                 $_SESSION['contact'] = $_POST;
