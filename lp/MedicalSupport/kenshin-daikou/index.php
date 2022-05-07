@@ -16,7 +16,7 @@ if (
   (isset($_SESSION['contact_flg']) && $_SESSION['contact_flg'] !== 1)
 ) {
   // 正規の遷移でない場合コンタクト画面に強制移動
-  header("Location: http://" . $_SERVER["HTTP_HOST"] . "/kenshin-daikou/index.php");
+  header("Location: http://" . $_SERVER["HTTP_HOST"] . "/kenshin-daikou/");
   exit;
 }
 if (isset($_POST) && count($_POST) > 0) {
@@ -54,7 +54,7 @@ if (isset($_POST) && count($_POST) > 0) {
         unset($_POST);
         $_SESSION['contact_flg'] = 2;
         // サンクスページに画面遷移させる
-        header("Location: http://" . $_SERVER["HTTP_HOST"] . "/kenshin-daikou/thanks/index.php");
+        header("Location: http://" . $_SERVER["HTTP_HOST"] . "/kenshin-daikou/thanks/");
         exit;
       }
     }
@@ -65,7 +65,7 @@ if (isset($_POST) && count($_POST) > 0) {
       setcookie(session_name(), '', time() - 42000, '/');
     }
     session_destroy();
-    header("Location: http://" . $_SERVER["HTTP_HOST"] . "/index.php");
+    header("Location: http://" . $_SERVER["HTTP_HOST"] . "/");
     exit;
   }
 }
@@ -102,7 +102,7 @@ if (isset($_POST) && count($_POST) > 0) {
           <div class="header__logo"></div>
         </div>
         <div class="header__right flex">
-          <a href="/kenshin-daikou/shiryou/index.php#shiryou" target="_top" class="download__document" onmousedown=""></a>
+          <a href="/kenshin-daikou/shiryou/#shiryou/" target="_top" class="download__document" onmousedown=""></a>
           <a href="#estimate" target="_top" class="estimate__link" onmousedown=""></a>
         </div>
       </div>
@@ -132,12 +132,12 @@ if (isset($_POST) && count($_POST) > 0) {
             <div class="fv__research">
               <p>※自社調べ</p>
             </div>
-            <a href="/kenshin-daikou/shiryou/index.php#shiryou" target="_top" class="download__document-pc"></a>
+            <a href="/kenshin-daikou/shiryou/#shiryou/" target="_top" class="download__document-pc"></a>
           </div>
           <div class="fv__right">
             <img src="/kenshin-daikou/assets/img/section_fv/image1.png" alt="fv__image" />
           </div>
-          <a href="/kenshin-daikou/shiryou/index.php#shiryou" target="_top" class="download__document-sp" onmousedown="">
+          <a href="/kenshin-daikou/shiryou/#shiryou/" target="_top" class="download__document-sp" onmousedown="">
           </a>
         </div>
       </section>
@@ -222,7 +222,7 @@ if (isset($_POST) && count($_POST) > 0) {
             <p class="trouble__text">
               健康診断業務は<br class="sp-only" />メディカルサポートにお任せください
             </p>
-            <a href="/kenshin-daikou/shiryou/index.php#shiryou" target="_top" class="download__document" onmousedown="">
+            <a href="/kenshin-daikou/shiryou/#shiryou/" target="_top" class="download__document" onmousedown="">
               <img src="/kenshin-daikou/assets/img/section_trouble/document__download.png" alt="download__document" />
             </a>
           </div>
@@ -371,7 +371,7 @@ if (isset($_POST) && count($_POST) > 0) {
             </div>
           </div>
         </div>
-        <a href="/kenshin-daikou/shiryou/index.php#shiryou" target="_top" class="download__document" onmousedown="">
+        <a href="/kenshin-daikou/shiryou/#shiryou/" target="_top" class="download__document" onmousedown="">
           <img src="/kenshin-daikou/assets/img/section_service/document_download.png" alt="download__document" />
         </a>
       </section>

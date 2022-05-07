@@ -5,7 +5,7 @@ if (
   (isset($_SESSION['contact_flg']) && $_SESSION['contact_flg'] !== 2)
 ) {
   // 正規の遷移でない場合コンタクト画面に強制移動
-  header("Location: http://" . $_SERVER["HTTP_HOST"] . "/kenshin-daikou/index.php");
+  header("Location: http://" . $_SERVER["HTTP_HOST"] . "/kenshin-daikou/");
   exit;
 } else {
   $_SESSION = array(); // セッション変数解除
@@ -47,8 +47,8 @@ if (
           <div class="header__logo"></div>
         </div>
         <div class="header__right flex">
-          <a href="/kenshin-daikou/shiryou/index.php#shiryou" target="_top" class="download__document" onmousedown=""></a>
-          <a href="/kenshin-daikou/index.php#estimate" target="_top" class="estimate__link" onmousedown=""></a>
+          <a href="/kenshin-daikou/shiryou/#shiryou/" target="_top" class="download__document" onmousedown=""></a>
+          <a href="/kenshin-daikou/#estimate" target="_top" class="estimate__link" onmousedown=""></a>
         </div>
       </div>
     </header>
@@ -57,7 +57,7 @@ if (
       <section id="thanks">
         <p class="category">THANK YOU</p>
         <h2>ダウンロードありがとうございました。</h2>
-        <a href="/kenshin-daikou/index.php" target="_top" class="return-to-top flex is-center" onmousedown="">
+        <a href="/kenshin-daikou/" target="_top" class="return-to-top flex is-center" onmousedown="">
           <img src="/kenshin-daikou/assets/img/common/top.png" alt="top" />
         </a>
       </section>
@@ -79,7 +79,7 @@ if (
       <script type="text/javascript">
         // URLから自動ダウンロードさせる
         downloadFromUrlAutomatically(
-          "../../download-document/健康診断業務サポート_資料簡易版.pdf",
+          "/kenshin-daikou/download-document/健康診断業務サポート_資料簡易版.pdf",
           "健康診断業務サポート_資料簡易版.pdf"
         );
       </script>

@@ -16,7 +16,7 @@ if (
     (isset($_SESSION['contact_flg']) && $_SESSION['contact_flg'] !== 1)
 ) {
     // 正規の遷移でない場合コンタクト画面に強制移動
-    header("Location: http://" . $_SERVER["HTTP_HOST"] . "/kenshin-daikou/index.php");
+    header("Location: http://" . $_SERVER["HTTP_HOST"] . "/kenshin-daikou/");
     exit;
 }
 if (isset($_POST) && count($_POST) > 0) {
@@ -36,7 +36,7 @@ if (isset($_POST) && count($_POST) > 0) {
                 unset($_POST);
                 $_SESSION['contact_flg'] = 2;
                 // サンクスページに画面遷移させる
-                header("Location: http://" . $_SERVER["HTTP_HOST"] . "/kenshin-daikou/shiryou/thanks/index.php");
+                header("Location: http://" . $_SERVER["HTTP_HOST"] . "/kenshin-daikou/shiryou/thanks/");
                 exit;
             }
         }
@@ -47,7 +47,7 @@ if (isset($_POST) && count($_POST) > 0) {
             setcookie(session_name(), '', time() - 42000, '/');
         }
         session_destroy();
-        header("Location: http://" . $_SERVER["HTTP_HOST"] . "/index.php");
+        header("Location: http://" . $_SERVER["HTTP_HOST"] . "/");
         exit;
     }
 }
@@ -83,9 +83,9 @@ if (isset($_POST) && count($_POST) > 0) {
                     <div class="header__logo"></div>
                 </div>
                 <div class="header__right flex sp-only">
-                    <a href="/kenshin-daikou/shiryou/index.php#shiryou" target="_top" class="download__document" onmousedown="">
+                    <a href="/kenshin-daikou/shiryou/#shiryou/" target="_top" class="download__document" onmousedown="">
                     </a>
-                    <a href="/kenshin-daikou/index.php#estimate" target="_top" class="estimate__link" onmousedown=""></a>
+                    <a href="/kenshin-daikou/#estimate" target="_top" class="estimate__link" onmousedown=""></a>
                 </div>
             </div>
         </header>
@@ -197,7 +197,7 @@ if (isset($_POST) && count($_POST) > 0) {
                         </form>
                     </div>
                     <br class="pc-only" />
-                    <a href="/kenshin-daikou/index.php" target="_top" class="return-to-top pc-only">トップに戻る</a>
+                    <a href="/kenshin-daikou/" target="_top" class="return-to-top pc-only">トップに戻る</a>
                 </div>
             </section>
         </main>

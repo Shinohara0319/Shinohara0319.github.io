@@ -5,7 +5,7 @@ if (
   (isset($_SESSION['contact_flg']) && $_SESSION['contact_flg'] !== 2)
 ) {
   // 正規の遷移でない場合コンタクト画面に強制移動
-  header("Location: http://" . $_SERVER["HTTP_HOST"] . "/kenshin-daikou/index.php");
+  header("Location: http://" . $_SERVER["HTTP_HOST"] . "/kenshin-daikou/");
   exit;
 } else {
   $_SESSION = array(); // セッション変数解除
@@ -46,8 +46,8 @@ if (
           <div class="header__logo"></div>
         </div>
         <div class="header__right flex">
-          <a href="/kenshin-daikou/shiryou/index.php" target="_top" class="download__document" onmousedown=""></a>
-          <a href="/kenshin-daikou/index.php#estimate" target="_top" class="estimate__link" onmousedown=""></a>
+          <a href="/kenshin-daikou/shiryou/#shiryou/" target="_top" class="download__document" onmousedown=""></a>
+          <a href="/kenshin-daikou/#estimate" target="_top" class="estimate__link" onmousedown=""></a>
         </div>
       </div>
     </header>
@@ -68,7 +68,7 @@ if (
             <p class="download__staff">株式会社メイサービス　スタッフ一同</p>
           </div>
         </div>
-        <a href="/kenshin-daikou/index.php" target="_top" class="return-to-top flex is-center" onmousedown="">
+        <a href="/kenshin-daikou/" target="_top" class="return-to-top flex is-center" onmousedown="">
           <img src="/kenshin-daikou/assets/img/common/top.png" alt="top" />
         </a>
       </section>
