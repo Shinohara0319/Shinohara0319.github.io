@@ -236,9 +236,6 @@ if (isset($_POST) && count($_POST) > 0) {
           <div>
             <div class="realizable__content flex">
               <div class="realizable__content-text-box first flex is-center sp-only">
-                <div class="realizable__content-icon">
-                  <img src="/kenshin-daikou/assets/img/section_realizable/checking_icon.svg" alt="realizable__checking_icon" />
-                </div>
                 <div class="realizable__content-text flex is-center">
                   <p>
                     これまでの健診業務を<br /><span>約<span class="realizable__content-text-big">80%</span>軽減</span>できます
@@ -248,10 +245,7 @@ if (isset($_POST) && count($_POST) > 0) {
               <div class="realizable__content-image flex is-center">
                 <img src="/kenshin-daikou/assets/img/section_realizable/image1.png" alt="section_realizable/image1.png" />
               </div>
-              <div class="realizable__content-text-box first flex is-center pc-only">
-                <div class="realizable__content-icon">
-                  <img src="/kenshin-daikou/assets/img/section_realizable/checking_icon.svg" alt="realizable__checking_icon" />
-                </div>
+              <div class="realizable__content-text-box first flex is-end pc-only">
                 <div class="realizable__content-text flex is-center">
                   <p>
                     これまでの健診業務を<br /><span>約<span class="realizable__content-text-big">80%</span>軽減</span>できます
@@ -261,10 +255,14 @@ if (isset($_POST) && count($_POST) > 0) {
             </div>
             <div class="realizable__border"></div>
             <div class="realizable__content flex">
-              <div class="realizable__content-text-box second flex is-center">
-                <div class="realizable__content-icon">
-                  <img src="/kenshin-daikou/assets/img/section_realizable/checking_icon.svg" alt="realizable__checking_icon" />
+              <div class="realizable__content-text-box second flex is-start pc-only">
+                <div class="realizable__content-text flex is-center">
+                  <p>
+                    <span><span class="realizable__content-text-big">全国</span>に</span>提携医療機関<br />受診者の利便性にお応えします
+                  </p>
                 </div>
+              </div>
+              <div class="realizable__content-text-box second flex is-center sp-only">
                 <div class="realizable__content-text flex is-center">
                   <p>
                     <span><span class="realizable__content-text-big">全国</span>に</span>提携医療機関<br />受診者の利便性にお応えします
@@ -278,9 +276,6 @@ if (isset($_POST) && count($_POST) > 0) {
             <div class="realizable__border"></div>
             <div class="realizable__content flex">
               <div class="realizable__content-text-box third flex is-center sp-only">
-                <div class="realizable__content-icon">
-                  <img src="/kenshin-daikou/assets/img/section_realizable/checking_icon.svg" alt="realizable__checking_icon" />
-                </div>
                 <div class="realizable__content-text flex is-center">
                   <p>
                     <span>受診率<span class="realizable__content-text-big">100%</span></span>を共通目標に<br />しっかりサポートいたします
@@ -290,10 +285,7 @@ if (isset($_POST) && count($_POST) > 0) {
               <div class="realizable__content-image flex is-center">
                 <img src="/kenshin-daikou/assets/img/section_realizable/image3.png" alt="section_realizable/image3.png" />
               </div>
-              <div class="realizable__content-text-box third flex is-center pc-only">
-                <div class="realizable__content-icon">
-                  <img src="/kenshin-daikou/assets/img/section_realizable/checking_icon.svg" alt="realizable__checking_icon" />
-                </div>
+              <div class="realizable__content-text-box third flex is-end pc-only">
                 <div class="realizable__content-text flex is-center">
                   <p>
                     <span>受診率<span class="realizable__content-text-big">100%</span></span>を共通目標に<br />しっかりサポートいたします

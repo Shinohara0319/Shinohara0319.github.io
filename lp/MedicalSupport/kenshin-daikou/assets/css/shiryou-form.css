@@ -137,10 +137,16 @@
   text-align: center;
 }
 .shiryou__form-box .submit_box .btn_in {
-  width: 350px;
+  width: 260px;
   margin: auto;
   position: relative;
   cursor: pointer;
+}
+.shiryou__form-box .submit_box .btn_in::before {
+  content: url("/kenshin-daikou/assets/img/download/download-icon.svg");
+  position: absolute;
+  right: 15px;
+  bottom: 24px;
 }
 .shiryou__form-box .submit_box .btn_in .submit_btn {
   width: 100%;
@@ -247,7 +253,12 @@
     line-height: 1.9;
   }
   .shiryou__form-box .submit_box .btn_in {
-    width: 80%;
+    width: 270px;
+  }
+  .shiryou__form-box .submit_box .btn_in::before {
+    position: absolute;
+    right: 15px;
+    bottom: 16px;
   }
   .shiryou__form-box .submit_box .btn_in input {
     width: 100%;

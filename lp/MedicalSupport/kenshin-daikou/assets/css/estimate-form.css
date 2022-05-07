@@ -168,6 +168,18 @@ select {
   position: relative;
   cursor: pointer;
 }
+.estimate__form-box .submit_box .btn_in::before {
+  content: "";
+  position: absolute;
+  top: 40%;
+  right: 20px;
+  width: 10px;
+  height: 10px;
+  border-right: 3px solid #fff;
+  border-top: 3px solid #fff;
+  transform: rotate(45deg);
+  border-radius: 20%;
+}
 .estimate__form-box .submit_box .btn_in .submit_btn {
   width: 100%;
   text-align: center;
@@ -293,5 +305,6 @@ select {
     width: 100%;
     max-width: 100%;
     padding: 15px;
+    font-size: 15px;
   }
 }
