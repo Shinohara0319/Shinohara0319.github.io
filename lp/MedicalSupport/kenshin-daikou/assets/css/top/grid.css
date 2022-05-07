@@ -10,6 +10,7 @@
   max-width: 1400px;
   height: 100px;
   margin: 0 auto;
+  text-decoration: none;
 }
 .grid__monthly_limit {
   border-radius: 30px;

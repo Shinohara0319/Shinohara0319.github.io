@@ -58,6 +58,9 @@
   display: table;
   margin: 60px 0 0 -15px;
 }
+#fv .download__document-pc:hover {
+  filter: brightness(90%);
+}
 #fv .download__document-pc::before {
   content: "";
   display: block;

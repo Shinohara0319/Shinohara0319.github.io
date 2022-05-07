@@ -30,6 +30,9 @@
   width: 180px;
   margin-right: 10px;
 }
+.header__right .download__document:hover {
+  filter: brightness(90%);
+}
 .header__right .download__document::before {
   content: "";
   display: block;
@@ -42,6 +45,9 @@
 .header__right .estimate__link {
   width: 180px;
   margin-right: 10px;
+}
+.header__right .estimate__link:hover {
+  filter: brightness(90%);
 }
 .header__right .estimate__link::before {
   content: "";

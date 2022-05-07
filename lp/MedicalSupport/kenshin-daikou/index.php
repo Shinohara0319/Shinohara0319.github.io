@@ -102,8 +102,8 @@ if (isset($_POST) && count($_POST) > 0) {
           <div class="header__logo"></div>
         </div>
         <div class="header__right flex">
-          <a href="/kenshin-daikou/shiryou/index.php#shiryou" target="_top" class="download__document"></a>
-          <a href="#estimate" target="_top" class="estimate__link"></a>
+          <a href="/kenshin-daikou/shiryou/index.php#shiryou" target="_top" class="download__document" onmousedown=""></a>
+          <a href="#estimate" target="_top" class="estimate__link" onmousedown=""></a>
         </div>
       </div>
     </header>
@@ -137,13 +137,13 @@ if (isset($_POST) && count($_POST) > 0) {
           <div class="fv__right">
             <img src="/kenshin-daikou/assets/img/section_fv/image1.png" alt="fv__image" />
           </div>
-          <a href="/kenshin-daikou/shiryou/index.php#shiryou" target="_top" class="download__document-sp">
+          <a href="/kenshin-daikou/shiryou/index.php#shiryou" target="_top" class="download__document-sp" onmousedown="">
           </a>
         </div>
       </section>
 
       <section id="grid">
-        <div class="grid__label flex is-center">
+        <a class="grid__label flex is-center" href="#estimate">
           <div class="grid__monthly_limit">
             <p class="grid__monthly_limit_text">毎月<span>3</span>社限定</p>
           </div>
@@ -153,7 +153,7 @@ if (isset($_POST) && count($_POST) > 0) {
             </p>
           </div>
           <div class="grid__cursor"></div>
-        </div>
+        </a>
       </section>
 
       <section id="trouble">
@@ -222,7 +222,7 @@ if (isset($_POST) && count($_POST) > 0) {
             <p class="trouble__text">
               健康診断業務は<br class="sp-only" />メディカルサポートにお任せください
             </p>
-            <a href="/kenshin-daikou/shiryou/index.php#shiryou" target="_top" class="download__document">
+            <a href="/kenshin-daikou/shiryou/index.php#shiryou" target="_top" class="download__document" onmousedown="">
               <img src="/kenshin-daikou/assets/img/section_trouble/document__download.png" alt="download__document" />
             </a>
           </div>
@@ -371,7 +371,7 @@ if (isset($_POST) && count($_POST) > 0) {
             </div>
           </div>
         </div>
-        <a href="/kenshin-daikou/shiryou/index.php#shiryou" target="_top" class="download__document">
+        <a href="/kenshin-daikou/shiryou/index.php#shiryou" target="_top" class="download__document" onmousedown="">
           <img src="/kenshin-daikou/assets/img/section_service/document_download.png" alt="download__document" />
         </a>
       </section>
@@ -415,7 +415,7 @@ if (isset($_POST) && count($_POST) > 0) {
               </p>
               <p>
                 ご入力いただいた個人情報は、
-                <a href="https://www.meiservice.com/privacy-policy" target="_blank" class="privacy-policy">個人情報保護方針</a>及び<a href="https://www.meiservice.com/privacy-policy/treatment" target="_blank" class="privacy-policy-treatment">個人情報保護に関する弊社の取り扱い</a>基づき、適切な取扱いを行います。
+                <a href="https://www.meiservice.com/privacy-policy" target="_blank" class="privacy-policy" onmousedown="">個人情報保護方針</a>及び<a href="https://www.meiservice.com/privacy-policy/treatment" target="_blank" class="privacy-policy-treatment" onmousedown="">個人情報保護に関する弊社の取り扱い</a>基づき、適切な取扱いを行います。
               </p>
             </div>
             <div class="estimate__form-box">
@@ -548,8 +548,8 @@ if (isset($_POST) && count($_POST) > 0) {
       <div id="footer" class="footer">
         <div class="footer__content-box flex is-between">
           <div class="footer__privacy-policy-link-box flex is-center">
-            <a href="https://www.meiservice.com/privacy-policy" target="_blank" class="privacy-policy">個人情報保護方針</a>
-            <a href="https://www.meiservice.com/privacy-policy/treatment" target="_blank" class="privacy-policy-treatment">個人情報保護に関する弊社の取り扱い</a>
+            <a href="https://www.meiservice.com/privacy-policy" target="_blank" class="privacy-policy" onmousedown="">個人情報保護方針</a>
+            <a href="https://www.meiservice.com/privacy-policy/treatment" target="_blank" class="privacy-policy-treatment" onmousedown="">個人情報保護に関する弊社の取り扱い</a>
           </div>
           <div class="footer__address flex is-center">
             COPYRIGHT(C) MEISERVICE co.,ltd ALL RIGHTS RESERVED.

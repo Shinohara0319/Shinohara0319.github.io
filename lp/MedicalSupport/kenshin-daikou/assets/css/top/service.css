@@ -71,6 +71,9 @@
   margin: 100px auto 10px;
   text-align: center;
 }
+#service > .download__document:hover {
+  filter: brightness(90%);
+}
 
 @media (max-width: 768px) {
   #service {

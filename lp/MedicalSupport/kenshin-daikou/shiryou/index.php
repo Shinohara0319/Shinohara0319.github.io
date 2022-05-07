@@ -83,9 +83,9 @@ if (isset($_POST) && count($_POST) > 0) {
                     <div class="header__logo"></div>
                 </div>
                 <div class="header__right flex sp-only">
-                    <a href="/kenshin-daikou/shiryou/index.php#shiryou" target="_top" class="download__document">
+                    <a href="/kenshin-daikou/shiryou/index.php#shiryou" target="_top" class="download__document" onmousedown="">
                     </a>
-                    <a href="/kenshin-daikou/index.php#estimate" target="_top" class="estimate__link"></a>
+                    <a href="/kenshin-daikou/index.php#estimate" target="_top" class="estimate__link" onmousedown=""></a>
                 </div>
             </div>
         </header>
