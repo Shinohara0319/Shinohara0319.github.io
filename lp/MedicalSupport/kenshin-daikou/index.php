@@ -80,6 +80,7 @@ if (isset($_POST) && count($_POST) > 0) {
   <title>健診代行ならメイサービス Medical Support</title>
   <meta name="description" content="健診代行ならメイサービス Medical Support" />
   <meta name="keywords" content="健診代行ならメイサービス Medical Support" />
+  <link rel="icon" type="image/png" href="/kenshin-daikou/assets/img/common/favicon.png" />
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:700&display=swap&subset=japanese" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
@@ -143,7 +144,7 @@ if (isset($_POST) && count($_POST) > 0) {
       </section>
 
       <section id="grid">
-        <a class="grid__label flex is-center" href="#estimate">
+        <a class="grid__label flex is-center" href="#estimate" onmousedown="">
           <div class="grid__monthly_limit">
             <p class="grid__monthly_limit_text">毎月<span>3</span>社限定</p>
           </div>
