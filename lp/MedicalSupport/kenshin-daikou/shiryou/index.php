@@ -26,9 +26,9 @@ if (isset($_POST) && count($_POST) > 0) {
         // 送信ボタンが押されたら
         if (isset($_POST["submit"])) {
             //メール送信処理
-            require_once '../libs/SendEmail.php';
+            require_once '../libs/SendEmailDownload.php';
             //メール送信処理
-            $mail = new SendEmail;
+            $mail = new SendEmailDownload;
             $sendAdmin = $mail->sendContactToAdmin($_POST);
             $sendUser  = $mail->sendContactToUser($_POST);
             if ($sendAdmin && $sendUser) {
