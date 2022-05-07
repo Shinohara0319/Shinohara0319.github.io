@@ -18,7 +18,7 @@ class SendEmailEstimate
 			$subject = 'お問い合わせがありました ';
 			$body = $this->buildBodyContact('admin', $data);
 
-			mb_send_mail('kudrya.key@gmail.com', $subject, $body, $header);
+			mb_send_mail('info-co@meiservice.com', $subject, $body, $header);
 
 			return true;
 		} catch (Exception $e) {
@@ -31,7 +31,7 @@ class SendEmailEstimate
 	public function sendContactToUser($data)
 	{
 		try {
-			$from = 'kudrya.key@gmail.com';
+			$from = 'info-co@meiservice.com';
 
 			mb_language("JA");
 			mb_internal_encoding("UTF-8");
