@@ -12,6 +12,9 @@
   margin: 0 auto;
   text-decoration: none;
 }
+.grid__label:hover {
+  filter: brightness(90%);
+}
 .grid__monthly_limit {
   border-radius: 30px;
   background-color: #fff;
