@@ -73,13 +73,18 @@ if (isset($_POST) && count($_POST) > 0) {
 <!DOCTYPE html>
 <html lang="ja">
 
-<head>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width-device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>健診代行ならメイサービス Medical Support</title>
   <meta name="description" content="健診代行ならメイサービス Medical Support" />
   <meta name="keywords" content="健診代行ならメイサービス Medical Support" />
+  <meta property="og:url" content="https://www.meiservice.com/kenshin-daikou/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.meiservice.com/kenshin-daikou/assets/img/common/ogp.png" />
+  <meta property="og:title" content="健診代行ならメイサービス Medical Support">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/png" href="/kenshin-daikou/assets/img/common/favicon.png" />
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:700&display=swap&subset=japanese" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
