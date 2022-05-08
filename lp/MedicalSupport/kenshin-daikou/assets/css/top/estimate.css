@@ -1,5 +1,5 @@
 #estimate {
-  padding: 100px 50px;
+  padding: 100px 50px 140px;
   background-color: #f2fbfa;
   font-family: "Noto Sans", sans-serif;
   letter-spacing: 0;
@@ -29,7 +29,7 @@
   text-align: center;
   max-width: 810px;
   font-size: 12px;
-  margin: 30px auto;
+  margin: 30px auto 0;
 }
 .estimate__form-box > p {
   margin: 0 0 100px;
@@ -41,7 +41,7 @@
 
 @media (max-width: 768px) {
   #estimate {
-    padding: 50px 20px;
+    padding: 50px 20px 35px;
   }
   #estimate > h2 {
     font-size: 20px;

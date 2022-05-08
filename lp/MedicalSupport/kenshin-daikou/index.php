@@ -196,7 +196,7 @@ if (isset($_POST) && count($_POST) > 0) {
                 <div class="trouble__question-number">3</div>
                 <div class="trouble__question-text">
                   <p class="trouble__question-text-bold">
-                    なかなか受信率が上がらない
+                    なかなか受診率が上がらない
                   </p>
                 </div>
               </div>
@@ -533,6 +533,21 @@ if (isset($_POST) && count($_POST) > 0) {
               </form>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section id="security" style="display: none;">
+        <!-- SSL認証タグを埋めたら上記のstyle="display: none;"を削除してください。 -->
+        <div class="security__content-box flex is-center">
+          <div class="security__logo">
+            <!-- ここにSSL認証のタグが埋まる想定 -->
+          </div>
+          <div class="security__text-box">
+            <h2 class="secutiry__header">セキュリティについて</h2>
+            <p>当ページは個人情報保護のためにセキュリティ機能（SSL）を使用しております。お客さまのWEBブラウザがSSLに対応していない場合には、警告画面が出ることがあります。<br />
+              その際には、新しいバージョンのブラウザをインストールしていただけますよう、お願いいたします。</p>
+          </div>
+          <div></div>
         </div>
       </section>
 

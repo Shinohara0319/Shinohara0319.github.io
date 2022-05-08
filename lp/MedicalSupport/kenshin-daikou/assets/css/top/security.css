@@ -1,0 +1,53 @@
+#security {
+  padding: 0 50px 200px;
+  background-color: #f2fbfa;
+  font-family: "Noto Sans", sans-serif;
+}
+.security__content-box {
+  max-width: 1200px;
+  min-height: 180px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #f0f0f0;
+  padding: 32px 50px;
+}
+.security__logo {
+  width: 30%;
+  height: 100px;
+}
+.security__text-box {
+  width: 70%;
+  letter-spacing: 0;
+}
+.security__text-box h2 {
+  font-size: 25px;
+  font-weight: 700;
+  font-family: "Noto Sans";
+  margin: 0 0 15px;
+}
+.security__text-box p {
+  font-size: 16px;
+  font-weight: 300;
+  font-family: "ヒラギノ角ゴシック";
+  line-height: 1.5;
+}
+@media (max-width: 768px) {
+  #security {
+    padding: 0 20px 50px;
+  }
+  .security__content-box {
+    max-width: initial;
+    padding: 30px 15px;
+  }
+  .security__logo {
+    width: 100%;
+    height: 117px;
+  }
+  .security__text-box {
+    width: 100%;
+  }
+  .security__text-box p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
