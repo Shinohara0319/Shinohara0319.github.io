@@ -1,12 +1,13 @@
 #trouble {
   padding: 100px 50px;
   background-color: #f2fbfa;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", sans-serif;
 }
 #trouble > h2 {
   text-align: center;
   font-size: 30px;
   letter-spacing: 0;
+  line-height: 1.2;
   margin: 30px 0;
 }
 #trouble > h2 > span {
@@ -21,10 +22,10 @@
 }
 .trouble__image {
   text-align: center;
+  margin: 0 0 10px 0;
 }
 .trouble__question-box {
-  padding: 20px 0;
-  margin: 45px 0 0;
+  padding: 15px 0;
 }
 .trouble__question-box > .trouble__question:nth-child(1) {
   width: 34%;
@@ -57,7 +58,7 @@
 .trouble__question-box .trouble__question-text {
   text-align: left;
   font-size: 18px;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", sans-serif;
   line-height: 1.4;
   letter-spacing: 0;
 }
@@ -69,7 +70,7 @@
   border-style: solid;
   border-width: 50px 50px 0 50px;
   border-color: #00b49f transparent transparent transparent;
-  margin: 100px auto;
+  margin: 100px auto 50px;
 }
 .trouble__text {
   text-align: center;
@@ -80,7 +81,10 @@
 }
 #trouble .download__document {
   display: table;
-  margin: 100px auto;
+  margin: 50px auto 0;
+}
+#trouble .download__document:hover {
+  filter: brightness(90%);
 }
 
 @media (max-width: 768px) {
@@ -97,10 +101,13 @@
   .trouble__content-box > div {
     padding: 0 10px;
   }
+  .trouble__image {
+    margin: 0 0 10vw 0;
+  }
   .trouble__question-box {
     display: block;
     padding: 0 0 0 10px;
-    margin: 10vw -10px 0 0;
+    margin: 0 -10px 0 0;
   }
   .trouble__question-box > .trouble__question {
     position: relative;
@@ -154,6 +161,5 @@
   }
   #trouble .download__document {
     width: 95%;
-    margin: 50px auto 0;
   }
 }

@@ -1,0 +1,4 @@
+# AuthUserFile /home/concerto-jpn/www/meiservice.com/www/kenshin-daikou/.htpasswd
+# AuthName "Please enter your ID and password"
+# AuthType Basic
+# require valid-user

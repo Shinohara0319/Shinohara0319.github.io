@@ -1,36 +1,103 @@
 <?php
 session_start();
 $_SESSION['contact_flg'] = 1;
+// フォームから送信されたデータを各変数に格納
+$company       = isset($_POST['your-company']) ? $_POST['your-company'] : NULL;
+$staffNumber       = isset($_POST['your-staffNumber']) ? $_POST['your-staffNumber'] : NULL;
+$sei       = isset($_POST['your-sei']) ? $_POST['your-sei'] : NULL;
+$mei       = isset($_POST['your-mei']) ? $_POST['your-mei'] : NULL;
+$email      = isset($_POST['your-email']) ? $_POST['your-email'] : NULL;
+$tel       = isset($_POST['your-tel']) ? $_POST['your-tel'] : NULL;
+$agree1      = isset($_POST['agree1']) ? $_POST['agree1'] : NULL;
+$agree2      = isset($_POST['agree2']) ? $_POST['agree2'] : NULL;
 
-//確認から戻っていたら変数にSessionから値を代入
-$company       = isset($_SESSION['your-company']) ? $_SESSION['your-company'] : NULL;
-$staffNumber       = isset($_SESSION['your-staffNumber']) ? $_SESSION['your-staffNumber'] : NULL;
-$busyo       = isset($_SESSION['your-busyo']) ? $_SESSION['your-busyo'] : NULL;
-$sei       = isset($_SESSION['your-sei']) ? $_SESSION['your-sei'] : NULL;
-$mei       = isset($_SESSION['your-mei']) ? $_SESSION['your-mei'] : NULL;
-$email      = isset($_SESSION['your-email']) ? $_SESSION['your-email'] : NULL;
-$tel       = isset($_SESSION['your-tel']) ? $_SESSION['your-tel'] : NULL;
-$agree1      = isset($_SESSION['agree1']) ? $_SESSION['agree1'] : NULL;
-$agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
+if (
+  !isset($_SESSION['contact_flg']) ||
+  (isset($_SESSION['contact_flg']) && $_SESSION['contact_flg'] !== 1)
+) {
+  // 正規の遷移でない場合コンタクト画面に強制移動
+  header("Location: http://" . $_SERVER["HTTP_HOST"] . "/kenshin-daikou/");
+  exit;
+}
+if (isset($_POST) && count($_POST) > 0) {
+  // フォームのボタンが押されたら
+  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    switch ($staffNumber) {
+      case '1':
+        $staffNumber = "50人未満";
+        break;
+      case '2':
+        $staffNumber = "50人以上〜100人未満";
+        break;
+      case '3':
+        $staffNumber = "100人以上〜300人未満";
+        break;
+      case '4':
+        $staffNumber = "300人以上";
+        break;
+      default:
+        $staffNumber = "---";
+    }
+    // valueの値を文字に書き換えて$_POSTに格納
+    $_POST['your-staffNumber'] = $staffNumber;
+
+    // 送信ボタンが押されたら
+    if (isset($_POST["submit"])) {
+      //メール送信処理
+      require_once './libs/SendEmailEstimate.php';
+      //メール送信処理
+      $mail = new SendEmailEstimate;
+      $sendAdmin = $mail->sendContactToAdmin($_POST);
+      $sendUser  = $mail->sendContactToUser($_POST);
+      if ($sendAdmin && $sendUser) {
+        //終了処理
+        unset($_POST);
+        $_SESSION['contact_flg'] = 2;
+        // サンクスページに画面遷移させる
+        header("Location: http://" . $_SERVER["HTTP_HOST"] . "/kenshin-daikou/thanks/");
+        exit;
+      }
+    }
+  } else {
+    // POST遷移でない場合Sessionとクッキーを破棄してコンタクト画面に強制移動
+    $_SESSION = array();
+    if (isset($_COOKIE[session_name()])) {
+      setcookie(session_name(), '', time() - 42000, '/');
+    }
+    session_destroy();
+    header("Location: http://" . $_SERVER["HTTP_HOST"] . "/");
+    exit;
+  }
+}
 ?>
 <!DOCTYPE html>
 <html lang="ja">
 
-<head>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width-device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>健診代行ならメイサービス Medical Support</title>
   <meta name="description" content="健診代行ならメイサービス Medical Support" />
   <meta name="keywords" content="健診代行ならメイサービス Medical Support" />
+  <meta property="og:url" content="https://www.meiservice.com/kenshin-daikou/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.meiservice.com/kenshin-daikou/assets/img/common/ogp.png" />
+  <meta property="og:title" content="健診代行ならメイサービス Medical Support">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="/kenshin-daikou/assets/img/common/favicon.png" />
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:700&display=swap&subset=japanese" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
-  <link rel="stylesheet" href="./assets/css/toppage.css" />
-  <link rel="stylesheet" href="./assets/css/estimate-form.css" />
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/gotham" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" />
+  <link rel="stylesheet" href="/kenshin-daikou/assets/css/toppage.css" />
+  <link rel="stylesheet" href="/kenshin-daikou/assets/css/estimate-form.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script type="text/javascript" src="./assets/js/validation.js"></script>
-  <script type="text/javascript" src="./assets/js/onchange.js"></script>
+  <script type="text/javascript" src="/kenshin-daikou/assets/js/validation.js"></script>
+  <script type="text/javascript" src="/kenshin-daikou/assets/js/onchange.js"></script>
 </head>
 
 <body id="body">
@@ -41,8 +108,8 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
           <div class="header__logo"></div>
         </div>
         <div class="header__right flex">
-          <a href="./html/shiryou/shiryou.php#shiryou" target="_blank" class="download__document"></a>
-          <a href="#estimate" target="_top" class="estimate__link"></a>
+          <a href="/kenshin-daikou/shiryou/#shiryou/" target="_top" class="download__document" onmousedown=""></a>
+          <a href="#estimate" target="_top" class="estimate__link" onmousedown=""></a>
         </div>
       </div>
     </header>
@@ -65,24 +132,24 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
                 <p>業務改善の健診代行なら</p>
               </div>
               <div class="logo">
-                <img src="assets/img/section_fv/Medicalsupport-logo大.png" alt="Medicalsupport-logo" />
+                <img src="/kenshin-daikou/assets/img/section_fv/Medicalsupport-logo大.png" alt="Medicalsupport-logo" />
               </div>
             </div>
             <div class="fv__research">
               <p>※自社調べ</p>
             </div>
-            <a href="./html/shiryou/shiryou.php#shiryou" target="_blank" class="download__document-pc"></a>
+            <a href="/kenshin-daikou/shiryou/#shiryou/" target="_top" class="download__document-pc"></a>
           </div>
           <div class="fv__right">
-            <img src="assets/img/section_fv/image1.png" alt="fv__image" />
+            <img src="/kenshin-daikou/assets/img/section_fv/image1.png" alt="fv__image" />
           </div>
-          <a href="./html/shiryou/shiryou.php#shiryou" target="_blank" class="download__document-sp">
+          <a href="/kenshin-daikou/shiryou/#shiryou/" target="_top" class="download__document-sp" onmousedown="">
           </a>
         </div>
       </section>
 
       <section id="grid">
-        <div class="grid__label flex is-center">
+        <a class="grid__label flex is-center" href="#estimate" onmousedown="">
           <div class="grid__monthly_limit">
             <p class="grid__monthly_limit_text">毎月<span>3</span>社限定</p>
           </div>
@@ -92,7 +159,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
             </p>
           </div>
           <div class="grid__cursor"></div>
-        </div>
+        </a>
       </section>
 
       <section id="trouble">
@@ -101,7 +168,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
         <div class="trouble__content-box flex is-center">
           <div>
             <div class="trouble__image">
-              <img src="assets/img/section_trouble/image1.png" alt="trouble__image" />
+              <img src="/kenshin-daikou/assets/img/section_trouble/image1.png" alt="trouble__image" />
             </div>
             <div class="trouble__question-box flex-nowrap">
               <div class="trouble__question flex-nowrap is-center is-start">
@@ -129,7 +196,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
                 <div class="trouble__question-number">3</div>
                 <div class="trouble__question-text">
                   <p class="trouble__question-text-bold">
-                    なかなか受信率が上がらない
+                    なかなか受診率が上がらない
                   </p>
                 </div>
               </div>
@@ -161,8 +228,8 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
             <p class="trouble__text">
               健康診断業務は<br class="sp-only" />メディカルサポートにお任せください
             </p>
-            <a href="./html/shiryou/shiryou.php#shiryou" target="_blank" class="download__document">
-              <img src="assets/img/section_trouble/document__download.png" alt="download__document" />
+            <a href="/kenshin-daikou/shiryou/#shiryou/" target="_top" class="download__document" onmousedown="">
+              <img src="/kenshin-daikou/assets/img/section_trouble/document__download.png" alt="download__document" />
             </a>
           </div>
         </div>
@@ -175,9 +242,6 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
           <div>
             <div class="realizable__content flex">
               <div class="realizable__content-text-box first flex is-center sp-only">
-                <div class="realizable__content-icon">
-                  <img src="./assets/img/section_realizable/checking_icon.svg" alt="realizable__checking_icon" />
-                </div>
                 <div class="realizable__content-text flex is-center">
                   <p>
                     これまでの健診業務を<br /><span>約<span class="realizable__content-text-big">80%</span>軽減</span>できます
@@ -185,12 +249,9 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
                 </div>
               </div>
               <div class="realizable__content-image flex is-center">
-                <img src="./assets/img/section_realizable/image1.png" alt="section_realizable/image1.png" />
+                <img src="/kenshin-daikou/assets/img/section_realizable/image1.png" alt="section_realizable/image1.png" />
               </div>
-              <div class="realizable__content-text-box first flex is-center pc-only">
-                <div class="realizable__content-icon">
-                  <img src="./assets/img/section_realizable/checking_icon.svg" alt="realizable__checking_icon" />
-                </div>
+              <div class="realizable__content-text-box first flex is-end pc-only">
                 <div class="realizable__content-text flex is-center">
                   <p>
                     これまでの健診業務を<br /><span>約<span class="realizable__content-text-big">80%</span>軽減</span>できます
@@ -198,12 +259,16 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
                 </div>
               </div>
             </div>
-            <div class="realizable__border sp-only"></div>
+            <div class="realizable__border"></div>
             <div class="realizable__content flex">
-              <div class="realizable__content-text-box second flex is-center">
-                <div class="realizable__content-icon">
-                  <img src="./assets/img/section_realizable/checking_icon.svg" alt="realizable__checking_icon" />
+              <div class="realizable__content-text-box second flex is-start pc-only">
+                <div class="realizable__content-text flex is-center">
+                  <p>
+                    <span><span class="realizable__content-text-big">全国</span>に</span>提携医療機関<br />受診者の利便性にお応えします
+                  </p>
                 </div>
+              </div>
+              <div class="realizable__content-text-box second flex is-center sp-only">
                 <div class="realizable__content-text flex is-center">
                   <p>
                     <span><span class="realizable__content-text-big">全国</span>に</span>提携医療機関<br />受診者の利便性にお応えします
@@ -211,15 +276,12 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
                 </div>
               </div>
               <div class="realizable__content-image flex is-center">
-                <img src="./assets/img/section_realizable/image2.png" alt="section_realizable/image2.png" />
+                <img src="/kenshin-daikou/assets/img/section_realizable/image2.png" alt="section_realizable/image2.png" />
               </div>
             </div>
-            <div class="realizable__border sp-only"></div>
+            <div class="realizable__border"></div>
             <div class="realizable__content flex">
               <div class="realizable__content-text-box third flex is-center sp-only">
-                <div class="realizable__content-icon">
-                  <img src="./assets/img/section_realizable/checking_icon.svg" alt="realizable__checking_icon" />
-                </div>
                 <div class="realizable__content-text flex is-center">
                   <p>
                     <span>受診率<span class="realizable__content-text-big">100%</span></span>を共通目標に<br />しっかりサポートいたします
@@ -227,12 +289,9 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
                 </div>
               </div>
               <div class="realizable__content-image flex is-center">
-                <img src="./assets/img/section_realizable/image3.png" alt="section_realizable/image3.png" />
+                <img src="/kenshin-daikou/assets/img/section_realizable/image3.png" alt="section_realizable/image3.png" />
               </div>
-              <div class="realizable__content-text-box third flex is-center pc-only">
-                <div class="realizable__content-icon">
-                  <img src="./assets/img/section_realizable/checking_icon.svg" alt="realizable__checking_icon" />
-                </div>
+              <div class="realizable__content-text-box third flex is-end pc-only">
                 <div class="realizable__content-text flex is-center">
                   <p>
                     <span>受診率<span class="realizable__content-text-big">100%</span></span>を共通目標に<br />しっかりサポートいたします
@@ -254,7 +313,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
               <p class="service__number">01</p>
             </div>
             <div class="service__image">
-              <img src="./assets/img/section_service/image1.png" alt="service__image1" />
+              <img src="/kenshin-daikou/assets/img/section_service/image1.png" alt="service__image1" />
             </div>
             <div class="service__text-box">
               <h3>健診に関わる業務をお引き受けします</h3>
@@ -274,7 +333,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
               <p class="service__number">02</p>
             </div>
             <div class="service__image">
-              <img src="./assets/img/section_service/image2.png" alt="service__image2" />
+              <img src="/kenshin-daikou/assets/img/section_service/image2.png" alt="service__image2" />
             </div>
             <div class="service__text-box">
               <h3>
@@ -298,7 +357,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
               <p class="service__number">03</p>
             </div>
             <div class="service__image">
-              <img src="./assets/img/section_service/image3.png" alt="service__image3" />
+              <img src="/kenshin-daikou/assets/img/section_service/image3.png" alt="service__image3" />
             </div>
             <div class="service__text-box">
               <h3>
@@ -310,8 +369,8 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
             </div>
           </div>
         </div>
-        <a href="./html/shiryou/shiryou.php#shiryou" target="_blank" class="download__document">
-          <img src="assets/img/section_service/document_download.png" alt="download__document" />
+        <a href="/kenshin-daikou/shiryou/#shiryou/" target="_top" class="download__document" onmousedown="">
+          <img src="/kenshin-daikou/assets/img/section_service/document_download.png" alt="download__document" />
         </a>
       </section>
 
@@ -322,21 +381,21 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
           <div>
             <div class="point__content first flex is-center">
               <div class="point__image">
-                <img src="./assets/img/section_point/image1.png" alt="point__image1" />
+                <img src="/kenshin-daikou/assets/img/section_point/image1.png" alt="point__image1" />
               </div>
               <div class="point__image">
-                <img src="./assets/img/section_point/image2.png" alt="point__image2" />
+                <img src="/kenshin-daikou/assets/img/section_point/image2.png" alt="point__image2" />
               </div>
               <div class="point__image">
-                <img src="./assets/img/section_point/image3.png" alt="point__image3" />
+                <img src="/kenshin-daikou/assets/img/section_point/image3.png" alt="point__image3" />
               </div>
             </div>
             <div class="point__content second flex is-center">
               <div class="point__image">
-                <img src="./assets/img/section_point/image4.png" alt="point__image4" />
+                <img src="/kenshin-daikou/assets/img/section_point/image4.png" alt="point__image4" />
               </div>
               <div class="point__image">
-                <img src="./assets/img/section_point/image5.png" alt="point__image5" />
+                <img src="/kenshin-daikou/assets/img/section_point/image5.png" alt="point__image5" />
               </div>
             </div>
           </div>
@@ -345,7 +404,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
 
       <section id="estimate">
         <p class="category">ESTIMATE</p>
-        <h2>お見積もりはこちら</h2>
+        <h2>お見積はこちら</h2>
         <div class="estimate__content-box flex is-center">
           <div>
             <div class="estimate__description">
@@ -354,12 +413,12 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
               </p>
               <p>
                 ご入力いただいた個人情報は、
-                <a href="https://www.meiservice.com/privacy-policy/" target="_blank" class="privacy-policy">個人情報保護方針</a>及び<a href="https://www.meiservice.com/privacy-policy/treatment" target="_blank" class="privacy-policy-treatment">個人情報保護に関する弊社の取り扱い</a>基づき、適切な取扱いを行います。
+                <a href="https://www.meiservice.com/privacy-policy" target="_blank" class="privacy-policy" onmousedown="">個人情報保護方針</a>及び<a href="https://www.meiservice.com/privacy-policy/treatment" target="_blank" class="privacy-policy-treatment" onmousedown="">個人情報保護に関する弊社の取り扱い</a>基づき、適切な取扱いを行います。
               </p>
             </div>
             <div class="estimate__form-box">
               <p>入力必須事項</p>
-              <form method="post" name="form" id="form" action="html/confirm/estimate-confirm.php">
+              <form method="post" name="form" id="form" action="index.php">
                 <div class="contact_box">
 
                   <div class="list flex is_between">
@@ -383,15 +442,18 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
                         <div class="select-box-cursor"></div>
                         <select onchange="changeItem(this)" style="color: #c8c8c8;" name="your-staffNumber" id="your-staffNumber" class="form_input_yourstaffNumber input-your_staffNumber required" autocapitalize="street-staffNumber required" placeholder="" value="<?php echo $staffNumber; ?>" required>
                           <option value="" hidden>---</option>
-                          <option value="1" <?php if ($staffNumber === "10人以内") {
+                          <option value="1" <?php if ($staffNumber === "50人未満") {
                                               echo "selected";
-                                            } ?>>10人以内</option>
-                          <option value="2" <?php if ($staffNumber === "10人以上50人以下") {
+                                            } ?>>50人未満</option>
+                          <option value="2" <?php if ($staffNumber === "50人以上〜100人未満") {
                                               echo "selected";
-                                            } ?>>10人以上50人以下</option>
-                          <option value="3" <?php if ($staffNumber === "50人以上") {
+                                            } ?>>50人以上〜100人未満</option>
+                          <option value="3" <?php if ($staffNumber === "100人以上〜300人未満") {
                                               echo "selected";
-                                            } ?>>50人以上</option>
+                                            } ?>>100人以上〜300人未満</option>
+                          <option value="4" <?php if ($staffNumber === "300人以上") {
+                                              echo "selected";
+                                            } ?>>300人以上</option>
                         </select>
                       </div>
                       <div class="validation_space is-valid-staffNumber"></div>
@@ -443,7 +505,7 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
                                                                                                             echo "checked";
                                                                                                           } ?>>
                       <label for="agree1" class="privacy_txt">
-                        <a class="txt_link" href="https://www.meiservice.com/privacy-policy/">個人情報保護方針</a>に同意する
+                        <a class="txt_link" target="_blank" href="https://www.meiservice.com/privacy-policy">個人情報保護方針</a>に同意する
                       </label>
                     </p>
                     <div class="validation_space is-valid-agree1"></div>
@@ -454,16 +516,19 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
                                                                                                             echo "checked";
                                                                                                           } ?>>
                       <label for="agree2" class="privacy_txt">
-                        <a class="txt_link" href="https://www.meiservice.com/privacy-policy/treatment">個人情報の保護に関する弊社の取り扱い</a>に同意する
+                        <a class="txt_link" target="_blank" href="https://www.meiservice.com/privacy-policy/treatment">個人情報の保護に関する弊社の取り扱い</a>に同意する
                       </label>
                     </p>
                     <div class="validation_space is-valid-agree2"></div>
                   </div>
                 </div>
+
                 <div class="submit_box">
-                  <div class="btn_in">
-                    <input id="confirm" name="confirm" class="submit_btn" type="submit" value="送信する">
-                  </div>
+                  <form method="post" action="index.php">
+                    <div class="btn_in">
+                      <input id="submit" name="submit" class="submit_btn" type="submit" value="送信する">
+                    </div>
+                  </form>
                 </div>
               </form>
             </div>
@@ -471,9 +536,24 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
         </div>
       </section>
 
+      <section id="security" style="display: none;">
+        <!-- SSL認証タグを埋めたら上記のstyle="display: none;"を削除してください。 -->
+        <div class="security__content-box flex is-center">
+          <div class="security__logo">
+            <!-- ここにSSL認証のタグが埋まる想定 -->
+          </div>
+          <div class="security__text-box">
+            <h2 class="secutiry__header">セキュリティについて</h2>
+            <p>当ページは個人情報保護のためにセキュリティ機能（SSL）を使用しております。お客さまのWEBブラウザがSSLに対応していない場合には、警告画面が出ることがあります。<br />
+              その際には、新しいバージョンのブラウザをインストールしていただけますよう、お願いいたします。</p>
+          </div>
+          <div></div>
+        </div>
+      </section>
+
       <section id="logo">
         <div class="logo__content-box flex is-center">
-          <img src="./assets/img/common/logo.png" alt="MedicalSupport logo" />
+          <img src="/kenshin-daikou/assets/img/common/logo.png" alt="MedicalSupport logo" />
         </div>
       </section>
     </main>
@@ -481,8 +561,8 @@ $agree2      = isset($_SESSION['agree2']) ? $_SESSION['agree2'] : NULL;
       <div id="footer" class="footer">
         <div class="footer__content-box flex is-between">
           <div class="footer__privacy-policy-link-box flex is-center">
-            <a href="https://www.meiservice.com/privacy-policy/" target="_blank" class="privacy-policy">個人情報保護方針</a>
-            <a href="https://www.meiservice.com/privacy-policy/treatment" target="_blank" class="privacy-policy-treatment">個人情報保護に関する弊社の取り扱い</a>
+            <a href="https://www.meiservice.com/privacy-policy" target="_blank" class="privacy-policy" onmousedown="">個人情報保護方針</a>
+            <a href="https://www.meiservice.com/privacy-policy/treatment" target="_blank" class="privacy-policy-treatment" onmousedown="">個人情報保護に関する弊社の取り扱い</a>
           </div>
           <div class="footer__address flex is-center">
             COPYRIGHT(C) MEISERVICE co.,ltd ALL RIGHTS RESERVED.

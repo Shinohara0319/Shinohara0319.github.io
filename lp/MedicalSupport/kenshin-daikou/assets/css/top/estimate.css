@@ -1,13 +1,14 @@
 #estimate {
-  padding: 100px 50px;
+  padding: 100px 50px 140px;
   background-color: #f2fbfa;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", sans-serif;
   letter-spacing: 0;
 }
 #estimate > h2 {
   text-align: center;
   font-size: 30px;
   letter-spacing: 0;
+  line-height: 1.2;
   margin: 30px 0 70px;
 }
 .estimate__content-box {
@@ -28,7 +29,7 @@
   text-align: center;
   max-width: 810px;
   font-size: 12px;
-  margin: 30px auto;
+  margin: 30px auto 0;
 }
 .estimate__form-box > p {
   margin: 0 0 100px;
@@ -40,11 +41,11 @@
 
 @media (max-width: 768px) {
   #estimate {
-    padding: 50px 20px;
+    padding: 50px 20px 35px;
   }
   #estimate > h2 {
     font-size: 20px;
-    margin: 2.56vw 0 12.8vw;
+    margin: 10px 0 30px;
   }
   .estimate__content-box {
     max-width: initial;
