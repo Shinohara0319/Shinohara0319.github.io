@@ -19,7 +19,8 @@
   font-weight: 600;
   font-size: 18px;
   line-height: 1.5;
-  width: 33%;
+  letter-spacing: 0;
+  width: 26%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -34,8 +35,9 @@
   font-weight: bold;
 }
 .shiryou__form-box .contact_box .list .input_list {
-  width: 64%;
+  width: 74%;
   align-items: center;
+  justify-content: flex-end;
 }
 .shiryou__form-box .contact_box .list .input_list .form_input_yoursei {
   width: calc(50% - 10px);
@@ -60,11 +62,10 @@
   font-size: 14px;
   color: #dc3232;
   line-height: 1.7;
-  height: 25px;
 }
 .shiryou__form-box .privacy_check_box {
   width: 100%;
-  margin-left: 68px;
+  padding: 0 0 0 68px;
 }
 .shiryou__form-box .privacy_check_box .privacy_check_in {
   display: flex;
@@ -90,6 +91,7 @@
 .shiryou__form-box .privacy_check_box .privacy_txt {
   font-size: 16px;
   line-height: 1.9;
+  letter-spacing: 0;
 }
 .shiryou__form-box
   .privacy_check_box
@@ -135,10 +137,16 @@
   text-align: center;
 }
 .shiryou__form-box .submit_box .btn_in {
-  width: 350px;
+  width: 260px;
   margin: auto;
   position: relative;
   cursor: pointer;
+}
+.shiryou__form-box .submit_box .btn_in::before {
+  content: url("/kenshin-daikou/assets/img/download/download-icon.svg");
+  position: absolute;
+  right: 15px;
+  bottom: 24px;
 }
 .shiryou__form-box .submit_box .btn_in .submit_btn {
   width: 100%;
@@ -186,20 +194,27 @@
   }
   .shiryou__form-box .contact_box .list .input_list input {
     width: 100%;
-    font-size: 14px;
     height: inherit;
+    font-size: 14px;
   }
   .shiryou__form-box .validation_space {
     margin-bottom: 10px;
     padding-top: 5px;
   }
   .shiryou__form-box .privacy_check_box {
-    margin-left: 0;
+    width: 100%;
+    padding: 0;
   }
   .shiryou__form-box .privacy_check_box .privacy_txt {
     font-size: 12px;
     line-height: 1.9;
-    letter-spacing: 0;
+  }
+  .shiryou__form-box
+    .privacy_check_box
+    .privacy_check_in
+    .privacy_checkbox
+    + .privacy_txt {
+    padding-left: 25px;
   }
   .shiryou__form-box
     .privacy_check_box
@@ -225,8 +240,8 @@
     content: "";
     display: block;
     position: absolute;
-    top: calc(50% - 8px);
-    left: 21px;
+    top: calc(50% - 12px);
+    left: 12px;
     width: 11px;
     height: 7px;
     border-left: 3px solid #333;
@@ -238,7 +253,12 @@
     line-height: 1.9;
   }
   .shiryou__form-box .submit_box .btn_in {
-    width: 80%;
+    width: 270px;
+  }
+  .shiryou__form-box .submit_box .btn_in::before {
+    position: absolute;
+    right: 15px;
+    bottom: 16px;
   }
   .shiryou__form-box .submit_box .btn_in input {
     width: 100%;

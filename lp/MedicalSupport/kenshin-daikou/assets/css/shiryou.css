@@ -8,13 +8,14 @@ body {
 
 #shiryou {
   padding: 60px 0 116px;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", sans-serif;
   margin: 0 auto;
 }
 #shiryou h2 {
   text-align: center;
   font-size: 25px;
   letter-spacing: 0;
+  line-height: 1.2;
   margin: 20px 0;
 }
 .shiryou__form-box > p {
@@ -22,7 +23,7 @@ body {
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0;
-  margin: 0 0 100px;
+  margin: 0 0 30px;
 }
 .shiryou__form-box > p::before {
   content: "*";
@@ -44,7 +45,7 @@ body {
   text-decoration: underline;
   font-size: 12px;
   font-weight: 500;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", sans-serif;
   letter-spacing: 0;
   color: #000;
 }
@@ -64,7 +65,7 @@ body {
 #footer .footer__address {
   font-size: 12px;
   font-weight: 500;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", sans-serif;
   color: #00b49f;
 }
 
@@ -75,7 +76,7 @@ body {
 
   #shiryou {
     padding: 8.2vw 3.846vw 0;
-    font-family: "Noto Sans";
+    font-family: "Noto Sans", sans-serif;
     margin: 0 auto;
   }
   #shiryou h2 {
@@ -96,10 +97,14 @@ body {
   }
 
   .shiryou__form-box > p {
-    margin: 0 0 50px;
+    margin: 0 0 20px;
   }
   .shiryou__form-box > p::before {
     content: "*";
     color: #00b49f;
+  }
+
+  #footer .footer__address {
+    font-size: 10px;
   }
 }

@@ -5,12 +5,13 @@
 #thanks {
   padding: 200px 0 305px;
   background-color: #fff;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", sans-serif;
 }
 #thanks h2 {
   text-align: center;
   font-size: 25px;
   letter-spacing: 0;
+  line-height: 1.2;
   margin: 20px 0 100px;
 }
 #thanks .return-to-top {
@@ -23,11 +24,11 @@
   #thanks {
     padding: 66.6vw 5.128vw 69.23vw;
     background-color: #fff;
-    font-family: "Noto Sans";
+    font-family: "Noto Sans", sans-serif;
   }
   #thanks h2 {
-    font-size: 14px;
-    margin: 2.487vw -1.5vw 24.87vw;
+    font-size: 20px;
+    margin: 10px -10px 100px;
   }
   #thanks .return-to-top {
     letter-spacing: 0;
