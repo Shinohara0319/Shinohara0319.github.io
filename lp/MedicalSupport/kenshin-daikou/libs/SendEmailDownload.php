@@ -14,8 +14,8 @@ class SendEmailDownload
 			mb_language("JA");
 			mb_internal_encoding("UTF-8");
 
-			$header  = 'From:' . mb_encode_mimeheader("フォーム送信テスト") . '<' . $from . '>' . "\n";
-			$subject = 'お問い合わせがありました ';
+			$header  = 'From:' . mb_encode_mimeheader("メイサービス資料ダウンロード") . '<' . $from . '>' . "\n";
+			$subject = '資料がダウンロードされました。';
 			$body = $this->buildBodyContact('admin', $data);
 
 			mb_send_mail('info-co@meiservice.com', $subject, $body, $header);
@@ -35,9 +35,9 @@ class SendEmailDownload
 
 			mb_language("JA");
 			mb_internal_encoding("UTF-8");
-			$header  = 'From:' . mb_encode_mimeheader("フォーム送信テスト") . '<' . $from . '>' . "\n";
+			$header  = 'From:' . mb_encode_mimeheader("メイサービス資料ダウンロード") . '<' . $from . '>' . "\n";
 
-			$subject = 'メディカルサポートにお問い合わせいただきありがとうございます。';
+			$subject = 'メイサービス資料ダウンロードありがとうございます・';
 			$body = $this->buildBodyContact('user', $data);
 
 			mb_send_mail($data['your-email'], $subject, $body, $header);

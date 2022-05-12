@@ -14,7 +14,7 @@ class SendEmailEstimate
 			mb_language("JA");
 			mb_internal_encoding("UTF-8");
 
-			$header  = 'From:' . mb_encode_mimeheader("フォーム送信テスト") . '<' . $from . '>' . "\n";
+			$header  = 'From:' . mb_encode_mimeheader("メイサービスお見積りお問い合せ") . '<' . $from . '>' . "\n";
 			$subject = 'お問い合わせがありました ';
 			$body = $this->buildBodyContact('admin', $data);
 
@@ -35,7 +35,7 @@ class SendEmailEstimate
 
 			mb_language("JA");
 			mb_internal_encoding("UTF-8");
-			$header  = 'From:' . mb_encode_mimeheader("フォーム送信テスト") . '<' . $from . '>' . "\n";
+			$header  = 'From:' . mb_encode_mimeheader("メイサービスお見積りお問い合せ") . '<' . $from . '>' . "\n";
 
 			$subject = 'メディカルサポートにお問い合わせいただきありがとうございます。';
 			$body = $this->buildBodyContact('user', $data);
