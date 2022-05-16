@@ -571,7 +571,7 @@ if (isset($_POST) && count($_POST) > 0) {
       </div>
 
       <!-- Global site tag (gtag.js) - Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-9778423-1"></script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-9778423-3"></script>
       <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -580,7 +580,7 @@ if (isset($_POST) && count($_POST) > 0) {
         }
         gtag('js', new Date());
 
-        gtag('config', 'UA-9778423-1');
+        gtag('config', 'UA-9778423-3');
       </script>
     </footer>
   </div>
