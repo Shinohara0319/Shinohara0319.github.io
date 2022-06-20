@@ -80,8 +80,8 @@ if (
       <script type="text/javascript">
         // URLから自動ダウンロードさせる
         downloadFromUrlAutomatically(
-          "/kenshin-daikou/download-document/健康診断業務サポート_資料簡易版.pdf",
-          "健康診断業務サポート_資料簡易版.pdf"
+          "/kenshin-daikou/download-document/メディカルサポート_健康診断業務代行_簡易版202206.pdf",
+          "メディカルサポート_健康診断業務代行_簡易版202206.pdf"
         );
       </script>
     </footer>
