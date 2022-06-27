@@ -14,7 +14,7 @@ class SendEmailEstimate
 			mb_language("JA");
 			mb_internal_encoding("UTF-8");
 
-			$header  = 'From:' . mb_encode_mimeheader("フォーム送信テスト") . '<' . $from . '>' . "\n";
+			$header  = 'From:' . mb_encode_mimeheader("メイサービスお見積りお問い合せ") . '<' . $from . '>' . "\n";
 			$subject = 'お問い合わせがありました ';
 			$body = $this->buildBodyContact('admin', $data);
 
@@ -35,7 +35,7 @@ class SendEmailEstimate
 
 			mb_language("JA");
 			mb_internal_encoding("UTF-8");
-			$header  = 'From:' . mb_encode_mimeheader("フォーム送信テスト") . '<' . $from . '>' . "\n";
+			$header  = 'From:' . mb_encode_mimeheader("メイサービスお見積りお問い合せ") . '<' . $from . '>' . "\n";
 
 			$subject = 'メディカルサポートにお問い合わせいただきありがとうございます。';
 			$body = $this->buildBodyContact('user', $data);
@@ -101,7 +101,7 @@ EOM;
 		return
 			<<< EOM
 
-%company% ・ %sei%　%mei%様
+%company%  %sei%　%mei% 様
 
 ※このメールはシステムからの自動返信です
 
@@ -115,41 +115,10 @@ EOM;
 電　話：%tel%
 ご担当者：%sei% %mei% 様
 メール：%email%
-
-
-…………………………………………………………………………………
-●健康保険情報
-その他
-
-その他の内容／
-
-…………………………………………………………………………………
-●対象人数
- 名
-
-男性／  名
-女性／  名
-
-…………………………………………………………………………………
-●現在の受診方法
-来院／  ヶ所
-集合／  ヶ所
-
-…………………………………………………………………………………
-●予約連絡者
-その他
-
-その他の内容／
-
-…………………………………………………………………………………
-●お困りな事をご記入下さい
-
-
 …………………………………………………………………………………
 ●個人情報に関する確認・同意
 個人情報保護方針に同意しました。
 個人情報の保護に関する弊社の取扱いに同意しました。
-
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 弊社担当者から連絡がない場合システムエラー等の可能性がございますので、誠に恐縮ですが以下の電話もしくはメールにてお知らせください。
