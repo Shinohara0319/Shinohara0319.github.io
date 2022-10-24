@@ -85,6 +85,7 @@ if (isset($_POST) && count($_POST) > 0) {
   <meta property="og:image" content="https://www.meiservice.com/kenshin-daikou/assets/img/common/ogp.png" />
   <meta property="og:title" content="健診代行ならメイサービス Medical Support">
   <meta name="twitter:card" content="summary_large_image">
+  <meta http-equiv="Cache-Control" content="no-cache">
   <link rel="icon" type="image/png" href="/kenshin-daikou/assets/img/common/favicon.png" />
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:700&display=swap&subset=japanese" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
@@ -126,6 +127,7 @@ if (isset($_POST) && count($_POST) > 0) {
                 <p class="fv__second-text">
                   おかげさまでサービス開始から10周年！
                 </p>
+                <p class="fv__research">※自社調べ</p>
               </div>
               <div class="fv__big-text">
                 <p>リモートで実現、</p>
@@ -135,9 +137,6 @@ if (isset($_POST) && count($_POST) > 0) {
                 <img src="/kenshin-daikou/assets/img/section_fv/Medicalsupport-logo大.png" alt="Medicalsupport-logo" />
               </div>
             </div>
-            <div class="fv__research">
-              <p>※自社調べ</p>
-            </div>
             <a href="/kenshin-daikou/shiryou/#shiryou/" target="_top" class="download__document-pc"></a>
           </div>
           <div class="fv__right">
@@ -145,6 +144,38 @@ if (isset($_POST) && count($_POST) > 0) {
           </div>
           <a href="/kenshin-daikou/shiryou/#shiryou/" target="_top" class="download__document-sp" onmousedown="">
           </a>
+        </div>
+      </section>
+
+      <section id="client">
+        <p class="category">CLIENTS</p>
+        <h2>導入企業様の一例</h2>
+        <div class="client__logo-box pc-only">
+          <div class="client__logo1 flex is-center">
+            <img src="/kenshin-daikou/assets/img/section_client/krh-logo.png"></img>
+            <img src="/kenshin-daikou/assets/img/section_client/sagami-holdings-logo.png"></img>
+          </div>
+          <div class="client__logo2 flex is-center">
+            <img src="/kenshin-daikou/assets/img/section_client/Stellantis-logo.png"></img>
+            <img src="/kenshin-daikou/assets/img/section_client/DearsBRAIN01-logo.png"></img>
+            <img src="/kenshin-daikou/assets/img/section_client/PW-logo.png"></img>
+          </div>
+          <p class="client__permission flex is-center">※企業ロゴマーク掲載の許諾済</p>
+        </div>
+
+        <div class="client__logo-box sp-only">
+          <div class="client__logo1 flex is-between">
+            <img src="/kenshin-daikou/assets/img/section_client/krh-logo.png"></img>
+            <img src="/kenshin-daikou/assets/img/section_client/sagami-holdings-logo.png"></img>
+          </div>
+          <div class="client__logo2 flex is-between">
+            <img src="/kenshin-daikou/assets/img/section_client/DearsBRAIN01-logo.png"></img>
+            <img src="/kenshin-daikou/assets/img/section_client/Stellantis-logo.png"></img>
+          </div>
+          <div class="client__logo3 flex is-center">
+            <img src="/kenshin-daikou/assets/img/section_client/PW-logo.png"></img>
+          </div>
+          <p class="client__permission flex is-center">※企業ロゴマーク掲載の許諾済</p>
         </div>
       </section>
 
