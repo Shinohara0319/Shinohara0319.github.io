@@ -3,7 +3,7 @@
   width: 100%;
   font-family: "Noto Sans", sans-serif;
   letter-spacing: 0;
-  padding: 100px 50px 170px;
+  padding: 100px 50px;
 }
 .fv__content-box {
   max-width: 1400px;
@@ -74,10 +74,10 @@
   display: none;
 }
 .fv__research {
-  position: absolute;
-  bottom: 10px;
   font-size: 10px;
+  font-weight: 400;
   letter-spacing: 0;
+  margin: 10px 0 0;
 }
 
 @media (max-width: 768px) {
